@@ -4,26 +4,26 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
-        <link rel="canonical" href="https://hslima00.github.io/Notes/">
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Hugo Lima's Notes</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="canonical" href="https://hslima00.github.io/Notes/markdown-cheat-sheet/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Markdown Cheat Sheet - Hugo Lima's Notes</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">Hugo Lima's Notes</a>
+                <a class="navbar-brand" href="..">Hugo Lima's Notes</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -33,14 +33,14 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">About</a>
+                            </li>
                             <li class="navitem active">
-                                <a href="." class="nav-link">Home</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="about/" class="nav-link">About</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="markdown-cheat-sheet/" class="nav-link">Markdown Cheat Sheet</a>
+                                <a href="./" class="nav-link">Markdown Cheat Sheet</a>
                             </li>
                         </ul>
 
@@ -51,12 +51,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href="../about/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="about/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -78,25 +78,22 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#table-of-contents" class="nav-link">Table of Contents</a>
+            <li class="nav-item" data-level="1"><a href="#markdown-cheat-sheet" class="nav-link">Markdown Cheat Sheet</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#markdown-cheatsheet" class="nav-link">Markdown Cheatsheet:</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#markdown-no-vscode" class="nav-link">Markdown no VSCode:</a>
+            <li class="nav-item" data-level="2"><a href="#basic-syntax" class="nav-link">Basic Syntax</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#commands" class="nav-link">Commands</a>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#h1" class="nav-link">H1</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#h2" class="nav-link">H2</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#mkdocs-usage" class="nav-link">Mkdocs Usage:</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
+            <li class="nav-item" data-level="2"><a href="#extended-syntax" class="nav-link">Extended Syntax</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -107,100 +104,96 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="table-of-contents">Table of Contents</h1>
+<h1 id="markdown-cheat-sheet">Markdown Cheat Sheet</h1>
+<p>Thanks for visiting <a href="https://www.markdownguide.org">The Markdown Guide</a>!</p>
+<p>This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for <a href="https://www.markdownguide.org/basic-syntax">basic syntax</a> and <a href="https://www.markdownguide.org/extended-syntax">extended syntax</a>.</p>
+<h2 id="basic-syntax">Basic Syntax</h2>
+<p>These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.</p>
+<h3 id="heading">Heading</h3>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h3 id="bold">Bold</h3>
+<p><strong>bold text</strong></p>
+<h3 id="italic">Italic</h3>
+<p><em>italicized text</em></p>
+<h3 id="blockquote">Blockquote</h3>
+<blockquote>
+<p>blockquote</p>
+</blockquote>
+<h3 id="ordered-list">Ordered List</h3>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h3 id="unordered-list">Unordered List</h3>
 <ul>
-<li><a href="#table-of-contents">Table of Contents</a></li>
-<li><a href="#markdown-cheatsheet">Markdown Cheatsheet:</a></li>
-<li><a href="#markdown-no-vscode">Markdown no VSCode:</a><ul>
-<li><a href="#markdown-all-in-one-extension">Markdown All in One Extension:</a></li>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
 </ul>
-</li>
-<li><a href="#commands">Commands</a></li>
-<li><a href="#mkdocs-usage">Mkdocs Usage:</a></li>
-<li><a href="#project-layout">Project layout</a></li>
-</ul>
-<h2 id="markdown-cheatsheet">Markdown Cheatsheet:</h2>
-<p>Equações tipo LaTeX: 
-* <code>$\sqrt{25}=5$</code> - $\sqrt{25}=5$ 
-* <img alt="Caption" src="image.png" /></p>
-<h2 id="markdown-no-vscode">Markdown no VSCode:</h2>
-<ul>
-<li><code>Ctrl+Shift+V</code> - Ativa o preview do VSCode</li>
-<li><code>Ctrl+\</code> - Split screen</li>
-<li><code>Ctrl+J</code> - Abre terminal </li>
-<li><code>Ctrl+Space</code> - Aparece um pop up muito util das snippets do VSCode</li>
-<li><code>Ctrl+Shift+P: Snippet Ranger</code> - Extensão muito util para usar snippets, e dá para criar os teus próprios. </li>
-</ul>
-<h3 id="markdown-all-in-one-extension">Markdown All in One Extension:</h3>
+<h3 id="code">Code</h3>
+<p><code>code</code></p>
+<h3 id="horizontal-rule">Horizontal Rule</h3>
+<hr />
+<h3 id="link">Link</h3>
+<p><a href="https://www.markdownguide.org">Markdown Guide</a></p>
+<h3 id="image">Image</h3>
+<p><img alt="alt text" src="https://www.markdownguide.org/assets/images/tux.png" /></p>
+<h2 id="extended-syntax">Extended Syntax</h2>
+<p>These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.</p>
+<h3 id="table">Table</h3>
 <table>
 <thead>
 <tr>
-<th><strong>Command</strong></th>
-<th><strong>Usage</strong></th>
+<th>Syntax</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>Ctrl + B</code></td>
-<td>Toggle bold</td>
+<td>Header</td>
+<td>Title</td>
 </tr>
 <tr>
-<td><code>Ctrl + I</code></td>
-<td>Toggle italic</td>
-</tr>
-<tr>
-<td><code>Alt+S (on Windows)</code></td>
-<td>-Toggle strikethrough1</td>
-</tr>
-<tr>
-<td><code>Ctrl + Shift + ]</code></td>
-<td>Toggle heading (uplevel)</td>
-</tr>
-<tr>
-<td><code>Ctrl + Shift + [</code></td>
-<td>Toggle heading (downlevel)</td>
-</tr>
-<tr>
-<td><code>Ctrl/Cmd + M</code></td>
-<td>Toggle math environment</td>
-</tr>
-<tr>
-<td><code>Alt + C</code></td>
-<td>Check/Uncheck task list item</td>
-</tr>
-<tr>
-<td><code>Ctrl/Cmd + Shift + V</code></td>
-<td>Toggle preview</td>
-</tr>
-<tr>
-<td><code>Ctrl/Cmd + K V</code></td>
-<td>Toggle preview to side</td>
-</tr>
-<tr>
-<td><code>Alt*Shift+F</code></td>
-<td>Align Table</td>
+<td>Paragraph</td>
+<td>Text</td>
 </tr>
 </tbody>
 </table>
-<h2 id="commands">Commands</h2>
-<p>Block quote?</p>
-<blockquote>
-<p>isto é oq ?</p>
-</blockquote>
-<h2 id="mkdocs-usage">Mkdocs Usage:</h2>
+<h3 id="fenced-code-block">Fenced Code Block</h3>
+<pre><code>{
+  &quot;firstName&quot;: &quot;John&quot;,
+  &quot;lastName&quot;: &quot;Smith&quot;,
+  &quot;age&quot;: 25
+}
+</code></pre>
+<h3 id="footnote">Footnote</h3>
+<p>Here's a sentence with a footnote. [^1]</p>
+<p>[^1]: This is the footnote.</p>
+<h3 id="heading-id">Heading ID</h3>
+<h3 id="my-great-heading-custom-id">My Great Heading {#custom-id}</h3>
+<h3 id="definition-list">Definition List</h3>
+<p>term
+: definition</p>
+<h3 id="strikethrough">Strikethrough</h3>
+<p>~~The world is flat.~~</p>
+<h3 id="task-list">Task List</h3>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-<li><code>mkdocs gh-deploy</code> - Mete o que escreves no GitPages (este site)</li>
+<li>[x] Write the press release</li>
+<li>[ ] Update the website</li>
+<li>[ ] Contact the media</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, mages and other files
-</code></pre></div>
+<h3 id="emoji">Emoji</h3>
+<p>That is so funny! :joy:</p>
+<p>(See also <a href="https://www.markdownguide.org/extended-syntax/#copying-and-pasting-emoji">Copying and Pasting Emoji</a>)</p>
+<h3 id="highlight">Highlight</h3>
+<p>I need to highlight these ==very important words==.</p>
+<h3 id="subscript">Subscript</h3>
+<p>H~2~O</p>
+<h3 id="superscript">Superscript</h3>
+<p>X^2^</p></div>
             </div>
         </div>
 
@@ -209,11 +202,11 @@ docs/
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -278,8 +271,3 @@ docs/
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.3.0
-Build Date UTC : 2022-06-01 22:02:19.050200+00:00
--->
