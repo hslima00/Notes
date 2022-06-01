@@ -121,7 +121,7 @@
 </ul>
 <h2 id="markdown-cheatsheet">Markdown Cheatsheet:</h2>
 <p>Equações tipo LaTeX: 
-* <code>$\sqrt{25}=5$</code> - $\sqrt{25}=5$ 
+* <code>$\sqrt{25}=5$</code> - <span class="arithmatex">\(\sqrt{25}=5\)</span> 
 * <img alt="Caption" src="favicon.jpg" /></p>
 <h2 id="markdown-no-vscode">Markdown no VSCode:</h2>
 <ul>
@@ -213,6 +213,9 @@ docs/
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="js/base.js" defer></script>
+        <script src="javascripts/mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
         <script src="search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
@@ -281,5 +284,5 @@ docs/
 
 <!--
 MkDocs version : 1.3.0
-Build Date UTC : 2022-06-01 22:12:01.568387+00:00
+Build Date UTC : 2022-06-01 22:18:10.432525+00:00
 -->
