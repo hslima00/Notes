@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#markdown-cheatsheet" class="md-skip">
+        <a href="#markdown-equations" class="md-skip">
           Skip to content
         </a>
       
@@ -335,8 +335,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#markdown-cheatsheet" class="md-nav__link">
-    Markdown Cheatsheet
+  <a href="#markdown-equations" class="md-nav__link">
+    Markdown Equations
   </a>
   
 </li>
@@ -366,6 +366,26 @@
   <a href="#mkdocs-usage" class="md-nav__link">
     Mkdocs Usage
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admonitions" class="md-nav__link">
+    Admonitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Admonitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admonition-types" class="md-nav__link">
+    Admonition Types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -466,8 +486,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#markdown-cheatsheet" class="md-nav__link">
-    Markdown Cheatsheet
+  <a href="#markdown-equations" class="md-nav__link">
+    Markdown Equations
   </a>
   
 </li>
@@ -500,6 +520,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#admonitions" class="md-nav__link">
+    Admonitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Admonitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admonition-types" class="md-nav__link">
+    Admonition Types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -520,13 +560,18 @@
 
   <h1>Quick Stuff</h1>
 
-<p align="center">
+<details class="bug">
+<summary>Bonus</summary>
+<p><p align="center">
   <img src="img/favicon.jpg" />
-</p>
-
-<h2 id="markdown-cheatsheet"><strong>Markdown Cheatsheet</strong><a class="headerlink" href="#markdown-cheatsheet" title="Permanent link">&para;</a></h2>
-<p>Equações tipo LaTeX: 
-* <code>$\sqrt{25}=5$</code> - <span class="arithmatex">\(\sqrt{25}=5\)</span> </p>
+</p></p>
+</details>
+<p>É possível procurar cenas no GitPages clicando <code>F</code>.</p>
+<h2 id="markdown-equations"><strong>Markdown Equations</strong><a class="headerlink" href="#markdown-equations" title="Permanent link">&para;</a></h2>
+<p>É possivel escrever equações em MarkDown no formato LaTeX:</p>
+<ul>
+<li><code>$\sqrt{25}=5$</code> <span class="arithmatex">\(\rightarrow\)</span> <span class="arithmatex">\(\sqrt{25}=5\)</span> </li>
+</ul>
 <h2 id="markdown-no-vscode"><strong>Markdown no VSCode</strong><a class="headerlink" href="#markdown-no-vscode" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>Ctrl+Shift+V</code> - Ativa o preview do VSCode</li>
@@ -589,10 +634,10 @@
 </table>
 <p></center></p>
 <h2 id="class-diagram-example-uml"><strong>Class Diagram Example / UML</strong><a class="headerlink" href="#class-diagram-example-uml" title="Permanent link">&para;</a></h2>
-<p><center></p>
-<p>This was made with: <a href="https://mermaid-js.github.io/mermaid-live-editor/edit">Mermaid</a>
-<a href="https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNptkU1PwzAMhv9K5BOI9Q9EXBDbJA477YYqITcxndV8QD40weh_Jy1rGR0-OY_tV2_sEyivCSQogzGuGduAtnaixINji0bcf1WVWGfVXdMtx8M1faYm4B8sxR27JLClJd6nwK4VLTlN4bI4jMQd2pLe3C4KFhNNcLQ92jv9ADGLNoTdozc-zIV4ZDsNlud7RtVN7_5Sb_jYrFcN3iN_0pPbEqUZK3QbTP_Ojyv4NdR4bwTHlyMbPcOQ3WJ2CliBpWCRdbnLqFJDOpClGmRJNYauhtr1pS-_6bKMjebkA8hXNJFWgDn5_YdTIFPINDWdb3vu6r8BaWOZRQ"><img alt="" src="https://mermaid.ink/img/pako:eNptkU1PwzAMhv9K5BOI9Q9EXBDbJA477YYqITcxndV8QD40weh_Jy1rGR0-OY_tV2_sEyivCSQogzGuGduAtnaixINji0bcf1WVWGfVXdMtx8M1faYm4B8sxR27JLClJd6nwK4VLTlN4bI4jMQd2pLe3C4KFhNNcLQ92jv9ADGLNoTdozc-zIV4ZDsNlud7RtVN7_5Sb_jYrFcN3iN_0pPbEqUZK3QbTP_Ojyv4NdR4bwTHlyMbPcOQ3WJ2CliBpWCRdbnLqFJDOpClGmRJNYauhtr1pS-_6bKMjebkA8hXNJFWgDn5_YdTIFPINDWdb3vu6r8BaWOZRQ" /></a></p>
-<p></center></p>
+<details class="example">
+<summary>UML Image made with <a href="https://mermaid-js.github.io/mermaid-live-editor/edit">Mermaid</a></summary>
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNptkU1PwzAMhv9K5BOI9Q9EXBDbJA477YYqITcxndV8QD40weh_Jy1rGR0-OY_tV2_sEyivCSQogzGuGduAtnaixINji0bcf1WVWGfVXdMtx8M1faYm4B8sxR27JLClJd6nwK4VLTlN4bI4jMQd2pLe3C4KFhNNcLQ92jv9ADGLNoTdozc-zIV4ZDsNlud7RtVN7_5Sb_jYrFcN3iN_0pPbEqUZK3QbTP_Ojyv4NdR4bwTHlyMbPcOQ3WJ2CliBpWCRdbnLqFJDOpClGmRJNYauhtr1pS-_6bKMjebkA8hXNJFWgDn5_YdTIFPINDWdb3vu6r8BaWOZRQ"><img alt="" src="https://mermaid.ink/img/pako:eNptkU1PwzAMhv9K5BOI9Q9EXBDbJA477YYqITcxndV8QD40weh_Jy1rGR0-OY_tV2_sEyivCSQogzGuGduAtnaixINji0bcf1WVWGfVXdMtx8M1faYm4B8sxR27JLClJd6nwK4VLTlN4bI4jMQd2pLe3C4KFhNNcLQ92jv9ADGLNoTdozc-zIV4ZDsNlud7RtVN7_5Sb_jYrFcN3iN_0pPbEqUZK3QbTP_Ojyv4NdR4bwTHlyMbPcOQ3WJ2CliBpWCRdbnLqFJDOpClGmRJNYauhtr1pS-_6bKMjebkA8hXNJFWgDn5_YdTIFPINDWdb3vu6r8BaWOZRQ" /></a></p>
+</details>
 <h2 id="mkdocs-usage"><strong>Mkdocs Usage</strong><a class="headerlink" href="#mkdocs-usage" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
@@ -601,6 +646,188 @@
 <li><code>mkdocs -h</code> - Print help message and exit.</li>
 <li><code>mkdocs gh-deploy</code> - Mete o que escreves no GitPages (este site)</li>
 </ul>
+<h2 id="admonitions"><strong>Admonitions</strong><a class="headerlink" href="#admonitions" title="Permanent link">&para;</a></h2>
+<details class="example">
+<summary>Admonitions Icons</summary>
+<p><center></p>
+<p><img alt="picture 8" src="img/2cbb1e7b376c3429f283ea755a00527370e6d66a50d12ce8bcfe0778879100ee.png" />  </p>
+<p></center></p>
+</details>
+<details class="examples">
+<summary>Admonitions Examples</summary>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Normal</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>!!! note
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Phasellus posuere in sem ut cursus</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Com titulo mudado</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>!!! note &quot;Phasellus posuere in sem ut cursus&quot;
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sem título</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>!!! note &quot;&quot;
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+</code></pre></div></td></tr></table></div>
+<details class="note">
+<summary>Note</summary>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</details>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Hidden</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>??? note 
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+</code></pre></div></td></tr></table></div>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</details>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Expanded</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>???+ note
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+</code></pre></div></td></tr></table></div>
+<div class="admonition info inline end">
+<p class="admonition-title">Info</p>
+<p>Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Nulla et euismod nulla.
+Curabitur feugiat, tortor non consequat
+finibus, justo purus auctor massa, nec
+semper lorem quam in massa.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>!!! info inline end
+
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Nulla et euismod nulla.
+    Curabitur feugiat, tortor non consequat
+    finibus, justo purus auctor massa, nec
+    semper lorem quam in massa.
+</code></pre></div></td></tr></table></div>
+<div class="admonition info inline">
+<p class="admonition-title">Info</p>
+<p>Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Nulla et euismod nulla.
+Curabitur feugiat, tortor non consequat
+finibus, justo purus auctor massa, nec
+semper lorem quam in massa.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>!!! info inline
+
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Nulla et euismod nulla.
+    Curabitur feugiat, tortor non consequat
+    finibus, justo purus auctor massa, nec
+    semper lorem quam in massa.
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="admonition-types">Admonition Types<a class="headerlink" href="#admonition-types" title="Permanent link">&para;</a></h3>
+<details class="note inline">
+<summary>Note</summary>
+<p><code>note</code></p>
+</details>
+<details class="abstract inline">
+<summary>Abstract</summary>
+<p><code>abstract</code>, <code>summary</code>,<code>tldr</code></p>
+</details>
+<details class="info inline">
+<summary>Info</summary>
+<p><code>info</code>,<code>todo</code></p>
+</details>
+<details class="tip inline">
+<summary>Tip</summary>
+<p><code>tip</code>,<code>hint</code>, <code>important</code></p>
+</details>
+<details class="success inline">
+<summary>Success</summary>
+<p><code>success</code>,<code>done</code>,<code>check</code></p>
+</details>
+<details class="question inline">
+<summary>Question</summary>
+<p><code>question</code>,<code>help</code>,<code>faq</code></p>
+</details>
+<details class="warning inline">
+<summary>Warning</summary>
+<p><code>warning</code>,<code>caution</code>,<code>attention</code></p>
+</details>
+<details class="failure inline">
+<summary>Failure</summary>
+<p><code>failure</code>,<code>fail</code>,<code>missing</code></p>
+</details>
+<details class="danger inline">
+<summary>Danger</summary>
+<p><code>error</code>,<code>danger</code></p>
+</details>
+<details class="bug inline">
+<summary>Bug</summary>
+<p><code>bug</code></p>
+</details>
+<details class="example inline">
+<summary>Example</summary>
+<p><code>example</code></p>
+</details>
+<details class="quote inline">
+<summary>Quote</summary>
+<p><code>quote</code></p>
+</details>
 
               
             </article>
