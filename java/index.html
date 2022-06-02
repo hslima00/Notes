@@ -306,7 +306,7 @@
       
         <li class="md-nav__item">
   <a href="#java-rules" class="md-nav__link">
-    Java Rules
+    Java "Rules"
   </a>
   
 </li>
@@ -315,6 +315,47 @@
   <a href="#classes-and-objects" class="md-nav__link">
     Classes and Objects
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    Strings
+  </a>
+  
+    <nav class="md-nav" aria-label="Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-length" class="md-nav__link">
+    String Length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#touppercase-tolowercase" class="md-nav__link">
+    toUpperCase() &amp; toLowerCase()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexof" class="md-nav__link">
+    indexOf()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-concatenation" class="md-nav__link">
+    String Concatenation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -431,7 +472,7 @@
       
         <li class="md-nav__item">
   <a href="#java-rules" class="md-nav__link">
-    Java Rules
+    Java "Rules"
   </a>
   
 </li>
@@ -440,6 +481,47 @@
   <a href="#classes-and-objects" class="md-nav__link">
     Classes and Objects
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    Strings
+  </a>
+  
+    <nav class="md-nav" aria-label="Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-length" class="md-nav__link">
+    String Length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#touppercase-tolowercase" class="md-nav__link">
+    toUpperCase() &amp; toLowerCase()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexof" class="md-nav__link">
+    indexOf()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-concatenation" class="md-nav__link">
+    String Concatenation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -525,7 +607,7 @@
 
   <h1>Java</h1>
 
-<h2 id="java-rules">Java Rules<a class="headerlink" href="#java-rules" title="Permanent link">&para;</a></h2>
+<h2 id="java-rules">Java "Rules"<a class="headerlink" href="#java-rules" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Java is case-sensitive: "MyClass" and "myclass" has different meaning.</li>
 <li>Every line of code that runs in Java must be inside a class.</li>
@@ -537,7 +619,35 @@
 <p><img alt="picture 6" src="../img/e508fe71a2d8c8d64b37e10fca027cc58b8220501a2420e60b649f4211a1873a.png" />  </p>
 <p>So, a class is a template for objects, and an object is an instance of a class.</p>
 <p>When the individual objects are created, they inherit all the variables and methods from the class.</p>
+<h2 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link">&para;</a></h2>
+<h3 id="string-length">String Length<a class="headerlink" href="#string-length" title="Permanent link">&para;</a></h3>
+<p>Retorna o tamanho da String.
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">txt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The length of the txt string is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">txt</span><span class="p">.</span><span class="na">length</span><span class="p">());</span><span class="w"></span>
+</code></pre></div></p>
+<h3 id="touppercase-tolowercase">toUpperCase() &amp; toLowerCase()<a class="headerlink" href="#touppercase-tolowercase" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">txt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">txt</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">());</span><span class="w">   </span><span class="c1">// Outputs &quot;HELLO WORLD&quot;</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">txt</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">());</span><span class="w">   </span><span class="c1">// Outputs &quot;hello world&quot;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="indexof">indexOf()<a class="headerlink" href="#indexof" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">txt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Please locate where &#39;locate&#39; occurs!&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">txt</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">&quot;locate&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// Outputs 7</span><span class="w"></span>
+</code></pre></div>
+<h3 id="string-concatenation">String Concatenation<a class="headerlink" href="#string-concatenation" title="Permanent link">&para;</a></h3>
+<p>Existem 2 métodos: 
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">lastName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Doe&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">firstName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lastName</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">lastName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Doe&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">firstName</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="n">lastName</span><span class="p">));</span><span class="w"></span>
+</code></pre></div></p>
+<hr />
+<p><center></p>
 <h2 id="class">Class<a class="headerlink" href="#class" title="Permanent link">&para;</a></h2>
+<p></center></p>
 <p>Class named  <span style="color:red">"Main"</span> with a variable x:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
