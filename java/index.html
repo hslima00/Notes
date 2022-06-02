@@ -282,9 +282,56 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Java
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Nesta Página">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Nesta Página
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class" class="md-nav__link">
+    Class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-classes" class="md-nav__link">
+    Multiple Classes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -312,6 +359,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Nesta Página
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class" class="md-nav__link">
+    Class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-classes" class="md-nav__link">
+    Multiple Classes
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -330,12 +406,35 @@
 
 <h1 id="classes-and-objects">Classes and Objects<a class="headerlink" href="#classes-and-objects" title="Permanent link">&para;</a></h1>
 <p>Classes and objects are the two main aspects of object-oriented programming.</p>
-<p><img alt="picture 3" src="../images/4ed0825c775e16fddfcc97a468749f4d758fd4e48a4eaa662b6e864f539e0731.png" /><br />
-<img alt="![picture 3](../images/4ed0825c775e16fddfcc97a468749f4d758fd4e48a4eaa662b6e864f539e0731.png)  
+<p><img alt="picture 3" src="../img/4ed0825c775e16fddfcc97a468749f4d758fd4e48a4eaa662b6e864f539e0731.png" /><br />
+<img alt="![picture 3](../img/4ed0825c775e16fddfcc97a468749f4d758fd4e48a4eaa662b6e864f539e0731.png)  
  1" src="../images/a10afdc95d61d5c4f4071f978ad633bc88bdc57d860d9c200db2c32e11029356.png" /></p>
 <p>So, a class is a template for objects, and an object is an instance of a class.</p>
 <p>When the individual objects are created, they inherit all the variables and methods from the class.</p>
 <p>You will learn much more about classes and objects in the next chapter.</p>
+<h2 id="class">Class<a class="headerlink" href="#class" title="Permanent link">&para;</a></h2>
+<p>Class named  <span style="color:red">"Main"</span> with a variable x:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="object">Object<a class="headerlink" href="#object" title="Permanent link">&para;</a></h2>
+<p>Um objeto é criado a partir de uma classe. Neste caso vamos criar um <strong>objeto</strong> da classe <em>Main</em> chamado myObj.</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Main</span><span class="w"> </span><span class="n">myObj1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Main</span><span class="p">();</span><span class="w">  </span><span class="c1">// Object 1</span><span class="w"></span>
+<span class="w">    </span><span class="n">Main</span><span class="w"> </span><span class="n">myObj2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Main</span><span class="p">();</span><span class="w">  </span><span class="c1">// Object 2</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">myObj1</span><span class="p">.</span><span class="na">x</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">myObj2</span><span class="p">.</span><span class="na">x</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+Podem ser criados mais do que um objeto da mesma classe.</p>
+<h2 id="multiple-classes">Multiple Classes<a class="headerlink" href="#multiple-classes" title="Permanent link">&para;</a></h2>
+<p>É possível criar uma classe a aceder a esta noutra classe. Isto é útil em termos de <strong>organizar</strong> as classes.</p>
+<p>Exemplo: </p>
 
               
             </article>
