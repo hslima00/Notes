@@ -329,6 +329,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#java-attributes" class="md-nav__link">
+    Java Attributes
+  </a>
+  
+    <nav class="md-nav" aria-label="Java Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-attributes" class="md-nav__link">
+    Accessing Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-attributes" class="md-nav__link">
+    Modifying Attributes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -386,6 +413,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#java-attributes" class="md-nav__link">
+    Java Attributes
+  </a>
+  
+    <nav class="md-nav" aria-label="Java Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-attributes" class="md-nav__link">
+    Accessing Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-attributes" class="md-nav__link">
+    Modifying Attributes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -431,7 +485,54 @@
 Podem ser criados mais do que um objeto da mesma classe.</p>
 <h2 id="multiple-classes">Multiple Classes<a class="headerlink" href="#multiple-classes" title="Permanent link">&para;</a></h2>
 <p>É possível criar uma classe a aceder a esta noutra classe. Isto é útil em termos de <strong>organizar</strong> as classes.</p>
-<p>Exemplo: </p>
+<p>Exemplo: Uma classe tem todos os atributos e métodos e outra tem a <code>main()</code>, onde está o código a ser executado.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">Main</span><span class="p">.</span><span class="na">java</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w">   </span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">Second</span><span class="p">.</span><span class="na">java</span><span class="w"></span>
+<span class="kd">class</span> <span class="nc">Second</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Main</span><span class="w"> </span><span class="n">myObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Main</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">myObj</span><span class="p">.</span><span class="na">x</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<h2 id="java-attributes">Java Attributes<a class="headerlink" href="#java-attributes" title="Permanent link">&para;</a></h2>
+<p>As "variáveis" das classes, na verdade, são atributos das classes. </p>
+<p>Por exemplo, uma classe, <code>Main()</code>, que tem dois atributos, <code>x</code> e <code>y</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="accessing-attributes">Accessing Attributes<a class="headerlink" href="#accessing-attributes" title="Permanent link">&para;</a></h3>
+<p>Podemos aceder a atributos das classes, primeiramente criando um objeto da mesma e depois usando o operador <code>.</code>. Por exemplo, aqui estamos a aceder ao atributo <code>x</code> do objeto <code>myObj</code> da classe <code>Main</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Main</span><span class="w"> </span><span class="n">myObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Main</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">myObj</span><span class="p">.</span><span class="na">x</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="modifying-attributes">Modifying Attributes<a class="headerlink" href="#modifying-attributes" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Main</span><span class="w"> </span><span class="n">myObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Main</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">myObj</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">myObj</span><span class="p">.</span><span class="na">x</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+Caso <code>x</code> já tivesse um valor, por exemplo <code>int x = 5;</code> este seria reescrito com o valor 40.</p>
+<p><strong>SE</strong> não quisermos que o valor seja editável então declaramos o atributo como <code>final</code>: </p>
+<div class="highlight"><pre><span></span><code><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
 
               
             </article>
