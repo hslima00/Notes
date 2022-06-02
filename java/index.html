@@ -351,8 +351,47 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#multiple-objects-and-attributes" class="md-nav__link">
+    Multiple Objects and Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-attributes" class="md-nav__link">
+    Multiple Attributes
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-class-main-string-fname-john-string-lname-doe-int-age-24-public-static-void-mainstring-args-main-myobj-new-main-systemoutprintlnname-myobjfname-myobjlname-systemoutprintlnage-myobjage" class="md-nav__link">
+    public class Main {
+  String fname = &quot;John&quot;;
+  String lname = &quot;Doe&quot;;
+  int age = 24;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    System.out.println(&quot;Name: &quot; + myObj.fname + &quot; &quot; + myObj.lname);
+    System.out.println(&quot;Age: &quot; + myObj.age);
+  }
+}
+
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java-methods" class="md-nav__link">
+    Java Methods
+  </a>
   
 </li>
       
@@ -435,8 +474,47 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#multiple-objects-and-attributes" class="md-nav__link">
+    Multiple Objects and Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-attributes" class="md-nav__link">
+    Multiple Attributes
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-class-main-string-fname-john-string-lname-doe-int-age-24-public-static-void-mainstring-args-main-myobj-new-main-systemoutprintlnname-myobjfname-myobjlname-systemoutprintlnage-myobjage" class="md-nav__link">
+    public class Main {
+  String fname = &quot;John&quot;;
+  String lname = &quot;Doe&quot;;
+  int age = 24;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    System.out.println(&quot;Name: &quot; + myObj.fname + &quot; &quot; + myObj.lname);
+    System.out.println(&quot;Age: &quot; + myObj.age);
+  }
+}
+
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java-methods" class="md-nav__link">
+    Java Methods
+  </a>
   
 </li>
       
@@ -533,6 +611,35 @@ Caso <code>x</code> já tivesse um valor, por exemplo <code>int x = 5;</code> es
 <p><strong>SE</strong> não quisermos que o valor seja editável então declaramos o atributo como <code>final</code>: </p>
 <div class="highlight"><pre><span></span><code><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<h3 id="multiple-objects-and-attributes">Multiple Objects and Attributes<a class="headerlink" href="#multiple-objects-and-attributes" title="Permanent link">&para;</a></h3>
+<p>Se criarmos vários objetos de uma classe, os valores dos seus atributos não são partilhados, são independentes, logo podemos mudar os atributos de um objeto sem alterar os dos restantes.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Main</span><span class="w"> </span><span class="n">myObj1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Main</span><span class="p">();</span><span class="w">  </span><span class="c1">// Object 1</span><span class="w"></span>
+<span class="w">    </span><span class="n">Main</span><span class="w"> </span><span class="n">myObj2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Main</span><span class="p">();</span><span class="w">  </span><span class="c1">// Object 2</span><span class="w"></span>
+<span class="w">    </span><span class="n">myObj2</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">myObj1</span><span class="p">.</span><span class="na">x</span><span class="p">);</span><span class="w">  </span><span class="c1">// Outputs 5</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">myObj2</span><span class="p">.</span><span class="na">x</span><span class="p">);</span><span class="w">  </span><span class="c1">// Outputs 25</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="multiple-attributes">Multiple Attributes<a class="headerlink" href="#multiple-attributes" title="Permanent link">&para;</a></h3>
+<p>Podem ser criados tantos atributos quanto quisermos.</p>
+<h2 id="public-class-main-string-fname-john-string-lname-doe-int-age-24-public-static-void-mainstring-args-main-myobj-new-main-systemoutprintlnname-myobjfname-myobjlname-systemoutprintlnage-myobjage"><div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">fname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">lname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Doe&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">24</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Main</span><span class="w"> </span><span class="n">myObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Main</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myObj</span><span class="p">.</span><span class="na">fname</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myObj</span><span class="p">.</span><span class="na">lname</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Age: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myObj</span><span class="p">.</span><span class="na">age</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div><a class="headerlink" href="#public-class-main-string-fname-john-string-lname-doe-int-age-24-public-static-void-mainstring-args-main-myobj-new-main-systemoutprintlnname-myobjfname-myobjlname-systemoutprintlnage-myobjage" title="Permanent link">&para;</a></h2>
+<h2 id="java-methods">Java Methods<a class="headerlink" href="#java-methods" title="Permanent link">&para;</a></h2>
 
               
             </article>
