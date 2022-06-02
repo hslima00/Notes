@@ -16,11 +16,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hslima00.github.io/Notes/java/</loc>
-         <lastmod>2022-06-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://hslima00.github.io/Notes/markdown-cheat-sheet/</loc>
          <lastmod>2022-06-02</lastmod>
          <changefreq>daily</changefreq>
@@ -32,6 +27,21 @@
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/novo2/</loc>
+         <lastmod>2022-06-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hslima00.github.io/Notes/java_docs/java_basics/</loc>
+         <lastmod>2022-06-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hslima00.github.io/Notes/java_docs/java_index/</loc>
+         <lastmod>2022-06-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hslima00.github.io/Notes/java_docs/java_oop/</loc>
          <lastmod>2022-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
