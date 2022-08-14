@@ -5,18 +5,29 @@ site_author: Hugo Lima
 
 
 nav:
-    - Quick Stuff: index.md
-    - About: about.md
-    - Markdown Cheat Sheet: markdown-cheat-sheet.md
-    - Data Types in programming: data_types.md
-    - 'Teste':
-      - 'Writing you docs': 'novo.md'
-      - 'novo2' : 'novo2.md'
-    - Java:
-      - 'Index': java_docs/java_index.md
-      - 'Java Basics': java_docs/java_basics.md
-      - 'Java OOP': java_docs/java_oop.md
-      - 'Lab 5': java_docs/java_lab_5.md
+    - General: index.md
+#    - Testing Stuff: about.md
+    - Markdown: markdown-cheat-sheet.md
+    - Programming:
+      - 'Programming Index' : prog_index.md
+      - Java:
+        - 'Index': java_docs/java_index.md
+        - 'Java Basics': java_docs/java_basics.md
+        - 'Java OOP': java_docs/java_oop.md
+        - 'Lab 5': java_docs/java_lab_5.md
+        - 'Projeto' : java_docs/projeto.md
+        - 'Análise Template' : java_docs/analise_vp.md
+        - 'Exam' : java_docs/exam.md
+      - Data Types: data_types.md
+    - IST:
+      - 'Index' : uni_index.md   
+    - Other:
+      - Warframe: 
+        - 'TODO': other/warframe/warframe.md
+      - Links : 
+        - 'Links': other/links_to_save/links.md
+#      - Outra Cena:
+#        - 'Ola': other\warframe\warframe.md  
 
 theme:
   name: material
@@ -33,14 +44,14 @@ theme:
     - content.code.annotate
   palette:
     
-    - media: "(prefers-color-scheme: light)"
+    - media: "(prefers-color-scheme: dark)"
       accent: green
       primary: black
       scheme: slate
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)" 
+    - media: "(prefers-color-scheme: light)" 
       primary: blue-grey
       scheme: slate
       toggle:
@@ -111,8 +122,6 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.tasklist:
         custom_checkbox: true
-  - markdown_blockdiag:
-        format: svg
   - markdown_include.include
   - pymdownx.arithmatex:
         generic: true

@@ -717,3 +717,45 @@ Existe uma class no package java.util chamada `Collections` que inclui a funcion
       }
     }
     ```
+
+## LinkedList
+Uma `LinkedList` é muito parecida a uma `ArrayList` (até porque usam a mesma interface `List`) porem são construidas de formas muito diferentes.
+
+Uma `ArrayList` tem um array normal dentro dela.
+
+Uma `LinkedList` guarda os seus item dentro de "containers". A List tem um link para o primeiro container, e cada container tem um link para o próximo. Tipo nodes em AED. 
+
+Normalmente a `ArrayList` é mais eficiente uma vez que o seu uso foca-se mais em aceder a index's random da lista, mas a `LinkedList` tem métodos mais eficientes para alguns casos:
+
+| Método        | Descrição                           |
+| ------------- | ----------------------------------- |
+| addFirst()    | Adiciona um item ao inicio da lista |
+| addLast()     | Adiciona um item ao fim da lista    |
+| removeFirst() | Remove um item do inicio da lista   |
+| removeLast()  | Remove um item do fim da lista      |
+| getFirst()    | Obtém o primeiro item da lista      |
+| getLast()     | Obtém o ultimo item da lista        |
+
+!!!*** tip "Quando usar?"
+    Usa-se a `ArrayList` para guardar e aceder a dados, e a `LinkedList` para manipular dados.
+
+??? example
+    ```java
+    import java.util.LinkedList;
+
+    public class Main {
+      public static void main(String[] args) {
+        LinkedList<String> cars = new LinkedList<String>();
+        cars.add("Volvo");
+        cars.add("BMW");
+        cars.add("Ford");
+        cars.add("Mazda");
+        
+        // Use getLast() to display the last item in the list
+        System.out.println(cars.getFirst()); //Output: Volvo
+        cars.addFirst("Hola");
+        System.out.println(cars.getFirst()); //Output: Hola
+      }
+    }
+    ```
+    
