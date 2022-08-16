@@ -1,0 +1,180 @@
+site_name: Notes
+site_url: https://hslima00.github.io/Notes/
+site_description: A handy place to create all kinds of memos and annotations!
+site_author: Hugo Lima
+
+
+nav:
+    - General: index.md
+#    - Testing Stuff: about.md
+    - Markdown: markdown-cheat-sheet.md
+    - Programming:
+      - 'Programming Index' : prog_index.md
+      - Java:
+        - 'Index': java_docs/java_index.md
+        - 'Java Basics': java_docs/java_basics.md
+        - 'Java OOP': java_docs/java_oop.md
+        - 'Lab 5': java_docs/java_lab_5.md
+        - 'Projeto' : java_docs/projeto.md
+        - 'Análise Template' : java_docs/analise_vp.md
+        - 'Exam' : java_docs/exam.md
+      - Data Types: data_types.md
+    - IST:
+      - 'Index' : uni_index.md   
+    - Other:
+      - Warframe: 
+        - 'TODO': other/warframe/warframe.md
+      - Links : 
+        - 'Links': other/links_to_save/links.md
+#      - Outra Cena:
+#        - 'Ola': other\warframe\warframe.md  
+
+# theme:
+#   name: material
+#   favicon: img/favicon.jpg
+#   logo: img/pi.png
+#   #palette:
+#    # accent: purple #quando metes o rato em cima de um link muda p esta cor
+#    # primary: red #header do site 
+#   features:
+#     - header.autohide
+#     - navigation.tabs
+#     - navigation.sections
+#     - navigation.top
+#     - content.code.annotate
+#   palette:
+    
+#     - media: "(prefers-color-scheme: dark)"
+#       accent: green
+#       primary: black
+#       scheme: slate
+#       toggle:
+#         icon: material/toggle-switch-off-outline
+#         name: Switch to dark mode
+#     - media: "(prefers-color-scheme: light)" 
+#       primary: blue-grey
+#       scheme: slate
+#       toggle:
+#         icon: material/toggle-switch
+#         name: Switch to light mode
+
+#   admonition:
+#       note: octicons/tag-16
+#       note: fontawesome/solid/sticky-note
+#       abstract: fontawesome/solid/book
+#       info: fontawesome/solid/info-circle
+#       tip: fontawesome/solid/bullhorn
+#       success: fontawesome/solid/check
+#       question: fontawesome/solid/question-circle
+#       warning: fontawesome/solid/exclamation-triangle
+#       failure: fontawesome/solid/bomb
+#       danger: fontawesome/solid/skull
+#       bug: fontawesome/solid/robot
+#       example: fontawesome/solid/flask
+#       quote: fontawesome/solid/quote-left
+
+theme:
+  name: null
+  custom_dir: material
+  language: pt
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: pt
+  features:
+    - navigation.tabs
+    #- navigation.instant
+  palette:
+    scheme: slate
+    primary: blue
+    accent: cyan
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: fontawesome/solid/laptop-code
+
+
+
+plugins:
+  - search
+  - awesome-pages
+  - include-markdown
+  - minify:
+        minify_html: true
+        htmlmin_opts:
+            remove_comments: true
+
+markdown_extensions:
+  - meta
+  - attr_list
+  - md_in_html
+  - markdown_blockdiag:
+      format: svg
+  - pymdownx.highlight:
+      auto_title: true
+      linenums: true
+      #linenums_style: pymdownx-inline 
+  - toc:
+      permalink: true
+      title: Nesta Página
+      #permalink_title: Anchor link to this section for reference
+      #toc_depth: 3
+  - extra
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.mark
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+        alternate_style: true
+  - pymdownx.betterem:
+        smart_enable: all
+  - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist:
+        custom_checkbox: true
+  - markdown_include.include
+  - pymdownx.arithmatex:
+        generic: true
+  - pymdownx.progressbar
+
+
+
+
+
+#latex equations 
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - stylesheets/extra.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/hslima00
+  generator: false
+
+extra_css:
+  - stylesheets/extra.css
+
+repo_url: https://github.com/hslima00/Notes
+
+copyright: Copyright &copy; 2022 Hugo Lima
