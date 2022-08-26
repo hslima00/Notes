@@ -3,12 +3,20 @@ window.MathJax = {
       inlineMath: [["\\(", "\\)"]],
       displayMath: [["\\[", "\\]"]],
       processEscapes: true,
-      processEnvironments: true
+      processEnvironments: true,
+      require: {
+        allow: {
+          base: false,
+          'all-packages': false
+        },
+        defaultAllow: true
+      }
     },
     options: {
       ignoreHtmlClass: ".*|",
       processHtmlClass: "arithmatex"
-    }
+    },
+    
   };
   
   document$.subscribe(() => { 
