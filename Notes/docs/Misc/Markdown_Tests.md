@@ -1,4 +1,13 @@
 
+``` { .yaml .annotate }
+    theme:
+    features:
+        - content.code.annotate # (1)
+```
+
+1.  :man_raising_hand: I'm a code annotation! I can contain `code`, **formatted
+    text**, images, ... basically anything that can be expressed in Markdown.
+
 -   [x] item 1
     -   [x] item A
     -   [ ] item B
@@ -52,14 +61,9 @@ def bubble_sort(items):
                 items[j], items[j + 1] = items[j + 1], items[j]
 ```
 
-```yaml
-theme:
-    features:
-        - content.code.annotate # (1)
-```
 
-1.  :man_raising_hand: I'm a code annotation! I can contain `code`, **formatted
-    text**, images, ... basically anything that can be expressed in Markdown.
+
+
 
 
 [=0% "0%"]
@@ -126,3 +130,6 @@ blockdiag {
 }
 
  ++ctrl+alt+del++
+
+
+

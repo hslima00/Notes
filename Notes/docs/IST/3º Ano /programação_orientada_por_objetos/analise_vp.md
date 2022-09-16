@@ -7,21 +7,21 @@ Os ficheiros estão no nosso repositório, [aqui](https://github.com/ricardo2000
 
 
 
-![picture 1](../img/0edc37cbee687eda75d0b8bd0b4e24313744d4dae2a57422419206761d77e2c7.png)  
+![picture 1](%24%7Bpath%7D/img/0edc37cbee687eda75d0b8bd0b4e24313744d4dae2a57422419206761d77e2c7.png)  
 
 ??? tip "Sobre como é q foi feito o UML"
 
     Se quiseres saber como é q fiz este UML tá aqui, mas basicamente dá para fazer rever engineering com o Visual Paradigm diretamente do código. Tools>Code>Reverse Java Code
 
-    ![picture 3](../img/295c95a45a0b4e5fe8dc23aec60e5544a5a85617894f75d20c1bcb728386e28d.png)  
+    ![picture 3](%24%7Bpath%7D/img/295c95a45a0b4e5fe8dc23aec60e5544a5a85617894f75d20c1bcb728386e28d.png)  
 
     Selecionas os .java
 
-    ![picture 4](../img/ab781cb833681564c47f55cc7f78cfa53f38848f6acc95684ef194182904b33b.png)  
+    ![picture 4](%24%7Bpath%7D/img/ab781cb833681564c47f55cc7f78cfa53f38848f6acc95684ef194182904b33b.png)  
 
     Fazes um novo diagram e arrastas para lá as classes. Elas já vão estar interligadas. Might be useful para depois vermos se o nosso UML final está bem ou não.
 
-    ![picture 5](../img/a92dd6d7370644df244d8624e696e7c2d6bece5a32f24e7ebb5353761a83187c.png)  
+    ![picture 5](%24%7Bpath%7D/img/a92dd6d7370644df244d8624e696e7c2d6bece5a32f24e7ebb5353761a83187c.png)  
 
 
 
@@ -55,7 +55,7 @@ Ela só inicializa o jogo basically, que na pratica é criar um novo objeto da `
 
 Dá print a isto e aguarda instruções do user:
 
-![picture 2](../img/25ea9d0d93d4096f96d059425fbc56f9153d4b8de821908d01d3eb2e52d99825.png)  
+![picture 2](%24%7Bpath%7D/img/25ea9d0d93d4096f96d059425fbc56f9153d4b8de821908d01d3eb2e52d99825.png)  
 
 Como é q isto funciona? 
 
@@ -171,5 +171,3 @@ O gajo faz 1000 trocas entre 2 cartas com index random do baralho, not sure se �
 Ok, o proximo passo q o gajo faz depois de baralhar o deck é dar uma mão ao jogador. 
 
 1º ele cria uma arrayList de `Card` vazia. (no constructor) e atribui os créditos iniciais ao player, 50.
-
-

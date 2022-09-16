@@ -8,12 +8,12 @@ Depois a mão final dele é comparada com uma tabela de "mãos" e se ele tiver u
 
 ### Combinações Vitoriosas 
 
-![picture 1](../img/02dbf805495f8651a4b706d5e6173c17620207ac018ea5e5274726ad1dde2cef.png)  
+![picture 1](%24%7Bpath%7D/img/02dbf805495f8651a4b706d5e6173c17620207ac018ea5e5274726ad1dde2cef.png)  
 
 
 ## Paytable 
 
-![picture 3](../img/d93636df457e7b9f837f518f7b68e999bfd35abe8e24773371d5269eceabcbfa.png)  
+![picture 3](%24%7Bpath%7D/img/d93636df457e7b9f837f518f7b68e999bfd35abe8e24773371d5269eceabcbfa.png)  
 
 
 ## Variações de jogo
@@ -144,7 +144,7 @@ Correr assim:
 
 ## Comandos e resultados
 
-![picture 2](../img/0eac4cefe22646e548c1c3eff94aaef77cd067166734a2c5099c5a7418763738.png)  
+![picture 2](%24%7Bpath%7D/img/0eac4cefe22646e548c1c3eff94aaef77cd067166734a2c5099c5a7418763738.png)  
 
 ### Bet `b (i)`
 O comando bet pode ser `b` ou `b i` em que `i` é o valor da aposta.
@@ -178,7 +178,7 @@ Depois do `h` ser usado, a consola dá print da nova mão do jogador.
 
 Dá print de uma cena assim: 
 
-![picture 3](../img/85680dd327a559e10ce30ac7beab8a171a5e224f45a7ab635cfdc1c6d2686c17.png)  
+![picture 3](%24%7Bpath%7D/img/85680dd327a559e10ce30ac7beab8a171a5e224f45a7ab635cfdc1c6d2686c17.png)  
 
 * `N1...N10` - vezes que a jogada saiu. 
 * `N11` - Numero de deals desde o inicio do jogo.

@@ -18,7 +18,7 @@ for (const tab of tabs) {
 }
 
 /* make tables sortable */
-document$.subscribe(function() {
+document$.subscribe(function() {  
   var tables = document.querySelectorAll('article table:not([class])')
   tables.forEach(function(table) {
     new Tablesort(table)
@@ -27,17 +27,25 @@ document$.subscribe(function() {
 
 /* MATHJax */
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(', '\\)']],
-    displayMath: [['\\[', '\\]']],
-    processEscapes: true,
-    processEnvironments: true
-  },
-  options: {
-    ignoreHtmlClass: '.*',
-    processHtmlClass: 'arithmatex'
-  }
-};
+    tex: {
+      inlineMath: [["\\(", "\\)"]],
+      displayMath: [["\\[", "\\]"]],
+      processEscapes: true,
+      processEnvironments: true,
+      require: {
+        allow: {
+          base: false,
+          'all-packages': false
+        },
+        defaultAllow: true
+      }
+    },
+    options: {
+      ignoreHtmlClass: ".*|",
+      processHtmlClass: "arithmatex"
+    },
+    
+  };
 
 /* ZOOM */
 document.querySelectorAll('.zoom').forEach(item => {

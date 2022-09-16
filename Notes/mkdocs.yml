@@ -11,22 +11,34 @@ copyright: Copyright &copy; 2022 Hugo Lima
 
 # Configuration
 theme:
-  name: null
+  name: material
   custom_dir: material
   language: pt
-
+  icon:
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+  features:
+    - navigation.tabs
+    - content.code.annotate
   # 404 page
   static_templates:
     - 404.html
-
   # Don't include MkDocs' JavaScript
   include_search_page: false
   search_index_only: true
-
   # Default values, taken from mkdocs_theme.yml
-  language: pt
-  features:
-    - navigation.tabs
+  #language: pt
     #- navigation.instant
   palette:
     scheme: slate
@@ -35,25 +47,24 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
+  favicon: assets/favicon.ico
   icon:
     logo: fontawesome/solid/laptop-code
 
+
 # Plugins
 plugins:
-  - search
   - awesome-pages
   - git-revision-date-localized:
       fallback_to_build_date: true      
       type: date
       locale: pt
-      # exclude:
-      #   - consultoria/*
-      #   - música/*
-      #   - contacto/*
-      #   - kb/index.md
+  - search
+  - include-markdown
   - minify:
-      minify_html: true
+        minify_html: true
+        htmlmin_opts:
+            remove_comments: true
       
 # Customization
 extra:
@@ -74,34 +85,24 @@ extra:
 
 # Extensions
 markdown_extensions:
-  - admonition
+  - pymdownx.progressbar
   - abbr
   - attr_list
   - def_list
   - footnotes
-  - meta
   - pyembed.markdown
-  - toc:
-      permalink: true
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
       smart_enable: all
-  - pymdownx.caret
   - pymdownx.critic
-  - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
-  - pymdownx.keys
   - pymdownx.magiclink:
       repo_url_shorthand: true
       user: hslima00
       repo: mkdocs-material
-  - pymdownx.mark
-  - pymdownx.smartsymbols
   - pymdownx.snippets:
       check_paths: true
   - pymdownx.superfences:
@@ -109,10 +110,44 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - meta
+  - md_in_html
+  - markdown_blockdiag:
+      format: svg
+  - pymdownx.highlight:
+      auto_title: true
+      linenums: true
+      #linenums_style: pymdownx-inline 
+  - toc:
+      permalink: true
+      title: Nesta Página
+      #permalink_title: Anchor link to this section for reference
+      #toc_depth: 3
+  - extra
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.mark
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+        alternate_style: true
+  - pymdownx.betterem:
+        smart_enable: all
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist:
+        custom_checkbox: true
+  - markdown_include.include
+  - pymdownx.arithmatex:
+        generic: true
+
+
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
@@ -122,8 +157,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 
-
 # Google Analytics
-google_analytics:
-  - UA-30695368-1
-  - auto
+# google_analytics:
+#   - UA-30695368-1
+#   - auto

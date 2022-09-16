@@ -1,3 +1,9 @@
+### Framedex
+
+[My Framedex](http://framedex.net/ada3e4f286705f6706b37591df68c4c7116c3562)
+
+[Nice Relic Info](https://wf.xuerian.net/ca2f7c56-84c1-4c66-8baf-ae6938a7c46f#reliquary)
+
 ### Shits to do in Warframe
 
 ![picture 6](%24%7Bpath%7D/img/9c56c7fd8ab9bdd33c2b3ab13a86058e3f214f8a333ce54fdc5db097db2d54b5.png)  
