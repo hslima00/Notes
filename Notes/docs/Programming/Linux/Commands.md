@@ -1,7 +1,20 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
+{{ button('Try this', 'http://your.website.com/page') }}
+
+
+{{ button('Google','www.google.pt') }}
+## esta merda
+
+{{ macros_info() }}
 ### Useful Commands: 
 
 ``` yaml
-theme:
+theme: 
   features:
     - content.code.annotate # (1)
 ```

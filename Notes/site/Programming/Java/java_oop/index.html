@@ -1,287 +1,528 @@
-<!doctype html><html lang=pt class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="A handy place to create all kinds of memos and annotations!"><link href=https://hslima00.github.io/Notes/Programming/Java/java_oop/ rel=canonical><meta name=author content="Hugo Lima"><link rel="shortcut icon" href=../../../assets/favicon.png><meta name=generator content="mkdocs-1.3.1, mkdocs-material-6.1.7"><title>Java oop - Notes</title><link rel=stylesheet href=../../../assets/stylesheets/main.19753c6b.min.css><link rel=stylesheet href=../../../assets/stylesheets/palette.196e0c26.min.css><meta name=theme-color content=#000000><link href=https://fonts.gstatic.com rel=preconnect crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback"><style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style></head> <body dir=ltr data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=green> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#static-vs-non-static class=md-skip> Ir para o conteúdo </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header-nav md-grid" aria-label=Header> <a href=https://hslima00.github.io/Notes/ title=Notes class="md-header-nav__button md-logo" aria-label=Notes> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 640 512"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg> </a> <label class="md-header-nav__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg> </label> <div class=md-header-nav__title data-md-component=header-title> <div class=md-header-nav__ellipsis> <span class="md-header-nav__topic md-ellipsis"> Notes </span> <span class="md-header-nav__topic md-ellipsis"> Java oop </span> </div> </div> <label class="md-header-nav__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Buscar placeholder=Buscar autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query data-md-state=active required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </label> <button type=reset class="md-search__icon md-icon" aria-label=Clear data-md-component=search-reset tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg> </button> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> </nav> </header> <div class=md-container data-md-component=container> <nav class="md-tabs md-tabs--active" aria-label=Tabs data-md-component=tabs> <div class="md-tabs__inner md-grid"> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../../.. class=md-tabs__link> Página Inicial </a> </li> <li class=md-tabs__item> <a href=../../../IST/ class=md-tabs__link> IST </a> </li> <li class=md-tabs__item> <a href=../../data_types/ class="md-tabs__link md-tabs__link--active"> Programming </a> </li> <li class=md-tabs__item> <a href=../../../Misc/Markdown_Tests/ class=md-tabs__link> Misc </a> </li> </ul> </div> </nav> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=https://hslima00.github.io/Notes/ title=Notes class="md-nav__button md-logo" aria-label=Notes> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 640 512"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg> </a> Notes </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../.. class=md-nav__link> Página Inicial </a> </li> <li class=md-nav__item> <a href=../../../le_stuff/ class=md-nav__link> Le stuff </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3 type=checkbox id=nav-3> <label class=md-nav__link for=nav-3> IST <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=IST data-md-level=1> <label class=md-nav__title for=nav-3> <span class="md-nav__icon md-icon"></span> IST </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../IST/ class=md-nav__link> Index </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3-2 type=checkbox id=nav-3-2> <label class=md-nav__link for=nav-3-2> 3º Ano <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="3º Ano " data-md-level=2> <label class=md-nav__title for=nav-3-2> <span class="md-nav__icon md-icon"></span> 3º Ano </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3-2-1 type=checkbox id=nav-3-2-1> <label class=md-nav__link for=nav-3-2-1> Controlo <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Controlo data-md-level=3> <label class=md-nav__title for=nav-3-2-1> <span class="md-nav__icon md-icon"></span> Controlo </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../IST/3%C2%BA%20Ano%20/controlo/ class=md-nav__link> Index </a> </li> <li class=md-nav__item> <a href=../../../IST/3%C2%BA%20Ano%20/controlo/1a_serie_prob/ class=md-nav__link> 1a serie prob </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3-2-2 type=checkbox id=nav-3-2-2> <label class=md-nav__link for=nav-3-2-2> Programação orientada por objetos <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="Programação orientada por objetos" data-md-level=3> <label class=md-nav__title for=nav-3-2-2> <span class="md-nav__icon md-icon"></span> Programação orientada por objetos </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../IST/3%C2%BA%20Ano%20/programa%C3%A7%C3%A3o_orientada_por_objetos/analise_vp/ class=md-nav__link> Analise vp </a> </li> <li class=md-nav__item> <a href=../../../IST/3%C2%BA%20Ano%20/programa%C3%A7%C3%A3o_orientada_por_objetos/exam/ class=md-nav__link> Exam </a> </li> <li class=md-nav__item> <a href=../../../IST/3%C2%BA%20Ano%20/programa%C3%A7%C3%A3o_orientada_por_objetos/java_lab_5/ class=md-nav__link> Java lab 5 </a> </li> <li class=md-nav__item> <a href=../../../IST/3%C2%BA%20Ano%20/programa%C3%A7%C3%A3o_orientada_por_objetos/projeto/ class=md-nav__link> Projeto </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4 type=checkbox id=nav-4 checked> <label class=md-nav__link for=nav-4> Programming <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Programming data-md-level=1> <label class=md-nav__title for=nav-4> <span class="md-nav__icon md-icon"></span> Programming </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../data_types/ class=md-nav__link> Data types </a> </li> <li class=md-nav__item> <a href=../../markdown-cheat-sheet/ class=md-nav__link> Markdown cheat sheet </a> </li> <li class=md-nav__item> <a href=../../prog_index/ class=md-nav__link> Prog index </a> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4-4 type=checkbox id=nav-4-4 checked> <label class=md-nav__link for=nav-4-4> Java <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Java data-md-level=2> <label class=md-nav__title for=nav-4-4> <span class="md-nav__icon md-icon"></span> Java </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../java_index/ class=md-nav__link> Java index </a> </li> <li class=md-nav__item> <a href=../java_basics/ class=md-nav__link> Java basics </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> Java oop <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> Java oop </a> <nav class="md-nav md-nav--secondary" aria-label=Índice> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Índice </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#static-vs-non-static class=md-nav__link> Static VS Non-Static </a> </li> <li class=md-nav__item> <a href=#java-constructors class=md-nav__link> Java Constructors </a> </li> <li class=md-nav__item> <a href=#java-modifiers class=md-nav__link> Java Modifiers </a> <nav class=md-nav aria-label="Java Modifiers"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#access-modifiers class=md-nav__link> Access Modifiers </a> </li> <li class=md-nav__item> <a href=#non-access-modifiers class=md-nav__link> Non-Access Modifiers </a> </li> <li class=md-nav__item> <a href=#exemplos class=md-nav__link> Exemplos </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#encapsulation class=md-nav__link> Encapsulation </a> <nav class=md-nav aria-label=Encapsulation> <ul class=md-nav__list> <li class=md-nav__item> <a href=#get-and-set class=md-nav__link> Get and Set </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#java-packages class=md-nav__link> Java Packages </a> <nav class=md-nav aria-label="Java Packages"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#creating-a-package class=md-nav__link> Creating a package </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#java-abstraction class=md-nav__link> Java Abstraction </a> </li> <li class=md-nav__item> <a href=#java-interfaces class=md-nav__link> Java Interfaces </a> </li> <li class=md-nav__item> <a href=#enum class=md-nav__link> Enum </a> <nav class=md-nav aria-label=Enum> <ul class=md-nav__list> <li class=md-nav__item> <a href=#adicionar-elementos class=md-nav__link> Adicionar elementos </a> </li> <li class=md-nav__item> <a href=#aceder-a-um-elemento-por-index class=md-nav__link> Aceder a um elemento por index </a> </li> <li class=md-nav__item> <a href=#modificar-elementos-numa-arraylist class=md-nav__link> Modificar elementos numa ArrayList </a> </li> <li class=md-nav__item> <a href=#remover-um-elemento-da-arraylist class=md-nav__link> Remover um elemento da ArrayList </a> </li> <li class=md-nav__item> <a href=#remover-todos-os-elementos-da-arraylist class=md-nav__link> Remover todos os elementos da ArrayList </a> </li> <li class=md-nav__item> <a href=#tamanho-de-uma-arraylist class=md-nav__link> Tamanho de uma ArrayList </a> </li> <li class=md-nav__item> <a href=#loop-de-uma-arraylist class=md-nav__link> Loop de uma ArrayList </a> </li> <li class=md-nav__item> <a href=#sort-arraylist class=md-nav__link> Sort ArrayList </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#linkedlist class=md-nav__link> LinkedList </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4-5 type=checkbox id=nav-4-5> <label class=md-nav__link for=nav-4-5> Linux <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Linux data-md-level=2> <label class=md-nav__title for=nav-4-5> <span class="md-nav__icon md-icon"></span> Linux </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../Linux/Commands/ class=md-nav__link> Commands </a> </li> <li class=md-nav__item> <a href=../../Linux/Exploits/ class=md-nav__link> Exploits </a> </li> <li class=md-nav__item> <a href=../../Linux/Introdu%C3%A7%C3%A3o/ class=md-nav__link> Introdução </a> </li> <li class=md-nav__item> <a href=../../Linux/SSH/ class=md-nav__link> SSH </a> </li> <li class=md-nav__item> <a href=../../Linux/Terminal/ class=md-nav__link> Terminal </a> </li> <li class=md-nav__item> <a href=../../Linux/cheatsheet/ class=md-nav__link> Cheatsheet </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-5 type=checkbox id=nav-5> <label class=md-nav__link for=nav-5> Misc <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Misc data-md-level=1> <label class=md-nav__title for=nav-5> <span class="md-nav__icon md-icon"></span> Misc </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../Misc/Markdown_Tests/ class=md-nav__link> Markdown Tests </a> </li> <li class=md-nav__item> <a href=../../../Misc/links/ class=md-nav__link> Links </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-5-3 type=checkbox id=nav-5-3> <label class=md-nav__link for=nav-5-3> Warframe <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Warframe data-md-level=2> <label class=md-nav__title for=nav-5-3> <span class="md-nav__icon md-icon"></span> Warframe </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../Misc/warframe/warframe/ class=md-nav__link> Warframe </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label=Índice> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Índice </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#static-vs-non-static class=md-nav__link> Static VS Non-Static </a> </li> <li class=md-nav__item> <a href=#java-constructors class=md-nav__link> Java Constructors </a> </li> <li class=md-nav__item> <a href=#java-modifiers class=md-nav__link> Java Modifiers </a> <nav class=md-nav aria-label="Java Modifiers"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#access-modifiers class=md-nav__link> Access Modifiers </a> </li> <li class=md-nav__item> <a href=#non-access-modifiers class=md-nav__link> Non-Access Modifiers </a> </li> <li class=md-nav__item> <a href=#exemplos class=md-nav__link> Exemplos </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#encapsulation class=md-nav__link> Encapsulation </a> <nav class=md-nav aria-label=Encapsulation> <ul class=md-nav__list> <li class=md-nav__item> <a href=#get-and-set class=md-nav__link> Get and Set </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#java-packages class=md-nav__link> Java Packages </a> <nav class=md-nav aria-label="Java Packages"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#creating-a-package class=md-nav__link> Creating a package </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#java-abstraction class=md-nav__link> Java Abstraction </a> </li> <li class=md-nav__item> <a href=#java-interfaces class=md-nav__link> Java Interfaces </a> </li> <li class=md-nav__item> <a href=#enum class=md-nav__link> Enum </a> <nav class=md-nav aria-label=Enum> <ul class=md-nav__list> <li class=md-nav__item> <a href=#adicionar-elementos class=md-nav__link> Adicionar elementos </a> </li> <li class=md-nav__item> <a href=#aceder-a-um-elemento-por-index class=md-nav__link> Aceder a um elemento por index </a> </li> <li class=md-nav__item> <a href=#modificar-elementos-numa-arraylist class=md-nav__link> Modificar elementos numa ArrayList </a> </li> <li class=md-nav__item> <a href=#remover-um-elemento-da-arraylist class=md-nav__link> Remover um elemento da ArrayList </a> </li> <li class=md-nav__item> <a href=#remover-todos-os-elementos-da-arraylist class=md-nav__link> Remover todos os elementos da ArrayList </a> </li> <li class=md-nav__item> <a href=#tamanho-de-uma-arraylist class=md-nav__link> Tamanho de uma ArrayList </a> </li> <li class=md-nav__item> <a href=#loop-de-uma-arraylist class=md-nav__link> Loop de uma ArrayList </a> </li> <li class=md-nav__item> <a href=#sort-arraylist class=md-nav__link> Sort ArrayList </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#linkedlist class=md-nav__link> LinkedList </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content> <article class="md-content__inner md-typeset"> <h1>Java oop</h1> <div class="admonition quote"> <p class=admonition-title>Quote<p>OOP stands for Object-Oriented Programming.</p> <p>Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.</p> <p>Object-oriented programming has several advantages over procedural programming:</p> <p>OOP is faster and easier to execute OOP provides a clear structure for the programs OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug OOP makes it possible to create full reusable applications with less code and shorter development time</p> </p> </div> <details class=tip> <summary>Tip</summary> <p>The "Don't Repeat Yourself" (DRY) principle is about reducing the repetition of code. You should extract out the codes that are common for the application, and place them at a single place and reuse them instead of repeating it.</p> </details> <h2 id=static-vs-non-static>Static VS Non-Static<a class=headerlink href=#static-vs-non-static title="Permanent link">&para;</a></h2> <ul> <li>Static: Não precisa de um objeto para chamar o método.</li> <li>Non-Static: Precisa de ser chamado por um objeto, posteriormente criado.</li> </ul> <pre><code class=language-java>public class Main {
-  // Static method
-  static void myStaticMethod() {
-    System.out.println(&quot;Static methods can be called without creating objects&quot;);
-  }
+<!doctype html><html lang=pt class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="A handy place to create all kinds of memos and annotations!"><link href=https://hslima00.github.io/Notes/Programming/Java/java_oop/ rel=canonical><meta name=author content="Hugo Lima"><link rel="shortcut icon" href=../../../assets/favicon.ico><meta name=generator content="mkdocs-1.3.1, mkdocs-material-6.1.7"><title>Java oop - Notes</title><link rel=stylesheet href=../../../assets/stylesheets/main.19753c6b.min.css><link rel=stylesheet href=../../../assets/stylesheets/palette.196e0c26.min.css><meta name=theme-color content=#000000><link href=https://fonts.gstatic.com rel=preconnect crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback"><style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default></head> <body dir=ltr data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=green> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#static-vs-non-static class=md-skip> Ir para o conteúdo </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header-nav md-grid" aria-label=Header> <a href=https://hslima00.github.io/Notes/ title=Notes class="md-header-nav__button md-logo" aria-label=Notes> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 640 512"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg> </a> <label class="md-header-nav__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg> </label> <div class=md-header-nav__title data-md-component=header-title> <div class=md-header-nav__ellipsis> <span class="md-header-nav__topic md-ellipsis"> Notes </span> <span class="md-header-nav__topic md-ellipsis"> Java oop </span> </div> </div> <label class="md-header-nav__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Buscar placeholder=Buscar autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query data-md-state=active required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </label> <button type=reset class="md-search__icon md-icon" aria-label=Clear data-md-component=search-reset tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg> </button> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> </nav> </header> <div class=md-container data-md-component=container> <nav class="md-tabs md-tabs--active" aria-label=Tabs data-md-component=tabs> <div class="md-tabs__inner md-grid"> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../../.. class=md-tabs__link> Página Inicial </a> </li> <li class=md-tabs__item> <a href=../../../IST/ class=md-tabs__link> IST </a> </li> <li class=md-tabs__item> <a href=../../GitHub/ class="md-tabs__link md-tabs__link--active"> Programming </a> </li> <li class=md-tabs__item> <a href=../../../Misc/Markdown_Tests/ class=md-tabs__link> Misc </a> </li> </ul> </div> </nav> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=https://hslima00.github.io/Notes/ title=Notes class="md-nav__button md-logo" aria-label=Notes> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 640 512"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg> </a> Notes </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../.. class=md-nav__link> Página Inicial </a> </li> <li class=md-nav__item> <a href=../../../le_stuff/ class=md-nav__link> Le stuff </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3 type=checkbox id=nav-3> <label class=md-nav__link for=nav-3> IST <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=IST data-md-level=1> <label class=md-nav__title for=nav-3> <span class="md-nav__icon md-icon"></span> IST </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../IST/ class=md-nav__link> Index </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3-2 type=checkbox id=nav-3-2> <label class=md-nav__link for=nav-3-2> 3º Ano <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="3º Ano " data-md-level=2> <label class=md-nav__title for=nav-3-2> <span class="md-nav__icon md-icon"></span> 3º Ano </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3-2-1 type=checkbox id=nav-3-2-1> <label class=md-nav__link for=nav-3-2-1> Controlo <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Controlo data-md-level=3> <label class=md-nav__title for=nav-3-2-1> <span class="md-nav__icon md-icon"></span> Controlo </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../IST/3%C2%BA%20Ano%20/controlo/ class=md-nav__link> Index </a> </li> <li class=md-nav__item> <a href=../../../IST/3%C2%BA%20Ano%20/controlo/1a_serie_prob/ class=md-nav__link> 1a serie prob </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3-2-2 type=checkbox id=nav-3-2-2> <label class=md-nav__link for=nav-3-2-2> Programação orientada por objetos <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="Programação orientada por objetos" data-md-level=3> <label class=md-nav__title for=nav-3-2-2> <span class="md-nav__icon md-icon"></span> Programação orientada por objetos </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../IST/3%C2%BA%20Ano%20/programa%C3%A7%C3%A3o_orientada_por_objetos/analise_vp/ class=md-nav__link> Analise vp </a> </li> <li class=md-nav__item> <a href=../../../IST/3%C2%BA%20Ano%20/programa%C3%A7%C3%A3o_orientada_por_objetos/exam/ class=md-nav__link> Exam </a> </li> <li class=md-nav__item> <a href=../../../IST/3%C2%BA%20Ano%20/programa%C3%A7%C3%A3o_orientada_por_objetos/java_lab_5/ class=md-nav__link> Java lab 5 </a> </li> <li class=md-nav__item> <a href=../../../IST/3%C2%BA%20Ano%20/programa%C3%A7%C3%A3o_orientada_por_objetos/projeto/ class=md-nav__link> Projeto </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3-3 type=checkbox id=nav-3-3> <label class=md-nav__link for=nav-3-3> 4º ano <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="4º ano" data-md-level=2> <label class=md-nav__title for=nav-3-3> <span class="md-nav__icon md-icon"></span> 4º ano </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3-3-1 type=checkbox id=nav-3-3-1> <label class=md-nav__link for=nav-3-3-1> Aprendizagem Automática <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="Aprendizagem Automática" data-md-level=3> <label class=md-nav__title for=nav-3-3-1> <span class="md-nav__icon md-icon"></span> Aprendizagem Automática </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Aprendizagem%20Autom%C3%A1tica/1st_class/ class=md-nav__link> Aprendizagem Automática </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Aprendizagem%20Autom%C3%A1tica/2nd_class/ class=md-nav__link> Linear Regression </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Aprendizagem%20Autom%C3%A1tica/3rd_class/ class=md-nav__link> 3rd class </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Aprendizagem%20Autom%C3%A1tica/5th_class/ class=md-nav__link> 5th class </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Aprendizagem%20Autom%C3%A1tica/6th_class/ class=md-nav__link> Neural Networks </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3-3-2 type=checkbox id=nav-3-3-2> <label class=md-nav__link for=nav-3-3-2> Computação Inteligente <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="Computação Inteligente" data-md-level=3> <label class=md-nav__title for=nav-3-3-2> <span class="md-nav__icon md-icon"></span> Computação Inteligente </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Computa%C3%A7%C3%A3o%20Inteligente/1st_Class/ class=md-nav__link> What is Computation Intelligence? </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Computa%C3%A7%C3%A3o%20Inteligente/2nd_class/ class=md-nav__link> Data Preprocessing </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Computa%C3%A7%C3%A3o%20Inteligente/3rd_class/ class=md-nav__link> Neural Networks </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Computa%C3%A7%C3%A3o%20Inteligente/4th_class/ class=md-nav__link> LSTM - Long Shot Term Memory </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Computa%C3%A7%C3%A3o%20Inteligente/5th_class/ class=md-nav__link> 5th class </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Computa%C3%A7%C3%A3o%20Inteligente/Presentation_and_Planning/ class=md-nav__link> Presentation </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3-3-2-7 type=checkbox id=nav-3-3-2-7> <label class=md-nav__link for=nav-3-3-2-7> Labs <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Labs data-md-level=4> <label class=md-nav__title for=nav-3-3-2-7> <span class="md-nav__icon md-icon"></span> Labs </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Computa%C3%A7%C3%A3o%20Inteligente/Labs/lab1/ class=md-nav__link> Lab1 </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Computa%C3%A7%C3%A3o%20Inteligente/Labs/lab2/ class=md-nav__link> Lab2 - CInte </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Computa%C3%A7%C3%A3o%20Inteligente/Labs/lab3_1/ class=md-nav__link> Lab 3 exercise 1 </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Computa%C3%A7%C3%A3o%20Inteligente/Labs/lab3_2/ class=md-nav__link> Lab 3 exercise 2 </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Computa%C3%A7%C3%A3o%20Inteligente/Labs/lab3_3/ class=md-nav__link> Lab 3 Exercise 3 - Scatter Plot </a> </li> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Computa%C3%A7%C3%A3o%20Inteligente/Labs/lab4/ class=md-nav__link> Lab 4 </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3-3-3 type=checkbox id=nav-3-3-3> <label class=md-nav__link for=nav-3-3-3> Parallel and Heterogeneous Computing Systems <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="Parallel and Heterogeneous Computing Systems" data-md-level=3> <label class=md-nav__title for=nav-3-3-3> <span class="md-nav__icon md-icon"></span> Parallel and Heterogeneous Computing Systems </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../IST/4%C2%BA%20ano/Parallel%20and%20Heterogeneous%20Computing%20Systems/lecture1_why_paralelism/ class=md-nav__link> Lecture1 why paralelism </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4 type=checkbox id=nav-4 checked> <label class=md-nav__link for=nav-4> Programming <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Programming data-md-level=1> <label class=md-nav__title for=nav-4> <span class="md-nav__icon md-icon"></span> Programming </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../GitHub/ class=md-nav__link> GitHub </a> </li> <li class=md-nav__item> <a href=../../data_types/ class=md-nav__link> Data types </a> </li> <li class=md-nav__item> <a href=../../prog_index/ class=md-nav__link> Prog index </a> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4-4 type=checkbox id=nav-4-4 checked> <label class=md-nav__link for=nav-4-4> Java <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Java data-md-level=2> <label class=md-nav__title for=nav-4-4> <span class="md-nav__icon md-icon"></span> Java </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../java_index/ class=md-nav__link> Java index </a> </li> <li class=md-nav__item> <a href=../java_basics/ class=md-nav__link> Java basics </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> Java oop <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> Java oop </a> <nav class="md-nav md-nav--secondary" aria-label=Índice> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Índice </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#static-vs-non-static class=md-nav__link> Static VS Non-Static </a> </li> <li class=md-nav__item> <a href=#java-constructors class=md-nav__link> Java Constructors </a> </li> <li class=md-nav__item> <a href=#java-modifiers class=md-nav__link> Java Modifiers </a> <nav class=md-nav aria-label="Java Modifiers"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#access-modifiers class=md-nav__link> Access Modifiers </a> </li> <li class=md-nav__item> <a href=#non-access-modifiers class=md-nav__link> Non-Access Modifiers </a> </li> <li class=md-nav__item> <a href=#exemplos class=md-nav__link> Exemplos </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#encapsulation class=md-nav__link> Encapsulation </a> <nav class=md-nav aria-label=Encapsulation> <ul class=md-nav__list> <li class=md-nav__item> <a href=#get-and-set class=md-nav__link> Get and Set </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#java-packages class=md-nav__link> Java Packages </a> <nav class=md-nav aria-label="Java Packages"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#creating-a-package class=md-nav__link> Creating a package </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#java-abstraction class=md-nav__link> Java Abstraction </a> </li> <li class=md-nav__item> <a href=#java-interfaces class=md-nav__link> Java Interfaces </a> </li> <li class=md-nav__item> <a href=#enum class=md-nav__link> Enum </a> <nav class=md-nav aria-label=Enum> <ul class=md-nav__list> <li class=md-nav__item> <a href=#adicionar-elementos class=md-nav__link> Adicionar elementos </a> </li> <li class=md-nav__item> <a href=#aceder-a-um-elemento-por-index class=md-nav__link> Aceder a um elemento por index </a> </li> <li class=md-nav__item> <a href=#modificar-elementos-numa-arraylist class=md-nav__link> Modificar elementos numa ArrayList </a> </li> <li class=md-nav__item> <a href=#remover-um-elemento-da-arraylist class=md-nav__link> Remover um elemento da ArrayList </a> </li> <li class=md-nav__item> <a href=#remover-todos-os-elementos-da-arraylist class=md-nav__link> Remover todos os elementos da ArrayList </a> </li> <li class=md-nav__item> <a href=#tamanho-de-uma-arraylist class=md-nav__link> Tamanho de uma ArrayList </a> </li> <li class=md-nav__item> <a href=#loop-de-uma-arraylist class=md-nav__link> Loop de uma ArrayList </a> </li> <li class=md-nav__item> <a href=#sort-arraylist class=md-nav__link> Sort ArrayList </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#linkedlist class=md-nav__link> LinkedList </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4-5 type=checkbox id=nav-4-5> <label class=md-nav__link for=nav-4-5> Linux <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Linux data-md-level=2> <label class=md-nav__title for=nav-4-5> <span class="md-nav__icon md-icon"></span> Linux </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../Linux/Commands/ class=md-nav__link> Commands </a> </li> <li class=md-nav__item> <a href=../../Linux/Exploits/ class=md-nav__link> Exploits </a> </li> <li class=md-nav__item> <a href=../../Linux/Introdu%C3%A7%C3%A3o/ class=md-nav__link> Introdução </a> </li> <li class=md-nav__item> <a href=../../Linux/SSH/ class=md-nav__link> SSH </a> </li> <li class=md-nav__item> <a href=../../Linux/Terminal/ class=md-nav__link> Terminal </a> </li> <li class=md-nav__item> <a href=../../Linux/cheatsheet/ class=md-nav__link> Cheatsheet </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4-6 type=checkbox id=nav-4-6> <label class=md-nav__link for=nav-4-6> Markdown <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Markdown data-md-level=2> <label class=md-nav__title for=nav-4-6> <span class="md-nav__icon md-icon"></span> Markdown </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../Markdown/markdown-cheat-sheet/ class=md-nav__link> Markdown cheat sheet </a> </li> <li class=md-nav__item> <a href=../../Markdown/mkdocs-macro/ class=md-nav__link> mkdocs-macro </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-5 type=checkbox id=nav-5> <label class=md-nav__link for=nav-5> Misc <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Misc data-md-level=1> <label class=md-nav__title for=nav-5> <span class="md-nav__icon md-icon"></span> Misc </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../Misc/Markdown_Tests/ class=md-nav__link> Markdown Tests </a> </li> <li class=md-nav__item> <a href=../../../Misc/links/ class=md-nav__link> Links </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-5-3 type=checkbox id=nav-5-3> <label class=md-nav__link for=nav-5-3> Warframe <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Warframe data-md-level=2> <label class=md-nav__title for=nav-5-3> <span class="md-nav__icon md-icon"></span> Warframe </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../Misc/warframe/warframe/ class=md-nav__link> Warframe </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label=Índice> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Índice </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#static-vs-non-static class=md-nav__link> Static VS Non-Static </a> </li> <li class=md-nav__item> <a href=#java-constructors class=md-nav__link> Java Constructors </a> </li> <li class=md-nav__item> <a href=#java-modifiers class=md-nav__link> Java Modifiers </a> <nav class=md-nav aria-label="Java Modifiers"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#access-modifiers class=md-nav__link> Access Modifiers </a> </li> <li class=md-nav__item> <a href=#non-access-modifiers class=md-nav__link> Non-Access Modifiers </a> </li> <li class=md-nav__item> <a href=#exemplos class=md-nav__link> Exemplos </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#encapsulation class=md-nav__link> Encapsulation </a> <nav class=md-nav aria-label=Encapsulation> <ul class=md-nav__list> <li class=md-nav__item> <a href=#get-and-set class=md-nav__link> Get and Set </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#java-packages class=md-nav__link> Java Packages </a> <nav class=md-nav aria-label="Java Packages"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#creating-a-package class=md-nav__link> Creating a package </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#java-abstraction class=md-nav__link> Java Abstraction </a> </li> <li class=md-nav__item> <a href=#java-interfaces class=md-nav__link> Java Interfaces </a> </li> <li class=md-nav__item> <a href=#enum class=md-nav__link> Enum </a> <nav class=md-nav aria-label=Enum> <ul class=md-nav__list> <li class=md-nav__item> <a href=#adicionar-elementos class=md-nav__link> Adicionar elementos </a> </li> <li class=md-nav__item> <a href=#aceder-a-um-elemento-por-index class=md-nav__link> Aceder a um elemento por index </a> </li> <li class=md-nav__item> <a href=#modificar-elementos-numa-arraylist class=md-nav__link> Modificar elementos numa ArrayList </a> </li> <li class=md-nav__item> <a href=#remover-um-elemento-da-arraylist class=md-nav__link> Remover um elemento da ArrayList </a> </li> <li class=md-nav__item> <a href=#remover-todos-os-elementos-da-arraylist class=md-nav__link> Remover todos os elementos da ArrayList </a> </li> <li class=md-nav__item> <a href=#tamanho-de-uma-arraylist class=md-nav__link> Tamanho de uma ArrayList </a> </li> <li class=md-nav__item> <a href=#loop-de-uma-arraylist class=md-nav__link> Loop de uma ArrayList </a> </li> <li class=md-nav__item> <a href=#sort-arraylist class=md-nav__link> Sort ArrayList </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#linkedlist class=md-nav__link> LinkedList </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content> <article class="md-content__inner md-typeset"> <h1>Java oop</h1> <div class="admonition quote"> <p class=admonition-title>Quote<p>OOP stands for Object-Oriented Programming.</p> <p>Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.</p> <p>Object-oriented programming has several advantages over procedural programming:</p> <p>OOP is faster and easier to execute OOP provides a clear structure for the programs OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug OOP makes it possible to create full reusable applications with less code and shorter development time</p> </p> </div> <details class=tip> <summary>Tip</summary> <p>The "Don't Repeat Yourself" (DRY) principle is about reducing the repetition of code. You should extract out the codes that are common for the application, and place them at a single place and reuse them instead of repeating it.</p> </details> <h2 id=static-vs-non-static>Static VS Non-Static<a class=headerlink href=#static-vs-non-static title="Permanent link">&para;</a></h2> <ul> <li>Static: Não precisa de um objeto para chamar o método.</li> <li>Non-Static: Precisa de ser chamado por um objeto, posteriormente criado.</li> </ul> <div class=codehilite><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span></pre></div></td><td class=code><div><pre><span></span><code><span class=kd>public</span><span class=w> </span><span class=kd>class</span> <span class=nc>Main</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>  </span><span class=c1>// Static method</span><span class=w></span>
+<span class=w>  </span><span class=kd>static</span><span class=w> </span><span class=kt>void</span><span class=w> </span><span class=nf>myStaticMethod</span><span class=p>()</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>    </span><span class=n>System</span><span class=p>.</span><span class=na>out</span><span class=p>.</span><span class=na>println</span><span class=p>(</span><span class=s>&quot;Static methods can be called without creating objects&quot;</span><span class=p>);</span><span class=w></span>
+<span class=w>  </span><span class=p>}</span><span class=w></span>
 
-  // Public method
-  public void myPublicMethod() {
-    System.out.println(&quot;Public methods must be called by creating objects&quot;);
-  }
+<span class=w>  </span><span class=c1>// Public method</span><span class=w></span>
+<span class=w>  </span><span class=kd>public</span><span class=w> </span><span class=kt>void</span><span class=w> </span><span class=nf>myPublicMethod</span><span class=p>()</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>    </span><span class=n>System</span><span class=p>.</span><span class=na>out</span><span class=p>.</span><span class=na>println</span><span class=p>(</span><span class=s>&quot;Public methods must be called by creating objects&quot;</span><span class=p>);</span><span class=w></span>
+<span class=w>  </span><span class=p>}</span><span class=w></span>
 
-  // Main method
-  public static void main(String[] args) {
-    myStaticMethod(); // Call the static method
-    // myPublicMethod(); This would compile an error
+<span class=w>  </span><span class=c1>// Main method</span><span class=w></span>
+<span class=w>  </span><span class=kd>public</span><span class=w> </span><span class=kd>static</span><span class=w> </span><span class=kt>void</span><span class=w> </span><span class=nf>main</span><span class=p>(</span><span class=n>String</span><span class=o>[]</span><span class=w> </span><span class=n>args</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>    </span><span class=n>myStaticMethod</span><span class=p>();</span><span class=w> </span><span class=c1>// Call the static method</span><span class=w></span>
+<span class=w>    </span><span class=c1>// myPublicMethod(); This would compile an error</span><span class=w></span>
 
-    Main myObj = new Main(); // Create an object of Main
-    myObj.myPublicMethod(); // Call the public method on the object
-  }
-}
-</code></pre> <h2 id=java-constructors>Java Constructors<a class=headerlink href=#java-constructors title="Permanent link">&para;</a></h2> <p>Um consctructor é usado para inicializar objetos. Ou seja, quando criamos um objeto com: </p> <p>```java title="" Main myObj = new Main();</p> <pre><code>Temos também que criar o construtor para este, exemplo:
-
-```java title=&quot;&quot;
-  // Create a class constructor for the Main class
-  public Main() {
-    x = 5;  // Set the initial value for the class attribute x
-  }
-</code></pre> <div class="admonition warning"> <p class=admonition-title>Warning</p> <p>Note that the constructor name must match the class name, and it cannot have a return type (like void).</p> <p>Also note that the constructor is called when the object is created.</p> <p>All classes have constructors by default: if you do not create a class constructor yourself, Java creates one for you. However, then you are not able to set initial values for object attributes.</p> </div> <div class="admonition example"> <p class=admonition-title>Example</p> </div> <pre><code class=language-java>public class Main {
-  int modelYear;
-  String modelName;
-
-  public Main(int year, String name) {
-    modelYear = year;
-    modelName = name;
-  }
-
-  public static void main(String[] args) {
-    Main myCar = new Main(1969, &quot;Mustang&quot;);
-    System.out.println(myCar.modelYear + &quot; &quot; + myCar.modelName);
-  }
-}
-
-// Outputs 1969 Mustang
-</code></pre> <h2 id=java-modifiers>Java Modifiers<a class=headerlink href=#java-modifiers title="Permanent link">&para;</a></h2> <ul> <li>Access Modifiers - controls the access level</li> <li>Non-Access Modifiers - do not control access level, but provides other functionality</li> </ul> <h3 id=access-modifiers>Access Modifiers<a class=headerlink href=#access-modifiers title="Permanent link">&para;</a></h3> <p>Para <strong>classes</strong>:</p> <table> <thead> <tr> <th>Modificador</th> <th>Descrição</th> </tr> </thead> <tbody> <tr> <td><code>public</code></td> <td>A <em>class</em> é alcançável por todas as classes</td> </tr> <tr> <td><em>default</em></td> <td>A <em>class</em> só é alcançável por classes que estejam no mesmo <em>package</em></td> </tr> </tbody> </table> <p>Para <strong>atributos</strong>, <strong>métodos</strong> e <strong>construtores</strong>: </p> <table> <thead> <tr> <th>Modificador</th> <th>Descrição</th> </tr> </thead> <tbody> <tr> <td><code>public</code></td> <td>O código é alcançavel por todas as classes</td> </tr> <tr> <td><code>private</code></td> <td>O código só é acedido dentro da classe que o declarou</td> </tr> <tr> <td><em>default</em></td> <td>O código é alcançavel dentro do mesmo <em>package</em></td> </tr> <tr> <td><code>protected</code></td> <td>O código é alcançável dentro do mesmo <em>package</em> e <strong>subclasses</strong></td> </tr> </tbody> </table> <p><span style=color:green></p> <h3 id=non-access-modifiers>Non-Access Modifiers<a class=headerlink href=#non-access-modifiers title="Permanent link">&para;</a></h3> <p></span></p> <p>Para <strong>classes</strong>:</p> <table> <thead> <tr> <th>Modificador</th> <th>Descrição</th> </tr> </thead> <tbody> <tr> <td><code>final</code></td> <td>A <em>class</em> não pode ser herdada por outras classes, ou seja, se fizermos <code>extend</code> dessa classe vai dar erro.</td> </tr> <tr> <td><code>abstract</code></td> <td>Uma classe que não pode criar objetos.</td> </tr> </tbody> </table> <p>Para <strong>atributos</strong>, <strong>métodos</strong> e <strong>construtores</strong>: </p> <table> <thead> <tr> <th>Modificador</th> <th>Descrição</th> </tr> </thead> <tbody> <tr> <td><code>final</code></td> <td>Atributos e métodos não podem ser modificados/overriden</td> </tr> <tr> <td><code>static</code></td> <td>Atributos e métodos pertencem à <em>class</em> e não ao objeto</td> </tr> <tr> <td><code>abstract</code></td> <td>Só podem ser usados numa <em>class</em> do tipo <code>abstract</code>. Só podem ser usados em métodos. O método não tem "corpo", este é definido nas subclasses da <em>class</em> <code>abstract</code>.</td> </tr> </tbody> </table> <p>Existem ainda <code>transient</code>, <code>syncronized</code> e <code>volatile</code>, porém isto não foi muito falado em aula nem usado em nenhum exercício/lab e usam threads, coisa que não foi falada em POO tb.</p> <details class=example> <summary>Os 3 fields mencionados acima</summary> <table> <thead> <tr> <th>Modificador</th> <th>Descrição</th> </tr> </thead> <tbody> <tr> <td><code>transient</code></td> <td>Attributes and methods are skipped when serializing the object containing them</td> </tr> <tr> <td><code>synchronized</code></td> <td>Methods can only be accessed by one thread at a time</td> </tr> <tr> <td><code>volatile</code></td> <td>The value of an attribute is not cached thread-locally, and is always read from the "main memory"</td> </tr> </tbody> </table> </details> <h3 id=exemplos>Exemplos<a class=headerlink href=#exemplos title="Permanent link">&para;</a></h3> <details class=example> <summary>Final</summary> <p>```java public class Main { final int x = 10; final double PI = 3.14;</p> <p>public static void main(String[] args) { Main myObj = new Main(); myObj.x = 50; // will generate an error: cannot assign a value to a final variable myObj.PI = 25; // will generate an error: cannot assign a value to a final variable System.out.println(myObj.x); } } ```</p> </details> <details class=example> <summary>Static</summary> <p>```java public class Main { // Static method static void myStaticMethod() { System.out.println("Static methods can be called without creating objects"); }</p> <p>// Public method public void myPublicMethod() { System.out.println("Public methods must be called by creating objects"); }</p> <p>// Main method public static void main(String[ ] args) { myStaticMethod(); // Call the static method // myPublicMethod(); This would output an error</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Text Only</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code>Main myObj = new Main(); // Create an object of Main
-myObj.myPublicMethod(); // Call the public method
-</code></pre></div></td></tr></table></div> <p>} } ```</p> </details> <details class=example> <summary>Abstract</summary> <p>```java // Code from filename: Main.java // abstract class abstract class Main { public String fname = "John"; public int age = 24; public abstract void study(); // abstract method }</p> <p>// Subclass (inherit from Main) class Student extends Main { public int graduationYear = 2018; public void study() { // the body of the abstract method is provided here System.out.println("Studying all day long"); } } // End code from filename: Main.java</p> <p>// Code from filename: Second.java class Second { public static void main(String[] args) { // create an object of the Student class (which inherits attributes and methods from Main) Student myObj = new Student();</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Text Only</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
-<span class=normal>2</span>
-<span class=normal>3</span>
-<span class=normal>4</span></pre></div></td><td class=code><div><pre><span></span><code>System.out.println(&quot;Name: &quot; + myObj.fname);
-System.out.println(&quot;Age: &quot; + myObj.age);
-System.out.println(&quot;Graduation Year: &quot; + myObj.graduationYear);
-myObj.study(); // call abstract method
-</code></pre></div></td></tr></table></div> <p>} } ```</p> </details> <h2 id=encapsulation>Encapsulation<a class=headerlink href=#encapsulation title="Permanent link">&para;</a></h2> <p><strong>Encapsulation</strong> serve para esconder "sensitive" data ao utilizador. Para isto devemos: </p> <ul class=task-list> <li class=task-list-item><label class=task-list-control><input type=checkbox disabled checked><span class=task-list-indicator></span></label> Declarar as variáveis/atributos da classe <code>private</code>.</li> <li class=task-list-item><label class=task-list-control><input type=checkbox disabled checked><span class=task-list-indicator></span></label> Aceder e atualizar valores de variáveis <code>private</code> recorrendo aos métodos <code>get()</code> e <code>set()</code>.</li> </ul> <h3 id=get-and-set>Get and Set<a class=headerlink href=#get-and-set title="Permanent link">&para;</a></h3> <ul> <li><strong>Getter</strong> - retorna o valor de um atributo/variável sem mudar o valor.</li> <li><strong>Setter</strong> - atualiza/muda o valor de um atributo/variável.</li> </ul> <div class="tabbed-set tabbed-alternate" data-tabs=1:3><input checked=checked id=__tabbed_1_1 name=__tabbed_1 type=radio><input id=__tabbed_1_2 name=__tabbed_1 type=radio><input id=__tabbed_1_3 name=__tabbed_1 type=radio><div class=tabbed-labels><label for=__tabbed_1_1>person.java</label><label for=__tabbed_1_2>main.java (erro)</label><label for=__tabbed_1_3>main.java (correct)</label></div> <div class=tabbed-content> <div class=tabbed-block> <p>```java public class Person { private String name; // private = restricted access</p> <p>// Getter public String getName() { return name; }</p> <p>// Setter public void setName(String newName) { this.name = newName; } } ```</p> </div> <div class=tabbed-block> <p><code>java hl_lines="4 5" public class Main { public static void main(String[] args) { Person myObj = new Person(); myObj.name = "John"; //error (1) System.out.println(myObj.name); // error //as the name variable is declared as private, we cannot access it from outside this class } }</code></p> </div> <div class=tabbed-block> <p>```java hl_lines="4 5" public class Main { public static void main(String[] args) { Person myObj = new Person(); myObj.setName("John"); // Set the value of the name variable to "John" System.out.println(myObj.getName()); } }</p> <p>// Outputs "John" ```</p> </div> </div> </div> <details class=question> <summary>Porquê Encapsulation?</summary> <ul> <li>Better control of class attributes and methods</li> <li>Class attributes can be made read-only (if you only use the get method), or write-only (if you only use the set method)</li> <li>Flexible: the programmer can change one part of the code without affecting other parts</li> <li>Increased security of data</li> </ul> </details> <h2 id=java-packages>Java Packages<a class=headerlink href=#java-packages title="Permanent link">&para;</a></h2> <p>Um <em>package</em> em Java é utilizado para "guardar" classes semelhantes no mesmo sítio. </p> <p>Existem <em>packeges</em> pré-feitos pela Oracle, que podem ser encontrados <a href=https://docs.oracle.com/javase/8/docs/api/ >aqui</a>.</p> <p>Podemos importar classes especificas ou o <em>package</em> inteiro:</p> <pre><code class=language-java>import package.name.Class;   // Import a single class
-import package.name.*;   // Import the whole package
-import java.util.Scanner;
-</code></pre> <p>No exemplo acima <code>java.util</code> é o <em>package</em> e <code>Scanner</code> é a <em>class</em>.</p> <h3 id=creating-a-package>Creating a package<a class=headerlink href=#creating-a-package title="Permanent link">&para;</a></h3> <pre><code>└── root
-  └── mypack
-    └── MyPackageClass.java
-</code></pre> <p>```java title="MyPackageClass.java" package mypack; class MyPackageClass { public static void main(String[] args) { System.out.println("This is my package!"); } }</p> <pre><code>#### Compiling with a package
-
-1. Compilar o .java
-2. Compilar o package
-3. Correr
-
-Ou seja:
-
-1. `C:\Users\Your Name&gt;javac MyPackageClass.java`
-2. `C:\Users\Your Name&gt;javac -d . MyPackageClass.java`
-3. `C:\Users\Your Name&gt;java mypack.MyPackageClass`
-
-O output seria: `This is my package!`.
-
-## Java Inheritance
-
-Em Java é possível que uma classe herde atributos e métodos de outra, criando assim uma hierarquia.
-
-Podemos separar a hierarquia em dois tipos de classes:
-* **subclass** - class que herda os atributos e métodos
-* **superclass** - class dá herança
-
-Para uma classe herdar de outra usa-se o `extends`.
-
-???+ example &quot;Herança&quot;
-    ```java
-    class Vehicle {
-    protected String brand = &quot;Ford&quot;;        // Vehicle attribute
-    public void honk() {                    // Vehicle method
-        System.out.println(&quot;Tuut, tuut!&quot;);
-    }
-    }
-
-    class Car extends Vehicle {
-    private String modelName = &quot;Mustang&quot;;    // Car attribute
-    public static void main(String[] args) {
-
-        // Create a myCar object
-        Car myCar = new Car();
-
-        // Call the honk() method (from the Vehicle class) on the myCar object
-        myCar.honk();
-
-        // Display the value of the brand attribute (from the Vehicle class) and the value of the modelName from the Car class
-        System.out.println(myCar.brand + &quot; &quot; + myCar.modelName);
-    }
-    }
-    ```
-
-## Java Polymorphism
-
-O polimorfismo acontece quando temos várias classes relacionadas umas com as outras hierarquicamente. 
-
-Por exemplo, uma superclass chamada `Animal` que tem subclasses como `Porco`, `Gato`, etc. Todos os animais têm um `animalSound()` distinto entre eles.
-
-```java title=&quot;Polimorfismo&quot;
-class Animal {
-  public void animalSound() {
-    System.out.println(&quot;The animal makes a sound&quot;);
-  }
-}
-
-class Pig extends Animal {
-  public void animalSound() {
-    System.out.println(&quot;The pig says: wee wee&quot;);
-  }
-}
-
-class Dog extends Animal {
-  public void animalSound() {
-    System.out.println(&quot;The dog says: bow wow&quot;);
-  }
-}
-
-class Main {
-  public static void main(String[] args) {
-    Animal myAnimal = new Animal();  // Create a Animal object
-    Animal myPig = new Pig();  // Create a Pig object
-    Animal myDog = new Dog();  // Create a Dog object
-    myAnimal.animalSound();
-    myPig.animalSound();
-    myDog.animalSound();
-  }
-}
-</code></pre> <hr> <h2 id=java-abstraction>Java Abstraction<a class=headerlink href=#java-abstraction title="Permanent link">&para;</a></h2> <p>Basicamente é a cena das classes poderem levar o modificador <code>abstract</code>.</p> <p>Por exemplo, um veículo é uma "coisa" abstrata, mas todos os veículos têm por exemplo uma <code>velocidadeMedia()</code> etc.</p> <pre><code class=language-java>// Abstract class
-abstract class Animal {
-  // Abstract method (does not have a body)
-  public abstract void animalSound();
-  // Regular method
-  public void sleep() {
-    System.out.println(&quot;Zzz&quot;);
-  }
-}
-
-// Subclass (inherit from Animal)
-class Pig extends Animal {
-  public void animalSound() {
-    // The body of animalSound() is provided here
-    System.out.println(&quot;The pig says: wee wee&quot;);
-  }
-}
-
-class Main {
-  public static void main(String[] args) {
-    Pig myPig = new Pig(); // Create a Pig object
-    myPig.animalSound();
-    myPig.sleep();
-  }
-}
-</code></pre> <h2 id=java-interfaces>Java Interfaces<a class=headerlink href=#java-interfaces title="Permanent link">&para;</a></h2> <p>Usar interfaces é outra maneira de criar abstração em Java. Uma interface é uma classe "completely abstract" usada para agrupar métodos sem corpo.</p> <details class=example> <summary>Interface</summary> <p><code>java title="Interface" // interface interface Animal { public void animalSound(); // interface method (does not have a body) public void run(); // interface method (does not have a body) }</code></p> </details> <p>Para uma classe aceder aos métodos de uma interface usa-se o <code>implements</code>.</p> <details class=example> <summary><code>implements</code></summary> <p>```java // Interface interface Animal { public void animalSound(); // interface method (does not have a body) public void sleep(); // interface method (does not have a body) }</p> <p>// Pig "implements" the Animal interface class Pig implements Animal { public void animalSound() { // The body of animalSound() is provided here System.out.println("The pig says: wee wee"); } public void sleep() { // The body of sleep() is provided here System.out.println("Zzz"); } }</p> <p>class Main { public static void main(String[] args) { Pig myPig = new Pig(); // Create a Pig object myPig.animalSound(); myPig.sleep(); } } ```</p> </details> <details class=note open=open> <summary>Note</summary> </details> <ul> <li>Interfaces <strong>não</strong> podem criar objetos, uma vez que são classes <code>abstract</code>.</li> <li>Os métodos das interfaces não têm corpo, este é posteriormente definido pelas classes que fazem o <code>implements</code> da interface.</li> <li>Os métodos de uma interface são <code>public</code> e <code>abstract</code>.</li> <li>Os atributos de uma interface são <code>public</code>, <code>static</code> e <code>final</code>.</li> <li>Uma interface não tem constructor, uma vez que não cria objetos.</li> </ul> <details class=example> <summary>Exemplo com múltiplas interfaces</summary> <p>```java interface FirstInterface { public void myMethod(); // interface method }</p> <p>interface SecondInterface { public void myOtherMethod(); // interface method }</p> <p>class DemoClass implements FirstInterface, SecondInterface { public void myMethod() { System.out.println("Some text.."); } public void myOtherMethod() { System.out.println("Some other text..."); } }</p> <p>class Main { public static void main(String[] args) { DemoClass myObj = new DemoClass(); myObj.myMethod(); myObj.myOtherMethod(); } } ```</p> </details> <hr> <h2 id=enum>Enum<a class=headerlink href=#enum title="Permanent link">&para;</a></h2> <p>```java title="Enum example" public class Main { enum Level { LOW, MEDIUM, HIGH }</p> <p>public static void main(String[] args) { Level myVar = Level.MEDIUM; System.out.println(myVar); } }</p> <pre><code>!!! warning
-    Os valores de um `enum` são constantes e imutáveis, como se fossem definidos com o modificador `final`.
-
-??? example &quot;Switch-Case Enum&quot;
-
-    ```java
-    enum Level {
-    LOW,
-    MEDIUM,
-    HIGH
-    }
-
-    public class Main {
-    public static void main(String[] args) {
-        Level myVar = Level.MEDIUM;
-
-        switch(myVar) {
-        case LOW:
-            System.out.println(&quot;Low level&quot;);
-            break;
-        case MEDIUM:
-            System.out.println(&quot;Medium level&quot;);
-            break;
-        case HIGH:
-            System.out.println(&quot;High level&quot;);
-            break;
-        }
-    }
-    }
-    ```
-
-??? example &quot;For each Enum&quot;
-    ```java
-    for (Level myVar : Level.values()) {
-        System.out.println(myVar);
-    }
-    ```
-
-## User Input
-
-??? example &quot;User Input&quot;
-
-    ```java
-        import java.util.Scanner;
-
-        class Main {
-        public static void main(String[] args) {
-            Scanner myObj = new Scanner(System.in);
-
-            System.out.println(&quot;Enter name, age and salary:&quot;);
-
-            // String input
-            String name = myObj.nextLine();
-
-            // Numerical input
-            int age = myObj.nextInt();
-            double salary = myObj.nextDouble();
-
-            // Output input by user
-            System.out.println(&quot;Name: &quot; + name);
-            System.out.println(&quot;Age: &quot; + age);
-            System.out.println(&quot;Salary: &quot; + salary);
-        }
-        }
-    ```
-
-## ArrayList
-
-Uma `ArrayList` é um array mas &quot;resizable&quot; que pertence ao package java.util.
-
-A diferença entre um array dito normal e um ArrayList é q o tamanho de um array normal não pode ser modificado, se queremos meter mais um elemento no array temos de fazer um novo, copiar o array antigo e meter outro elemento na ultima posição por exemplo. No caso do ArrayList podemos adicionar ou remover elementos sem problema.
-
-!!! warning &quot;A syntax é diferente que num array normal!&quot; 
-
-```java title=&quot;Uma `ArrayList` que vai guardar strings&quot;
-import java.util.ArrayList; // import the ArrayList class
-
-ArrayList&lt;String&gt; cars = new ArrayList&lt;String&gt;(); // Create an ArrayList object
-</code></pre> <h3 id=adicionar-elementos>Adicionar elementos<a class=headerlink href=#adicionar-elementos title="Permanent link">&para;</a></h3> <details class=example> <summary>add( )</summary> <p>```java import java.util.ArrayList;</p> <p>public class Main { public static void main(String[] args) { ArrayList<string> cars = new ArrayList<string>(); cars.add("Volvo"); cars.add("BMW"); cars.add("Ford"); cars.add("Mazda"); System.out.println(cars); } } ```</p> </details> <h3 id=aceder-a-um-elemento-por-index>Aceder a um elemento por index<a class=headerlink href=#aceder-a-um-elemento-por-index title="Permanent link">&para;</a></h3> <details class=example> <summary>get( )</summary> <p><code>cars.get(0);</code></p> </details> <h3 id=modificar-elementos-numa-arraylist>Modificar elementos numa ArrayList<a class=headerlink href=#modificar-elementos-numa-arraylist title="Permanent link">&para;</a></h3> <details class=example> <summary>set( )</summary> <p><code>cars.set(0, "Opel");</code></p> </details> <h3 id=remover-um-elemento-da-arraylist>Remover um elemento da ArrayList<a class=headerlink href=#remover-um-elemento-da-arraylist title="Permanent link">&para;</a></h3> <details class=example> <summary>remove( )</summary> <p><code>cars.remove(0);</code></p> </details> <h3 id=remover-todos-os-elementos-da-arraylist>Remover todos os elementos da ArrayList<a class=headerlink href=#remover-todos-os-elementos-da-arraylist title="Permanent link">&para;</a></h3> <details class=example> <summary>clear( )</summary> <p><code>cars.clear();</code> </p> </details> <h3 id=tamanho-de-uma-arraylist>Tamanho de uma ArrayList<a class=headerlink href=#tamanho-de-uma-arraylist title="Permanent link">&para;</a></h3> <p><code>cars.size()</code></p> <h3 id=loop-de-uma-arraylist>Loop de uma ArrayList<a class=headerlink href=#loop-de-uma-arraylist title="Permanent link">&para;</a></h3> <p>```java title="For" hl_lines="8 9 10" public class Main { public static void main(String[] args) { ArrayList<string> cars = new ArrayList<string>(); cars.add("Volvo"); cars.add("BMW"); cars.add("Ford"); cars.add("Mazda"); for (int i = 0; i &lt; cars.size(); i++) { System.out.println(cars.get(i)); } } }</p> <pre><code>
-Também se pode usar o For-Each
-
-```java title=&quot;For-Each&quot; hl_lines=&quot;8 9 10&quot;
-public class Main {
-  public static void main(String[] args) {
-    ArrayList&lt;String&gt; cars = new ArrayList&lt;String&gt;();
-    cars.add(&quot;Volvo&quot;);
-    cars.add(&quot;BMW&quot;);
-    cars.add(&quot;Ford&quot;);
-    cars.add(&quot;Mazda&quot;);
-    for (String i : cars) {
-      System.out.println(i);
-    }
-  }
-}
-</code></pre> <h3 id=sort-arraylist>Sort ArrayList<a class=headerlink href=#sort-arraylist title="Permanent link">&para;</a></h3> <p>Existe uma class no package java.util chamada <code>Collections</code> que inclui a funcionalidade <code>sort()</code> e que pode ser usada numa ArrayList, ordenando-a alfabeticamente ou numericamente.</p> <details class=example> <summary>Sort( )</summary> <p>```java title="Sort alfabeticamente" import java.util.ArrayList; import java.util.Collections; // Import the Collections class</p> <p>public class Main { public static void main(String[] args) { ArrayList<string> cars = new ArrayList<string>(); cars.add("Volvo"); cars.add("BMW"); cars.add("Ford"); cars.add("Mazda"); Collections.sort(cars); // Sort cars for (String i : cars) { System.out.println(i); } } } ```</p> <p>```java title="Sort Numericamente" import java.util.ArrayList; import java.util.Collections; // Import the Collections class</p> <p>public class Main { public static void main(String[] args) { ArrayList<integer> myNumbers = new ArrayList<integer>(); myNumbers.add(33); myNumbers.add(15); myNumbers.add(20); myNumbers.add(34); myNumbers.add(8); myNumbers.add(12);</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Text Only</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=w>    </span><span class=n>Main</span><span class=w> </span><span class=n>myObj</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>new</span><span class=w> </span><span class=n>Main</span><span class=p>();</span><span class=w> </span><span class=c1>// Create an object of Main</span><span class=w></span>
+<span class=w>    </span><span class=n>myObj</span><span class=p>.</span><span class=na>myPublicMethod</span><span class=p>();</span><span class=w> </span><span class=c1>// Call the public method on the object</span><span class=w></span>
+<span class=w>  </span><span class=p>}</span><span class=w></span>
+<span class=p>}</span><span class=w></span>
+</code></pre></div></td></tr></table></div> <h2 id=java-constructors>Java Constructors<a class=headerlink href=#java-constructors title="Permanent link">&para;</a></h2> <p>Um consctructor é usado para inicializar objetos. Ou seja, quando criamos um objeto com: </p> <p>```java title="" Main myObj = new Main();</p> <div class=codehilite><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
 <span class=normal>4</span>
-<span class=normal>5</span></pre></div></td><td class=code><div><pre><span></span><code>Collections.sort(myNumbers);  // Sort myNumbers
+<span class=normal>5</span>
+<span class=normal>6</span>
+<span class=normal>7</span></pre></div></td><td class=code><div><pre><span></span><code><span class=n>Temos</span><span class=w> </span><span class=n>também</span><span class=w> </span><span class=n>que</span><span class=w> </span><span class=n>criar</span><span class=w> </span><span class=n>o</span><span class=w> </span><span class=n>construtor</span><span class=w> </span><span class=n>para</span><span class=w> </span><span class=n>este</span><span class=p>,</span><span class=w> </span><span class=n>exemplo</span><span class=p>:</span><span class=w></span>
 
-for (int i : myNumbers) {
-  System.out.println(i);
-}
-</code></pre></div></td></tr></table></div> <p>} } ```</p> </details> <h2 id=linkedlist>LinkedList<a class=headerlink href=#linkedlist title="Permanent link">&para;</a></h2> <p>Uma <code>LinkedList</code> é muito parecida a uma <code>ArrayList</code> (até porque usam a mesma interface <code>List</code>) porem são construidas de formas muito diferentes.</p> <p>Uma <code>ArrayList</code> tem um array normal dentro dela.</p> <p>Uma <code>LinkedList</code> guarda os seus item dentro de "containers". A List tem um link para o primeiro container, e cada container tem um link para o próximo. Tipo nodes em AED. </p> <p>Normalmente a <code>ArrayList</code> é mais eficiente uma vez que o seu uso foca-se mais em aceder a index's random da lista, mas a <code>LinkedList</code> tem métodos mais eficientes para alguns casos:</p> <table> <thead> <tr> <th>Método</th> <th>Descrição</th> </tr> </thead> <tbody> <tr> <td>addFirst()</td> <td>Adiciona um item ao inicio da lista</td> </tr> <tr> <td>addLast()</td> <td>Adiciona um item ao fim da lista</td> </tr> <tr> <td>removeFirst()</td> <td>Remove um item do inicio da lista</td> </tr> <tr> <td>removeLast()</td> <td>Remove um item do fim da lista</td> </tr> <tr> <td>getFirst()</td> <td>Obtém o primeiro item da lista</td> </tr> <tr> <td>getLast()</td> <td>Obtém o ultimo item da lista</td> </tr> </tbody> </table> <p>!!!*** tip "Quando usar?" Usa-se a <code>ArrayList</code> para guardar e aceder a dados, e a <code>LinkedList</code> para manipular dados.</p> <details class=example> <summary>Example</summary> <p>```java import java.util.LinkedList;</p> <p>public class Main { public static void main(String[] args) { LinkedList<string> cars = new LinkedList<string>(); cars.add("Volvo"); cars.add("BMW"); cars.add("Ford"); cars.add("Mazda");</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Text Only</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=err>```</span><span class=n>java</span><span class=w> </span><span class=n>title</span><span class=o>=</span><span class=s2>&quot;&quot;</span><span class=w></span>
+<span class=w>  </span><span class=o>//</span><span class=w> </span><span class=n>Create</span><span class=w> </span><span class=n>a</span><span class=w> </span><span class=k>class</span><span class=w> </span><span class=n>constructor</span><span class=w> </span><span class=k>for</span><span class=w> </span><span class=n>the</span><span class=w> </span><span class=n>Main</span><span class=w> </span><span class=k>class</span><span class=w></span>
+<span class=w>  </span><span class=n>public</span><span class=w> </span><span class=n>Main</span><span class=p>()</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>    </span><span class=n>x</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=mi>5</span><span class=p>;</span><span class=w>  </span><span class=o>//</span><span class=w> </span><span class=n>Set</span><span class=w> </span><span class=n>the</span><span class=w> </span><span class=n>initial</span><span class=w> </span><span class=n>value</span><span class=w> </span><span class=k>for</span><span class=w> </span><span class=n>the</span><span class=w> </span><span class=k>class</span><span class=w> </span><span class=n>attribute</span><span class=w> </span><span class=n>x</span><span class=w></span>
+<span class=w>  </span><span class=p>}</span><span class=w></span>
+</code></pre></div></td></tr></table></div> <div class="admonition warning"> <p class=admonition-title>Warning</p> <p>Note that the constructor name must match the class name, and it cannot have a return type (like void).</p> <p>Also note that the constructor is called when the object is created.</p> <p>All classes have constructors by default: if you do not create a class constructor yourself, Java creates one for you. However, then you are not able to set initial values for object attributes.</p> </div> <div class="admonition example"> <p class=admonition-title>Example</p> </div> <div class=codehilite><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span></pre></div></td><td class=code><div><pre><span></span><code><span class=kd>public</span><span class=w> </span><span class=kd>class</span> <span class=nc>Main</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>  </span><span class=kt>int</span><span class=w> </span><span class=n>modelYear</span><span class=p>;</span><span class=w></span>
+<span class=w>  </span><span class=n>String</span><span class=w> </span><span class=n>modelName</span><span class=p>;</span><span class=w></span>
+
+<span class=w>  </span><span class=kd>public</span><span class=w> </span><span class=nf>Main</span><span class=p>(</span><span class=kt>int</span><span class=w> </span><span class=n>year</span><span class=p>,</span><span class=w> </span><span class=n>String</span><span class=w> </span><span class=n>name</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>    </span><span class=n>modelYear</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>year</span><span class=p>;</span><span class=w></span>
+<span class=w>    </span><span class=n>modelName</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>name</span><span class=p>;</span><span class=w></span>
+<span class=w>  </span><span class=p>}</span><span class=w></span>
+
+<span class=w>  </span><span class=kd>public</span><span class=w> </span><span class=kd>static</span><span class=w> </span><span class=kt>void</span><span class=w> </span><span class=nf>main</span><span class=p>(</span><span class=n>String</span><span class=o>[]</span><span class=w> </span><span class=n>args</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>    </span><span class=n>Main</span><span class=w> </span><span class=n>myCar</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>new</span><span class=w> </span><span class=n>Main</span><span class=p>(</span><span class=mi>1969</span><span class=p>,</span><span class=w> </span><span class=s>&quot;Mustang&quot;</span><span class=p>);</span><span class=w></span>
+<span class=w>    </span><span class=n>System</span><span class=p>.</span><span class=na>out</span><span class=p>.</span><span class=na>println</span><span class=p>(</span><span class=n>myCar</span><span class=p>.</span><span class=na>modelYear</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=s>&quot; &quot;</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=n>myCar</span><span class=p>.</span><span class=na>modelName</span><span class=p>);</span><span class=w></span>
+<span class=w>  </span><span class=p>}</span><span class=w></span>
+<span class=p>}</span><span class=w></span>
+
+<span class=c1>// Outputs 1969 Mustang</span><span class=w></span>
+</code></pre></div></td></tr></table></div> <h2 id=java-modifiers>Java Modifiers<a class=headerlink href=#java-modifiers title="Permanent link">&para;</a></h2> <ul> <li>Access Modifiers - controls the access level</li> <li>Non-Access Modifiers - do not control access level, but provides other functionality</li> </ul> <h3 id=access-modifiers>Access Modifiers<a class=headerlink href=#access-modifiers title="Permanent link">&para;</a></h3> <p>Para <strong>classes</strong>:</p> <table> <thead> <tr> <th>Modificador</th> <th>Descrição</th> </tr> </thead> <tbody> <tr> <td><code>public</code></td> <td>A <em>class</em> é alcançável por todas as classes</td> </tr> <tr> <td><em>default</em></td> <td>A <em>class</em> só é alcançável por classes que estejam no mesmo <em>package</em></td> </tr> </tbody> </table> <p>Para <strong>atributos</strong>, <strong>métodos</strong> e <strong>construtores</strong>: </p> <table> <thead> <tr> <th>Modificador</th> <th>Descrição</th> </tr> </thead> <tbody> <tr> <td><code>public</code></td> <td>O código é alcançavel por todas as classes</td> </tr> <tr> <td><code>private</code></td> <td>O código só é acedido dentro da classe que o declarou</td> </tr> <tr> <td><em>default</em></td> <td>O código é alcançavel dentro do mesmo <em>package</em></td> </tr> <tr> <td><code>protected</code></td> <td>O código é alcançável dentro do mesmo <em>package</em> e <strong>subclasses</strong></td> </tr> </tbody> </table> <p><span style=color:green></p> <h3 id=non-access-modifiers>Non-Access Modifiers<a class=headerlink href=#non-access-modifiers title="Permanent link">&para;</a></h3> <p></span></p> <p>Para <strong>classes</strong>:</p> <table> <thead> <tr> <th>Modificador</th> <th>Descrição</th> </tr> </thead> <tbody> <tr> <td><code>final</code></td> <td>A <em>class</em> não pode ser herdada por outras classes, ou seja, se fizermos <code>extend</code> dessa classe vai dar erro.</td> </tr> <tr> <td><code>abstract</code></td> <td>Uma classe que não pode criar objetos.</td> </tr> </tbody> </table> <p>Para <strong>atributos</strong>, <strong>métodos</strong> e <strong>construtores</strong>: </p> <table> <thead> <tr> <th>Modificador</th> <th>Descrição</th> </tr> </thead> <tbody> <tr> <td><code>final</code></td> <td>Atributos e métodos não podem ser modificados/overriden</td> </tr> <tr> <td><code>static</code></td> <td>Atributos e métodos pertencem à <em>class</em> e não ao objeto</td> </tr> <tr> <td><code>abstract</code></td> <td>Só podem ser usados numa <em>class</em> do tipo <code>abstract</code>. Só podem ser usados em métodos. O método não tem "corpo", este é definido nas subclasses da <em>class</em> <code>abstract</code>.</td> </tr> </tbody> </table> <p>Existem ainda <code>transient</code>, <code>syncronized</code> e <code>volatile</code>, porém isto não foi muito falado em aula nem usado em nenhum exercício/lab e usam threads, coisa que não foi falada em POO tb.</p> <details class=example> <summary>Os 3 fields mencionados acima</summary> <table> <thead> <tr> <th>Modificador</th> <th>Descrição</th> </tr> </thead> <tbody> <tr> <td><code>transient</code></td> <td>Attributes and methods are skipped when serializing the object containing them</td> </tr> <tr> <td><code>synchronized</code></td> <td>Methods can only be accessed by one thread at a time</td> </tr> <tr> <td><code>volatile</code></td> <td>The value of an attribute is not cached thread-locally, and is always read from the "main memory"</td> </tr> </tbody> </table> </details> <h3 id=exemplos>Exemplos<a class=headerlink href=#exemplos title="Permanent link">&para;</a></h3> <details class=example> <summary>Final</summary> <p>```java public class Main { final int x = 10; final double PI = 3.14;</p> <p>public static void main(String[] args) { Main myObj = new Main(); myObj.x = 50; // will generate an error: cannot assign a value to a final variable myObj.PI = 25; // will generate an error: cannot assign a value to a final variable System.out.println(myObj.x); } } ```</p> </details> <details class=example> <summary>Static</summary> <p>```java public class Main { // Static method static void myStaticMethod() { System.out.println("Static methods can be called without creating objects"); }</p> <p>// Public method public void myPublicMethod() { System.out.println("Public methods must be called by creating objects"); }</p> <p>// Main method public static void main(String[ ] args) { myStaticMethod(); // Call the static method // myPublicMethod(); This would output an error</p> <div class=codehilite><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
+<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code><span class=n>Main</span> <span class=n>myObj</span> <span class=o>=</span> <span class=k>new</span> <span class=n>Main</span><span class=o>();</span> <span class=c1>// Create an object of Main</span>
+<span class=n>myObj</span><span class=o>.</span><span class=na>myPublicMethod</span><span class=o>();</span> <span class=c1>// Call the public method</span>
+</code></pre></div></td></tr></table></div> <p>} } ```</p> </details> <details class=example> <summary>Abstract</summary> <p>```java // Code from filename: Main.java // abstract class abstract class Main { public String fname = "John"; public int age = 24; public abstract void study(); // abstract method }</p> <p>// Subclass (inherit from Main) class Student extends Main { public int graduationYear = 2018; public void study() { // the body of the abstract method is provided here System.out.println("Studying all day long"); } } // End code from filename: Main.java</p> <p>// Code from filename: Second.java class Second { public static void main(String[] args) { // create an object of the Student class (which inherits attributes and methods from Main) Student myObj = new Student();</p> <div class=codehilite><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
-<span class=normal>4</span></pre></div></td><td class=code><div><pre><span></span><code>// Use getLast() to display the last item in the list
-System.out.println(cars.getFirst()); //Output: Volvo
-cars.addFirst(&quot;Hola&quot;);
-System.out.println(cars.getFirst()); //Output: Hola
-</code></pre></div></td></tr></table></div> <p>} } ```</p> </details> <hr> <div class=md-source-date> <small> Última atualização: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">16 de agosto de 2022</span> </small> </div> </article> </div> </div> </main> <footer class=md-footer> <div class=md-footer-nav> <nav class="md-footer-nav__inner md-grid" aria-label=Footer> <a href=../java_basics/ class="md-footer-nav__link md-footer-nav__link--prev" rel=prev> <div class="md-footer-nav__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </div> <div class=md-footer-nav__title> <div class=md-ellipsis> <span class=md-footer-nav__direction> Anterior </span> Java basics </div> </div> </a> <a href=../../Linux/Commands/ class="md-footer-nav__link md-footer-nav__link--next" rel=next> <div class=md-footer-nav__title> <div class=md-ellipsis> <span class=md-footer-nav__direction> Próximo </span> Commands </div> </div> <div class="md-footer-nav__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg> </div> </a> </nav> </div> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-footer-copyright> <div class=md-footer-copyright__highlight> Copyright &copy; 2022 Hugo Lima </div> </div> <div class=md-footer-social> <a href=https://github.com/hslima00 target=_blank rel=noopener title=github.com class=md-footer-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </a> </div> </div> </div> </footer> </div> <script src=../../../assets/javascripts/vendor.0ac82a11.min.js></script> <script src=../../../assets/javascripts/bundle.f81dfb4d.min.js></script><script id=__lang type=application/json>{"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.config.lang": "pt", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Buscar", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Missing"}</script> <script>
+<span class=normal>4</span></pre></div></td><td class=code><div><pre><span></span><code><span class=nt>System</span><span class=p>.</span><span class=nc>out</span><span class=p>.</span><span class=nc>println</span><span class=o>(</span><span class=s2>&quot;Name: &quot;</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=nt>myObj</span><span class=p>.</span><span class=nc>fname</span><span class=o>);</span><span class=w></span>
+<span class=nt>System</span><span class=p>.</span><span class=nc>out</span><span class=p>.</span><span class=nc>println</span><span class=o>(</span><span class=s2>&quot;Age: &quot;</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=nt>myObj</span><span class=p>.</span><span class=nc>age</span><span class=o>);</span><span class=w></span>
+<span class=nt>System</span><span class=p>.</span><span class=nc>out</span><span class=p>.</span><span class=nc>println</span><span class=o>(</span><span class=s2>&quot;Graduation Year: &quot;</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=nt>myObj</span><span class=p>.</span><span class=nc>graduationYear</span><span class=o>);</span><span class=w></span>
+<span class=nt>myObj</span><span class=p>.</span><span class=nc>study</span><span class=o>();</span><span class=w> </span><span class=o>//</span><span class=w> </span><span class=nt>call</span><span class=w> </span><span class=nt>abstract</span><span class=w> </span><span class=nt>method</span><span class=w></span>
+</code></pre></div></td></tr></table></div> <p>} } ```</p> </details> <h2 id=encapsulation>Encapsulation<a class=headerlink href=#encapsulation title="Permanent link">&para;</a></h2> <p><strong>Encapsulation</strong> serve para esconder "sensitive" data ao utilizador. Para isto devemos: </p> <ul class=task-list> <li class=task-list-item><label class=task-list-control><input type=checkbox disabled checked><span class=task-list-indicator></span></label> Declarar as variáveis/atributos da classe <code>private</code>.</li> <li class=task-list-item><label class=task-list-control><input type=checkbox disabled checked><span class=task-list-indicator></span></label> Aceder e atualizar valores de variáveis <code>private</code> recorrendo aos métodos <code>get()</code> e <code>set()</code>.</li> </ul> <h3 id=get-and-set>Get and Set<a class=headerlink href=#get-and-set title="Permanent link">&para;</a></h3> <ul> <li><strong>Getter</strong> - retorna o valor de um atributo/variável sem mudar o valor.</li> <li><strong>Setter</strong> - atualiza/muda o valor de um atributo/variável.</li> </ul> <div class="tabbed-set tabbed-alternate" data-tabs=1:3><input checked=checked id=__tabbed_1_1 name=__tabbed_1 type=radio><input id=__tabbed_1_2 name=__tabbed_1 type=radio><input id=__tabbed_1_3 name=__tabbed_1 type=radio><div class=tabbed-labels><label for=__tabbed_1_1>person.java</label><label for=__tabbed_1_2>main.java (erro)</label><label for=__tabbed_1_3>main.java (correct)</label></div> <div class=tabbed-content> <div class=tabbed-block> <p>```java public class Person { private String name; // private = restricted access</p> <p>// Getter public String getName() { return name; }</p> <p>// Setter public void setName(String newName) { this.name = newName; } } ```</p> </div> <div class=tabbed-block> <p><code>java hl_lines="4 5" public class Main { public static void main(String[] args) { Person myObj = new Person(); myObj.name = "John"; //error (1) System.out.println(myObj.name); // error //as the name variable is declared as private, we cannot access it from outside this class } }</code></p> </div> <div class=tabbed-block> <p>```java hl_lines="4 5" public class Main { public static void main(String[] args) { Person myObj = new Person(); myObj.setName("John"); // Set the value of the name variable to "John" System.out.println(myObj.getName()); } }</p> <p>// Outputs "John" ```</p> </div> </div> </div> <details class=question> <summary>Porquê Encapsulation?</summary> <ul> <li>Better control of class attributes and methods</li> <li>Class attributes can be made read-only (if you only use the get method), or write-only (if you only use the set method)</li> <li>Flexible: the programmer can change one part of the code without affecting other parts</li> <li>Increased security of data</li> </ul> </details> <h2 id=java-packages>Java Packages<a class=headerlink href=#java-packages title="Permanent link">&para;</a></h2> <p>Um <em>package</em> em Java é utilizado para "guardar" classes semelhantes no mesmo sítio. </p> <p>Existem <em>packeges</em> pré-feitos pela Oracle, que podem ser encontrados <a href=https://docs.oracle.com/javase/8/docs/api/ >aqui</a>.</p> <p>Podemos importar classes especificas ou o <em>package</em> inteiro:</p> <div class=codehilite><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code><span class=kn>import</span><span class=w> </span><span class=nn>package.name.Class</span><span class=p>;</span><span class=w>   </span><span class=c1>// Import a single class</span><span class=w></span>
+<span class=kn>import</span><span class=w> </span><span class=nn>package.name.*</span><span class=p>;</span><span class=w>   </span><span class=c1>// Import the whole package</span><span class=w></span>
+<span class=kn>import</span><span class=w> </span><span class=nn>java.util.Scanner</span><span class=p>;</span><span class=w></span>
+</code></pre></div></td></tr></table></div> <p>No exemplo acima <code>java.util</code> é o <em>package</em> e <code>Scanner</code> é a <em>class</em>.</p> <h3 id=creating-a-package>Creating a package<a class=headerlink href=#creating-a-package title="Permanent link">&para;</a></h3> <div class=codehilite><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code>└── root
+  └── mypack
+    └── MyPackageClass.java
+</code></pre></div></td></tr></table></div> <p>```java title="MyPackageClass.java" package mypack; class MyPackageClass { public static void main(String[] args) { System.out.println("This is my package!"); } }</p> <div class=codehilite><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span>
+<span class=normal>28</span>
+<span class=normal>29</span>
+<span class=normal>30</span>
+<span class=normal>31</span>
+<span class=normal>32</span>
+<span class=normal>33</span>
+<span class=normal>34</span>
+<span class=normal>35</span>
+<span class=normal>36</span>
+<span class=normal>37</span>
+<span class=normal>38</span>
+<span class=normal>39</span>
+<span class=normal>40</span>
+<span class=normal>41</span>
+<span class=normal>42</span>
+<span class=normal>43</span>
+<span class=normal>44</span>
+<span class=normal>45</span>
+<span class=normal>46</span>
+<span class=normal>47</span>
+<span class=normal>48</span>
+<span class=normal>49</span>
+<span class=normal>50</span>
+<span class=normal>51</span>
+<span class=normal>52</span>
+<span class=normal>53</span>
+<span class=normal>54</span>
+<span class=normal>55</span>
+<span class=normal>56</span>
+<span class=normal>57</span>
+<span class=normal>58</span>
+<span class=normal>59</span>
+<span class=normal>60</span>
+<span class=normal>61</span>
+<span class=normal>62</span>
+<span class=normal>63</span>
+<span class=normal>64</span>
+<span class=normal>65</span>
+<span class=normal>66</span>
+<span class=normal>67</span>
+<span class=normal>68</span>
+<span class=normal>69</span>
+<span class=normal>70</span>
+<span class=normal>71</span>
+<span class=normal>72</span>
+<span class=normal>73</span>
+<span class=normal>74</span>
+<span class=normal>75</span>
+<span class=normal>76</span>
+<span class=normal>77</span>
+<span class=normal>78</span>
+<span class=normal>79</span>
+<span class=normal>80</span>
+<span class=normal>81</span>
+<span class=normal>82</span>
+<span class=normal>83</span>
+<span class=normal>84</span></pre></div></td><td class=code><div><pre><span></span><code><span class=c1>#### Compiling with a package</span><span class=w></span>
+
+<span class=mf>1.</span><span class=w> </span><span class=n>Compilar</span><span class=w> </span><span class=n>o</span><span class=w> </span><span class=p>.</span><span class=n>java</span><span class=w></span>
+<span class=mf>2.</span><span class=w> </span><span class=n>Compilar</span><span class=w> </span><span class=n>o</span><span class=w> </span><span class=n>package</span><span class=w></span>
+<span class=mf>3.</span><span class=w> </span><span class=n>Correr</span><span class=w></span>
+
+<span class=n>Ou</span><span class=w> </span><span class=n>seja</span><span class=o>:</span><span class=w></span>
+
+<span class=mf>1.</span><span class=w> </span><span class="n n-Quoted">`C:\Users\Your Name&gt;javac MyPackageClass.java`</span><span class=w></span>
+<span class=mf>2.</span><span class=w> </span><span class="n n-Quoted">`C:\Users\Your Name&gt;javac -d . MyPackageClass.java`</span><span class=w></span>
+<span class=mf>3.</span><span class=w> </span><span class="n n-Quoted">`C:\Users\Your Name&gt;java mypack.MyPackageClass`</span><span class=w></span>
+
+<span class=n>O</span><span class=w> </span><span class=n>output</span><span class=w> </span><span class=n>seria</span><span class=o>:</span><span class=w> </span><span class="n n-Quoted">`This is my package!`</span><span class=p>.</span><span class=w></span>
+
+<span class=c1>## Java Inheritance</span><span class=w></span>
+
+<span class=n>Em</span><span class=w> </span><span class=n>Java</span><span class=w> </span><span class=n>é</span><span class=w> </span><span class=n>possível</span><span class=w> </span><span class=n>que</span><span class=w> </span><span class=n>uma</span><span class=w> </span><span class=n>classe</span><span class=w> </span><span class=n>herde</span><span class=w> </span><span class=n>atributos</span><span class=w> </span><span class=n>e</span><span class=w> </span><span class=n>métodos</span><span class=w> </span><span class=n>de</span><span class=w> </span><span class=n>outra</span><span class=p>,</span><span class=w> </span><span class=n>criando</span><span class=w> </span><span class=n>assim</span><span class=w> </span><span class=n>uma</span><span class=w> </span><span class=n>hierarquia</span><span class=p>.</span><span class=w></span>
+
+<span class=n>Podemos</span><span class=w> </span><span class=n>separar</span><span class=w> </span><span class=n>a</span><span class=w> </span><span class=n>hierarquia</span><span class=w> </span><span class=n>em</span><span class=w> </span><span class=n>dois</span><span class=w> </span><span class=n>tipos</span><span class=w> </span><span class=n>de</span><span class=w> </span><span class=n>classes</span><span class=o>:</span><span class=w></span>
+<span class=o>*</span><span class=w> </span><span class=o>**</span><span class=n>subclass</span><span class=o>**</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=n>class</span><span class=w> </span><span class=n>que</span><span class=w> </span><span class=n>herda</span><span class=w> </span><span class=n>os</span><span class=w> </span><span class=n>atributos</span><span class=w> </span><span class=n>e</span><span class=w> </span><span class=n>métodos</span><span class=w></span>
+<span class=o>*</span><span class=w> </span><span class=o>**</span><span class=n>superclass</span><span class=o>**</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=n>class</span><span class=w> </span><span class=n>dá</span><span class=w> </span><span class=n>herança</span><span class=w></span>
+
+<span class=n>Para</span><span class=w> </span><span class=n>uma</span><span class=w> </span><span class=n>classe</span><span class=w> </span><span class=n>herdar</span><span class=w> </span><span class=n>de</span><span class=w> </span><span class=n>outra</span><span class=w> </span><span class=n>usa</span><span class=o>-</span><span class=n>se</span><span class=w> </span><span class=n>o</span><span class=w> </span><span class="n n-Quoted">`extends`</span><span class=p>.</span><span class=w></span>
+
+<span class=nv>???</span><span class=o>+</span><span class=w> </span><span class=n>example</span><span class=w> </span><span class=s2>&quot;Herança&quot;</span><span class=w></span>
+<span class=w>    </span><span class="n n-Quoted">`</span><span class="n n-Quoted n-Quoted-Escape">``</span><span class="n n-Quoted">java</span>
+<span class="n n-Quoted">    class Vehicle {</span>
+<span class="n n-Quoted">    protected String brand = &quot;Ford&quot;;        // Vehicle attribute</span>
+<span class="n n-Quoted">    public void honk() {                    // Vehicle method</span>
+<span class="n n-Quoted">        System.out.println(&quot;Tuut, tuut!&quot;);</span>
+<span class="n n-Quoted">    }</span>
+<span class="n n-Quoted">    }</span>
+
+<span class="n n-Quoted">    class Car extends Vehicle {</span>
+<span class="n n-Quoted">    private String modelName = &quot;Mustang&quot;;    // Car attribute</span>
+<span class="n n-Quoted">    public static void main(String[] args) {</span>
+
+<span class="n n-Quoted">        // Create a myCar object</span>
+<span class="n n-Quoted">        Car myCar = new Car();</span>
+
+<span class="n n-Quoted">        // Call the honk() method (from the Vehicle class) on the myCar object</span>
+<span class="n n-Quoted">        myCar.honk();</span>
+
+<span class="n n-Quoted">        // Display the value of the brand attribute (from the Vehicle class) and the value of the modelName from the Car class</span>
+<span class="n n-Quoted">        System.out.println(myCar.brand + &quot; &quot; + myCar.modelName);</span>
+<span class="n n-Quoted">    }</span>
+<span class="n n-Quoted">    }</span>
+<span class="n n-Quoted">    </span><span class="n n-Quoted n-Quoted-Escape">``</span><span class="n n-Quoted">`</span><span class=w></span>
+
+<span class=c1>## Java Polymorphism</span><span class=w></span>
+
+<span class=n>O</span><span class=w> </span><span class=n>polimorfismo</span><span class=w> </span><span class=n>acontece</span><span class=w> </span><span class=n>quando</span><span class=w> </span><span class=n>temos</span><span class=w> </span><span class=n>várias</span><span class=w> </span><span class=n>classes</span><span class=w> </span><span class=n>relacionadas</span><span class=w> </span><span class=n>umas</span><span class=w> </span><span class=n>com</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=n>outras</span><span class=w> </span><span class=n>hierarquicamente</span><span class=p>.</span><span class=w> </span>
+
+<span class=n>Por</span><span class=w> </span><span class=n>exemplo</span><span class=p>,</span><span class=w> </span><span class=n>uma</span><span class=w> </span><span class=n>superclass</span><span class=w> </span><span class=n>chamada</span><span class=w> </span><span class="n n-Quoted">`Animal`</span><span class=w> </span><span class=n>que</span><span class=w> </span><span class=n>tem</span><span class=w> </span><span class=n>subclasses</span><span class=w> </span><span class=n>como</span><span class=w> </span><span class="n n-Quoted">`Porco`</span><span class=p>,</span><span class=w> </span><span class="n n-Quoted">`Gato`</span><span class=p>,</span><span class=w> </span><span class=n>etc</span><span class=p>.</span><span class=w> </span><span class=n>Todos</span><span class=w> </span><span class=n>os</span><span class=w> </span><span class=n>animais</span><span class=w> </span><span class=n>têm</span><span class=w> </span><span class=n>um</span><span class=w> </span><span class="n n-Quoted">`animalSound()`</span><span class=w> </span><span class=n>distinto</span><span class=w> </span><span class=n>entre</span><span class=w> </span><span class=n>eles</span><span class=p>.</span><span class=w></span>
+
+<span class="n n-Quoted">`</span><span class="n n-Quoted n-Quoted-Escape">``</span><span class="n n-Quoted">java title=&quot;Polimorfismo&quot;</span>
+<span class="n n-Quoted">class Animal {</span>
+<span class="n n-Quoted">  public void animalSound() {</span>
+<span class="n n-Quoted">    System.out.println(&quot;The animal makes a sound&quot;);</span>
+<span class="n n-Quoted">  }</span>
+<span class="n n-Quoted">}</span>
+
+<span class="n n-Quoted">class Pig extends Animal {</span>
+<span class="n n-Quoted">  public void animalSound() {</span>
+<span class="n n-Quoted">    System.out.println(&quot;The pig says: wee wee&quot;);</span>
+<span class="n n-Quoted">  }</span>
+<span class="n n-Quoted">}</span>
+
+<span class="n n-Quoted">class Dog extends Animal {</span>
+<span class="n n-Quoted">  public void animalSound() {</span>
+<span class="n n-Quoted">    System.out.println(&quot;The dog says: bow wow&quot;);</span>
+<span class="n n-Quoted">  }</span>
+<span class="n n-Quoted">}</span>
+
+<span class="n n-Quoted">class Main {</span>
+<span class="n n-Quoted">  public static void main(String[] args) {</span>
+<span class="n n-Quoted">    Animal myAnimal = new Animal();  // Create a Animal object</span>
+<span class="n n-Quoted">    Animal myPig = new Pig();  // Create a Pig object</span>
+<span class="n n-Quoted">    Animal myDog = new Dog();  // Create a Dog object</span>
+<span class="n n-Quoted">    myAnimal.animalSound();</span>
+<span class="n n-Quoted">    myPig.animalSound();</span>
+<span class="n n-Quoted">    myDog.animalSound();</span>
+<span class="n n-Quoted">  }</span>
+<span class="n n-Quoted">}</span>
+</code></pre></div></td></tr></table></div> <hr> <h2 id=java-abstraction>Java Abstraction<a class=headerlink href=#java-abstraction title="Permanent link">&para;</a></h2> <p>Basicamente é a cena das classes poderem levar o modificador <code>abstract</code>.</p> <p>Por exemplo, um veículo é uma "coisa" abstrata, mas todos os veículos têm por exemplo uma <code>velocidadeMedia()</code> etc.</p> <div class=codehilite><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span></pre></div></td><td class=code><div><pre><span></span><code><span class=c1>// Abstract class</span><span class=w></span>
+<span class=kd>abstract</span><span class=w> </span><span class=kd>class</span> <span class=nc>Animal</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>  </span><span class=c1>// Abstract method (does not have a body)</span><span class=w></span>
+<span class=w>  </span><span class=kd>public</span><span class=w> </span><span class=kd>abstract</span><span class=w> </span><span class=kt>void</span><span class=w> </span><span class=nf>animalSound</span><span class=p>();</span><span class=w></span>
+<span class=w>  </span><span class=c1>// Regular method</span><span class=w></span>
+<span class=w>  </span><span class=kd>public</span><span class=w> </span><span class=kt>void</span><span class=w> </span><span class=nf>sleep</span><span class=p>()</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>    </span><span class=n>System</span><span class=p>.</span><span class=na>out</span><span class=p>.</span><span class=na>println</span><span class=p>(</span><span class=s>&quot;Zzz&quot;</span><span class=p>);</span><span class=w></span>
+<span class=w>  </span><span class=p>}</span><span class=w></span>
+<span class=p>}</span><span class=w></span>
+
+<span class=c1>// Subclass (inherit from Animal)</span><span class=w></span>
+<span class=kd>class</span> <span class=nc>Pig</span><span class=w> </span><span class=kd>extends</span><span class=w> </span><span class=n>Animal</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>  </span><span class=kd>public</span><span class=w> </span><span class=kt>void</span><span class=w> </span><span class=nf>animalSound</span><span class=p>()</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>    </span><span class=c1>// The body of animalSound() is provided here</span><span class=w></span>
+<span class=w>    </span><span class=n>System</span><span class=p>.</span><span class=na>out</span><span class=p>.</span><span class=na>println</span><span class=p>(</span><span class=s>&quot;The pig says: wee wee&quot;</span><span class=p>);</span><span class=w></span>
+<span class=w>  </span><span class=p>}</span><span class=w></span>
+<span class=p>}</span><span class=w></span>
+
+<span class=kd>class</span> <span class=nc>Main</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>  </span><span class=kd>public</span><span class=w> </span><span class=kd>static</span><span class=w> </span><span class=kt>void</span><span class=w> </span><span class=nf>main</span><span class=p>(</span><span class=n>String</span><span class=o>[]</span><span class=w> </span><span class=n>args</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w></span>
+<span class=w>    </span><span class=n>Pig</span><span class=w> </span><span class=n>myPig</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>new</span><span class=w> </span><span class=n>Pig</span><span class=p>();</span><span class=w> </span><span class=c1>// Create a Pig object</span><span class=w></span>
+<span class=w>    </span><span class=n>myPig</span><span class=p>.</span><span class=na>animalSound</span><span class=p>();</span><span class=w></span>
+<span class=w>    </span><span class=n>myPig</span><span class=p>.</span><span class=na>sleep</span><span class=p>();</span><span class=w></span>
+<span class=w>  </span><span class=p>}</span><span class=w></span>
+<span class=p>}</span><span class=w></span>
+</code></pre></div></td></tr></table></div> <h2 id=java-interfaces>Java Interfaces<a class=headerlink href=#java-interfaces title="Permanent link">&para;</a></h2> <p>Usar interfaces é outra maneira de criar abstração em Java. Uma interface é uma classe "completely abstract" usada para agrupar métodos sem corpo.</p> <details class=example> <summary>Interface</summary> <p><code>java title="Interface" // interface interface Animal { public void animalSound(); // interface method (does not have a body) public void run(); // interface method (does not have a body) }</code></p> </details> <p>Para uma classe aceder aos métodos de uma interface usa-se o <code>implements</code>.</p> <details class=example> <summary><code>implements</code></summary> <p>```java // Interface interface Animal { public void animalSound(); // interface method (does not have a body) public void sleep(); // interface method (does not have a body) }</p> <p>// Pig "implements" the Animal interface class Pig implements Animal { public void animalSound() { // The body of animalSound() is provided here System.out.println("The pig says: wee wee"); } public void sleep() { // The body of sleep() is provided here System.out.println("Zzz"); } }</p> <p>class Main { public static void main(String[] args) { Pig myPig = new Pig(); // Create a Pig object myPig.animalSound(); myPig.sleep(); } } ```</p> </details> <details class=note open=open> <summary>Note</summary> </details> <ul> <li>Interfaces <strong>não</strong> podem criar objetos, uma vez que são classes <code>abstract</code>.</li> <li>Os métodos das interfaces não têm corpo, este é posteriormente definido pelas classes que fazem o <code>implements</code> da interface.</li> <li>Os métodos de uma interface são <code>public</code> e <code>abstract</code>.</li> <li>Os atributos de uma interface são <code>public</code>, <code>static</code> e <code>final</code>.</li> <li>Uma interface não tem constructor, uma vez que não cria objetos.</li> </ul> <details class=example> <summary>Exemplo com múltiplas interfaces</summary> <p>```java interface FirstInterface { public void myMethod(); // interface method }</p> <p>interface SecondInterface { public void myOtherMethod(); // interface method }</p> <p>class DemoClass implements FirstInterface, SecondInterface { public void myMethod() { System.out.println("Some text.."); } public void myOtherMethod() { System.out.println("Some other text..."); } }</p> <p>class Main { public static void main(String[] args) { DemoClass myObj = new DemoClass(); myObj.myMethod(); myObj.myOtherMethod(); } } ```</p> </details> <hr> <h2 id=enum>Enum<a class=headerlink href=#enum title="Permanent link">&para;</a></h2> <p>```java title="Enum example" public class Main { enum Level { LOW, MEDIUM, HIGH }</p> <p>public static void main(String[] args) { Level myVar = Level.MEDIUM; System.out.println(myVar); } }</p> <div class=codehilite><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span>
+<span class=normal>28</span>
+<span class=normal>29</span>
+<span class=normal>30</span>
+<span class=normal>31</span>
+<span class=normal>32</span>
+<span class=normal>33</span>
+<span class=normal>34</span>
+<span class=normal>35</span>
+<span class=normal>36</span>
+<span class=normal>37</span>
+<span class=normal>38</span>
+<span class=normal>39</span>
+<span class=normal>40</span>
+<span class=normal>41</span>
+<span class=normal>42</span>
+<span class=normal>43</span>
+<span class=normal>44</span>
+<span class=normal>45</span>
+<span class=normal>46</span>
+<span class=normal>47</span>
+<span class=normal>48</span>
+<span class=normal>49</span>
+<span class=normal>50</span>
+<span class=normal>51</span>
+<span class=normal>52</span>
+<span class=normal>53</span>
+<span class=normal>54</span>
+<span class=normal>55</span>
+<span class=normal>56</span>
+<span class=normal>57</span>
+<span class=normal>58</span>
+<span class=normal>59</span>
+<span class=normal>60</span>
+<span class=normal>61</span>
+<span class=normal>62</span>
+<span class=normal>63</span>
+<span class=normal>64</span>
+<span class=normal>65</span>
+<span class=normal>66</span>
+<span class=normal>67</span>
+<span class=normal>68</span>
+<span class=normal>69</span>
+<span class=normal>70</span>
+<span class=normal>71</span>
+<span class=normal>72</span>
+<span class=normal>73</span>
+<span class=normal>74</span>
+<span class=normal>75</span>
+<span class=normal>76</span>
+<span class=normal>77</span>
+<span class=normal>78</span></pre></div></td><td class=code><div><pre><span></span><code><span class=err>!!!</span> <span class=n>warning</span>
+    <span class=n>Os</span> <span class=n>valores</span> <span class=n>de</span> <span class=n>um</span> <span class=err>`</span><span class=n>enum</span><span class=err>`</span> <span class=n>são</span> <span class=n>constantes</span> <span class=n>e</span> <span class=n>imutáveis</span><span class=p>,</span> <span class=n>como</span> <span class=n>se</span> <span class=n>fossem</span> <span class=n>definidos</span> <span class=n>com</span> <span class=n>o</span> <span class=n>modificador</span> <span class=err>`</span><span class=n>final</span><span class=err>`</span><span class=o>.</span>
+
+<span class=err>???</span> <span class=n>example</span> <span class=s2>&quot;Switch-Case Enum&quot;</span>
+
+    <span class=err>```</span><span class=n>java</span>
+    <span class=n>enum</span> <span class=n>Level</span> <span class=p>{</span>
+    <span class=n>LOW</span><span class=p>,</span>
+    <span class=n>MEDIUM</span><span class=p>,</span>
+    <span class=n>HIGH</span>
+    <span class=p>}</span>
+
+    <span class=n>public</span> <span class=k>class</span> <span class=nc>Main</span> <span class=p>{</span>
+    <span class=n>public</span> <span class=n>static</span> <span class=n>void</span> <span class=n>main</span><span class=p>(</span><span class=n>String</span><span class=p>[]</span> <span class=n>args</span><span class=p>)</span> <span class=p>{</span>
+        <span class=n>Level</span> <span class=n>myVar</span> <span class=o>=</span> <span class=n>Level</span><span class=o>.</span><span class=n>MEDIUM</span><span class=p>;</span>
+
+        <span class=n>switch</span><span class=p>(</span><span class=n>myVar</span><span class=p>)</span> <span class=p>{</span>
+        <span class=k>case</span> <span class=n>LOW</span><span class=p>:</span>
+            <span class=n>System</span><span class=o>.</span><span class=n>out</span><span class=o>.</span><span class=n>println</span><span class=p>(</span><span class=s2>&quot;Low level&quot;</span><span class=p>);</span>
+            <span class=k>break</span><span class=p>;</span>
+        <span class=k>case</span> <span class=n>MEDIUM</span><span class=p>:</span>
+            <span class=n>System</span><span class=o>.</span><span class=n>out</span><span class=o>.</span><span class=n>println</span><span class=p>(</span><span class=s2>&quot;Medium level&quot;</span><span class=p>);</span>
+            <span class=k>break</span><span class=p>;</span>
+        <span class=k>case</span> <span class=n>HIGH</span><span class=p>:</span>
+            <span class=n>System</span><span class=o>.</span><span class=n>out</span><span class=o>.</span><span class=n>println</span><span class=p>(</span><span class=s2>&quot;High level&quot;</span><span class=p>);</span>
+            <span class=k>break</span><span class=p>;</span>
+        <span class=p>}</span>
+    <span class=p>}</span>
+    <span class=p>}</span>
+    <span class=err>```</span>
+
+<span class=err>???</span> <span class=n>example</span> <span class=s2>&quot;For each Enum&quot;</span>
+    <span class=err>```</span><span class=n>java</span>
+    <span class=k>for</span> <span class=p>(</span><span class=n>Level</span> <span class=n>myVar</span> <span class=p>:</span> <span class=n>Level</span><span class=o>.</span><span class=n>values</span><span class=p>())</span> <span class=p>{</span>
+        <span class=n>System</span><span class=o>.</span><span class=n>out</span><span class=o>.</span><span class=n>println</span><span class=p>(</span><span class=n>myVar</span><span class=p>);</span>
+    <span class=p>}</span>
+    <span class=err>```</span>
+
+<span class=c1>## User Input</span>
+
+<span class=err>???</span> <span class=n>example</span> <span class=s2>&quot;User Input&quot;</span>
+
+    <span class=err>```</span><span class=n>java</span>
+        <span class=kn>import</span> <span class=nn>java.util.Scanner</span><span class=p>;</span>
+
+        <span class=k>class</span> <span class=nc>Main</span> <span class=p>{</span>
+        <span class=n>public</span> <span class=n>static</span> <span class=n>void</span> <span class=n>main</span><span class=p>(</span><span class=n>String</span><span class=p>[]</span> <span class=n>args</span><span class=p>)</span> <span class=p>{</span>
+            <span class=n>Scanner</span> <span class=n>myObj</span> <span class=o>=</span> <span class=n>new</span> <span class=n>Scanner</span><span class=p>(</span><span class=n>System</span><span class=o>.</span><span class=ow>in</span><span class=p>);</span>
+
+            <span class=n>System</span><span class=o>.</span><span class=n>out</span><span class=o>.</span><span class=n>println</span><span class=p>(</span><span class=s2>&quot;Enter name, age and salary:&quot;</span><span class=p>);</span>
+
+            <span class=o>//</span> <span class=n>String</span> <span class=nb>input</span>
+            <span class=n>String</span> <span class=n>name</span> <span class=o>=</span> <span class=n>myObj</span><span class=o>.</span><span class=n>nextLine</span><span class=p>();</span>
+
+            <span class=o>//</span> <span class=n>Numerical</span> <span class=nb>input</span>
+            <span class=nb>int</span> <span class=n>age</span> <span class=o>=</span> <span class=n>myObj</span><span class=o>.</span><span class=n>nextInt</span><span class=p>();</span>
+            <span class=n>double</span> <span class=n>salary</span> <span class=o>=</span> <span class=n>myObj</span><span class=o>.</span><span class=n>nextDouble</span><span class=p>();</span>
+
+            <span class=o>//</span> <span class=n>Output</span> <span class=nb>input</span> <span class=n>by</span> <span class=n>user</span>
+            <span class=n>System</span><span class=o>.</span><span class=n>out</span><span class=o>.</span><span class=n>println</span><span class=p>(</span><span class=s2>&quot;Name: &quot;</span> <span class=o>+</span> <span class=n>name</span><span class=p>);</span>
+            <span class=n>System</span><span class=o>.</span><span class=n>out</span><span class=o>.</span><span class=n>println</span><span class=p>(</span><span class=s2>&quot;Age: &quot;</span> <span class=o>+</span> <span class=n>age</span><span class=p>);</span>
+            <span class=n>System</span><span class=o>.</span><span class=n>out</span><span class=o>.</span><span class=n>println</span><span class=p>(</span><span class=s2>&quot;Salary: &quot;</span> <span class=o>+</span> <span class=n>salary</span><span class=p>);</span>
+        <span class=p>}</span>
+        <span class=p>}</span>
+    <span class=err>```</span>
+
+<span class=c1>## ArrayList</span>
+
+<span class=n>Uma</span> <span class=err>`</span><span class=n>ArrayList</span><span class=err>`</span> <span class=n>é</span> <span class=n>um</span> <span class=n>array</span> <span class=n>mas</span> <span class=s2>&quot;resizable&quot;</span> <span class=n>que</span> <span class=n>pertence</span> <span class=n>ao</span> <span class=n>package</span> <span class=n>java</span><span class=o>.</span><span class=n>util</span><span class=o>.</span>
+
+<span class=n>A</span> <span class=n>diferença</span> <span class=n>entre</span> <span class=n>um</span> <span class=n>array</span> <span class=n>dito</span> <span class=n>normal</span> <span class=n>e</span> <span class=n>um</span> <span class=n>ArrayList</span> <span class=n>é</span> <span class=n>q</span> <span class=n>o</span> <span class=n>tamanho</span> <span class=n>de</span> <span class=n>um</span> <span class=n>array</span> <span class=n>normal</span> <span class=n>não</span> <span class=n>pode</span> <span class=n>ser</span> <span class=n>modificado</span><span class=p>,</span> <span class=n>se</span> <span class=n>queremos</span> <span class=n>meter</span> <span class=n>mais</span> <span class=n>um</span> <span class=n>elemento</span> <span class=n>no</span> <span class=n>array</span> <span class=n>temos</span> <span class=n>de</span> <span class=n>fazer</span> <span class=n>um</span> <span class=n>novo</span><span class=p>,</span> <span class=n>copiar</span> <span class=n>o</span> <span class=n>array</span> <span class=n>antigo</span> <span class=n>e</span> <span class=n>meter</span> <span class=n>outro</span> <span class=n>elemento</span> <span class=n>na</span> <span class=n>ultima</span> <span class=n>posição</span> <span class=n>por</span> <span class=n>exemplo</span><span class=o>.</span> <span class=n>No</span> <span class=n>caso</span> <span class=n>do</span> <span class=n>ArrayList</span> <span class=n>podemos</span> <span class=n>adicionar</span> <span class=n>ou</span> <span class=n>remover</span> <span class=n>elementos</span> <span class=n>sem</span> <span class=n>problema</span><span class=o>.</span>
+
+<span class=err>!!!</span> <span class=n>warning</span> <span class=s2>&quot;A syntax é diferente que num array normal!&quot;</span> 
+
+<span class=err>```</span><span class=n>java</span> <span class=n>title</span><span class=o>=</span><span class=s2>&quot;Uma `ArrayList` que vai guardar strings&quot;</span>
+<span class=kn>import</span> <span class=nn>java.util.ArrayList</span><span class=p>;</span> <span class=o>//</span> <span class=kn>import</span> <span class=nn>the</span> <span class=n>ArrayList</span> <span class=k>class</span>
+
+<span class=nc>ArrayList</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;</span> <span class=n>cars</span> <span class=o>=</span> <span class=n>new</span> <span class=n>ArrayList</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;</span><span class=p>();</span> <span class=o>//</span> <span class=n>Create</span> <span class=n>an</span> <span class=n>ArrayList</span> <span class=nb>object</span>
+</code></pre></div></td></tr></table></div> <h3 id=adicionar-elementos>Adicionar elementos<a class=headerlink href=#adicionar-elementos title="Permanent link">&para;</a></h3> <details class=example> <summary>add( )</summary> <p>```java import java.util.ArrayList;</p> <p>public class Main { public static void main(String[] args) { ArrayList<string> cars = new ArrayList<string>(); cars.add("Volvo"); cars.add("BMW"); cars.add("Ford"); cars.add("Mazda"); System.out.println(cars); } } ```</p> </details> <h3 id=aceder-a-um-elemento-por-index>Aceder a um elemento por index<a class=headerlink href=#aceder-a-um-elemento-por-index title="Permanent link">&para;</a></h3> <details class=example> <summary>get( )</summary> <p><code>cars.get(0);</code></p> </details> <h3 id=modificar-elementos-numa-arraylist>Modificar elementos numa ArrayList<a class=headerlink href=#modificar-elementos-numa-arraylist title="Permanent link">&para;</a></h3> <details class=example> <summary>set( )</summary> <p><code>cars.set(0, "Opel");</code></p> </details> <h3 id=remover-um-elemento-da-arraylist>Remover um elemento da ArrayList<a class=headerlink href=#remover-um-elemento-da-arraylist title="Permanent link">&para;</a></h3> <details class=example> <summary>remove( )</summary> <p><code>cars.remove(0);</code></p> </details> <h3 id=remover-todos-os-elementos-da-arraylist>Remover todos os elementos da ArrayList<a class=headerlink href=#remover-todos-os-elementos-da-arraylist title="Permanent link">&para;</a></h3> <details class=example> <summary>clear( )</summary> <p><code>cars.clear();</code> </p> </details> <h3 id=tamanho-de-uma-arraylist>Tamanho de uma ArrayList<a class=headerlink href=#tamanho-de-uma-arraylist title="Permanent link">&para;</a></h3> <p><code>cars.size()</code></p> <h3 id=loop-de-uma-arraylist>Loop de uma ArrayList<a class=headerlink href=#loop-de-uma-arraylist title="Permanent link">&para;</a></h3> <p>```java title="For" hl_lines="8 9 10" public class Main { public static void main(String[] args) { ArrayList<string> cars = new ArrayList<string>(); cars.add("Volvo"); cars.add("BMW"); cars.add("Ford"); cars.add("Mazda"); for (int i = 0; i &lt; cars.size(); i++) { System.out.println(cars.get(i)); } } }</p> <div class=codehilite><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span></pre></div></td><td class=code><div><pre><span></span><code><span class=nv>Tamb</span>é<span class=nv>m</span><span class=w> </span><span class=nv>se</span><span class=w> </span><span class=nv>pode</span><span class=w> </span><span class=nv>usar</span><span class=w> </span><span class=nv>o</span><span class=w> </span><span class=k>For</span><span class=o>-</span><span class=nv>Each</span><span class=w></span>
+
+```<span class=nv>java</span><span class=w> </span><span class=nv>title</span><span class=o>=</span><span class=s2>&quot;For-Each&quot;</span><span class=w> </span><span class=nv>hl_lines</span><span class=o>=</span><span class=s2>&quot;8 9 10&quot;</span><span class=w></span>
+<span class=nv>public</span><span class=w> </span><span class=nv>class</span><span class=w> </span><span class=nv>Main</span><span class=w> </span>{<span class=w></span>
+<span class=w>  </span><span class=nv>public</span><span class=w> </span><span class=nv>static</span><span class=w> </span><span class=nv>void</span><span class=w> </span><span class=nv>main</span><span class=ss>(</span><span class=nv>String</span>[]<span class=w> </span><span class=nv>args</span><span class=ss>)</span><span class=w> </span>{<span class=w></span>
+<span class=w>    </span><span class=nv>ArrayList</span><span class=o>&lt;</span><span class=nv>String</span><span class=o>&gt;</span><span class=w> </span><span class=nv>cars</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nv>new</span><span class=w> </span><span class=nv>ArrayList</span><span class=o>&lt;</span><span class=nv>String</span><span class=o>&gt;</span><span class=ss>()</span><span class=c1>;</span><span class=w></span>
+<span class=w>    </span><span class=nv>cars</span>.<span class=nv>add</span><span class=ss>(</span><span class=s2>&quot;Volvo&quot;</span><span class=ss>)</span><span class=c1>;</span><span class=w></span>
+<span class=w>    </span><span class=nv>cars</span>.<span class=nv>add</span><span class=ss>(</span><span class=s2>&quot;BMW&quot;</span><span class=ss>)</span><span class=c1>;</span><span class=w></span>
+<span class=w>    </span><span class=nv>cars</span>.<span class=nv>add</span><span class=ss>(</span><span class=s2>&quot;Ford&quot;</span><span class=ss>)</span><span class=c1>;</span><span class=w></span>
+<span class=w>    </span><span class=nv>cars</span>.<span class=nv>add</span><span class=ss>(</span><span class=s2>&quot;Mazda&quot;</span><span class=ss>)</span><span class=c1>;</span><span class=w></span>
+<span class=w>    </span><span class=k>for</span><span class=w> </span><span class=ss>(</span><span class=nv>String</span><span class=w> </span><span class=nv>i</span><span class=w> </span>:<span class=w> </span><span class=nv>cars</span><span class=ss>)</span><span class=w> </span>{<span class=w></span>
+<span class=w>      </span><span class=nv>System</span>.<span class=nv>out</span>.<span class=nv>println</span><span class=ss>(</span><span class=nv>i</span><span class=ss>)</span><span class=c1>;</span><span class=w></span>
+<span class=w>    </span>}<span class=w></span>
+<span class=w>  </span>}<span class=w></span>
+}<span class=w></span>
+</code></pre></div></td></tr></table></div> <h3 id=sort-arraylist>Sort ArrayList<a class=headerlink href=#sort-arraylist title="Permanent link">&para;</a></h3> <p>Existe uma class no package java.util chamada <code>Collections</code> que inclui a funcionalidade <code>sort()</code> e que pode ser usada numa ArrayList, ordenando-a alfabeticamente ou numericamente.</p> <details class=example> <summary>Sort( )</summary> <p>```java title="Sort alfabeticamente" import java.util.ArrayList; import java.util.Collections; // Import the Collections class</p> <p>public class Main { public static void main(String[] args) { ArrayList<string> cars = new ArrayList<string>(); cars.add("Volvo"); cars.add("BMW"); cars.add("Ford"); cars.add("Mazda"); Collections.sort(cars); // Sort cars for (String i : cars) { System.out.println(i); } } } ```</p> <p>```java title="Sort Numericamente" import java.util.ArrayList; import java.util.Collections; // Import the Collections class</p> <p>public class Main { public static void main(String[] args) { ArrayList<integer> myNumbers = new ArrayList<integer>(); myNumbers.add(33); myNumbers.add(15); myNumbers.add(20); myNumbers.add(34); myNumbers.add(8); myNumbers.add(12);</p> <div class=codehilite><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span></pre></div></td><td class=code><div><pre><span></span><code><span class=nv>Collections</span>.<span class=nv>sort</span><span class=ss>(</span><span class=nv>myNumbers</span><span class=ss>)</span><span class=c1>;  // Sort myNumbers</span><span class=w></span>
+
+<span class=k>for</span><span class=w> </span><span class=ss>(</span><span class=nv>int</span><span class=w> </span><span class=nv>i</span><span class=w> </span>:<span class=w> </span><span class=nv>myNumbers</span><span class=ss>)</span><span class=w> </span>{<span class=w></span>
+<span class=w>  </span><span class=nv>System</span>.<span class=nv>out</span>.<span class=nv>println</span><span class=ss>(</span><span class=nv>i</span><span class=ss>)</span><span class=c1>;</span><span class=w></span>
+}<span class=w></span>
+</code></pre></div></td></tr></table></div> <p>} } ```</p> </details> <h2 id=linkedlist>LinkedList<a class=headerlink href=#linkedlist title="Permanent link">&para;</a></h2> <p>Uma <code>LinkedList</code> é muito parecida a uma <code>ArrayList</code> (até porque usam a mesma interface <code>List</code>) porem são construidas de formas muito diferentes.</p> <p>Uma <code>ArrayList</code> tem um array normal dentro dela.</p> <p>Uma <code>LinkedList</code> guarda os seus item dentro de "containers". A List tem um link para o primeiro container, e cada container tem um link para o próximo. Tipo nodes em AED. </p> <p>Normalmente a <code>ArrayList</code> é mais eficiente uma vez que o seu uso foca-se mais em aceder a index's random da lista, mas a <code>LinkedList</code> tem métodos mais eficientes para alguns casos:</p> <table> <thead> <tr> <th>Método</th> <th>Descrição</th> </tr> </thead> <tbody> <tr> <td>addFirst()</td> <td>Adiciona um item ao inicio da lista</td> </tr> <tr> <td>addLast()</td> <td>Adiciona um item ao fim da lista</td> </tr> <tr> <td>removeFirst()</td> <td>Remove um item do inicio da lista</td> </tr> <tr> <td>removeLast()</td> <td>Remove um item do fim da lista</td> </tr> <tr> <td>getFirst()</td> <td>Obtém o primeiro item da lista</td> </tr> <tr> <td>getLast()</td> <td>Obtém o ultimo item da lista</td> </tr> </tbody> </table> <p>!!!*** tip "Quando usar?" Usa-se a <code>ArrayList</code> para guardar e aceder a dados, e a <code>LinkedList</code> para manipular dados.</p> <details class=example> <summary>Example</summary> <p>```java import java.util.LinkedList;</p> <p>public class Main { public static void main(String[] args) { LinkedList<string> cars = new LinkedList<string>(); cars.add("Volvo"); cars.add("BMW"); cars.add("Ford"); cars.add("Mazda");</p> <div class=codehilite><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span></pre></div></td><td class=code><div><pre><span></span><code><span class=o>//</span><span class=w> </span><span class=nt>Use</span><span class=w> </span><span class=nt>getLast</span><span class=o>()</span><span class=w> </span><span class=nt>to</span><span class=w> </span><span class=nt>display</span><span class=w> </span><span class=nt>the</span><span class=w> </span><span class=nt>last</span><span class=w> </span><span class=nt>item</span><span class=w> </span><span class=nt>in</span><span class=w> </span><span class=nt>the</span><span class=w> </span><span class=nt>list</span><span class=w></span>
+<span class=nt>System</span><span class=p>.</span><span class=nc>out</span><span class=p>.</span><span class=nc>println</span><span class=o>(</span><span class=nt>cars</span><span class=p>.</span><span class=nc>getFirst</span><span class=o>());</span><span class=w> </span><span class=o>//</span><span class=nt>Output</span><span class=o>:</span><span class=w> </span><span class=nt>Volvo</span><span class=w></span>
+<span class=nt>cars</span><span class=p>.</span><span class=nc>addFirst</span><span class=o>(</span><span class=s2>&quot;Hola&quot;</span><span class=o>);</span><span class=w></span>
+<span class=nt>System</span><span class=p>.</span><span class=nc>out</span><span class=p>.</span><span class=nc>println</span><span class=o>(</span><span class=nt>cars</span><span class=p>.</span><span class=nc>getFirst</span><span class=o>());</span><span class=w> </span><span class=o>//</span><span class=nt>Output</span><span class=o>:</span><span class=w> </span><span class=nt>Hola</span><span class=w></span>
+</code></pre></div></td></tr></table></div> <p>} } ```</p> </details> <hr> <div class=md-source-date> <small> Última atualização: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">16 de agosto de 2022</span> </small> </div> </article> </div> </div> </main> <footer class=md-footer> <div class=md-footer-nav> <nav class="md-footer-nav__inner md-grid" aria-label=Footer> <a href=../java_basics/ class="md-footer-nav__link md-footer-nav__link--prev" rel=prev> <div class="md-footer-nav__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </div> <div class=md-footer-nav__title> <div class=md-ellipsis> <span class=md-footer-nav__direction> Anterior </span> Java basics </div> </div> </a> <a href=../../Linux/Commands/ class="md-footer-nav__link md-footer-nav__link--next" rel=next> <div class=md-footer-nav__title> <div class=md-ellipsis> <span class=md-footer-nav__direction> Próximo </span> Commands </div> </div> <div class="md-footer-nav__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg> </div> </a> </nav> </div> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-footer-copyright> <div class=md-footer-copyright__highlight> Copyright &copy; 2022 Hugo Lima </div> </div> <div class=md-footer-social> <a href=https://github.com/hslima00 target=_blank rel=noopener title=github.com class=md-footer-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </a> <a href=https://www.linkedin.com/in/hugo-lima-0b4aba234/ target=_blank rel=noopener title=www.linkedin.com class=md-footer-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg> </a> </div> </div> </div> </footer> </div> <script src=../../../assets/javascripts/vendor.0ac82a11.min.js></script> <script src=../../../assets/javascripts/bundle.f81dfb4d.min.js></script><script id=__lang type=application/json>{"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.config.lang": "pt", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Buscar", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Missing"}</script> <script>
         app = initialize({
           base: "../../..",
-          features: ['navigation.tabs', 'content.code.annotate'],
+          features: ['navigation.tabs', 'content.code.annotate', 'search.suggest', 'search.highlight', 'search.share', 'toc.integrate'],
           search: Object.assign({
             worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
-      </script> <script src=https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js></script> <script src=../../../stylesheets/extra.js></script> <script src=../../../javascripts/mathjax.js></script> <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script> </body> </html>
+      </script> <script src=https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js></script> <script src=../../../stylesheets/extra.js></script> <script src=../../../javascripts/mathjax.js></script> <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script> <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js></script> <script src=../../../javascripts/config.js></script> </body> </html>

@@ -1,0 +1,132 @@
+{
+  "main": {
+    "id": "263b7b439ff155e7",
+    "type": "split",
+    "children": [
+      {
+        "id": "7a20d8565d49badc",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "da5a9ee2c5642c9f",
+    "type": "split",
+    "children": [
+      {
+        "id": "064e4ef59132f0eb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4d9e18f7ba5f45d0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "e768085cc6adcfe8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4a7f5834c790b8ea",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b9a7b9ea17187758",
+    "type": "split",
+    "children": [
+      {
+        "id": "1053da8c33002352",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "decc4ef927865eac",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8af25a5aa621ae93",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "107466b3cc51c4d4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "a7960bc61a40211a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "e768085cc6adcfe8",
+  "lastOpenFiles": [
+    "%24{path}/img/9873e161bb9aabcd7ddc909e43fb505a117c8c29081548af63dedf89787d82ac.png.md",
+    "docs/IST/4º ano/Aprendizagem Automática/2nd_class.md",
+    "docs/IST/4º ano/Aprendizagem Automática/3rd_class.md",
+    "%24{path}/img/6406781714764baaa6f49d2c4667c71eb2baeccebd73066169062982cb98ac73.png.md",
+    "docs/IST/4º ano/Aprendizagem Automática/1st_class.md"
+  ]
+}

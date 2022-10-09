@@ -1,5 +1,5 @@
 actdiag==3.0.0
-apturl==0.5.2
+#apturl==0.5.2
 attrs==22.1.0
 Babel==2.10.3
 bcrypt==4.0.0

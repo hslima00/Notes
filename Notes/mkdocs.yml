@@ -9,6 +9,7 @@ copyright: Copyright &copy; 2022 Hugo Lima
 
 
 
+
 # Configuration
 theme:
   name: material
@@ -31,12 +32,16 @@ theme:
   features:
     - navigation.tabs
     - content.code.annotate
+    - search.suggest    #Not working apparently
+    - search.highlight  #Not working apparently
+    - search.share      #Not working apparently
+    - toc.integrate
   # 404 page
   static_templates:
     - 404.html
   # Don't include MkDocs' JavaScript
-  include_search_page: false
-  search_index_only: true
+  #include_search_page: false 
+  #search_index_only: false
   # Default values, taken from mkdocs_theme.yml
   #language: pt
     #- navigation.instant
@@ -50,29 +55,34 @@ theme:
   favicon: assets/favicon.ico
   icon:
     logo: fontawesome/solid/laptop-code
+    
 
 
 # Plugins
 plugins:
-  - awesome-pages
-  - git-revision-date-localized:
-      fallback_to_build_date: true      
-      type: date
+  - mkdocs-jupyter
+  - awesome-pages                          #Serve para a "navegação fácil" entre as páginas 
+  - git-revision-date-localized:           #Mete a data da ultima modificação baseado no ultimo commit git        
+      type: date                           #date = default https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/options/
       locale: pt
-  - search
-  - include-markdown
-  - minify:
-        minify_html: true
-        htmlmin_opts:
-            remove_comments: true
-      
+      timezone: UTC 
+      enable_creation_date: true           #Adiciona a data criada no bottom da pagina
+  - search:                                #Adiciona a barra de pesquisa
+      lang: pt
+      prebuild_index: true                 #Organiza a pesquisa segundo as cenas que aparecem primeiro
+  #- macros 
+  - include-markdown                       #Serve para incluir markdowns dentro de outros markdowns
+  - minify:                                #Minify the output HTML
+      minify_html: true 
+      htmlmin_opts: 
+          remove_comments: true            #Remove comments from the output HTML
 # Customization
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/hslima00
-#    - icon: fontawesome/brands/youtube
-#      link: https://www.youtube.com/channel/UCzgyG0bgwcu14KuS9sbUHMw/playlists?view_as=subscriber
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/hugo-lima-0b4aba234/
 #    - icon: fontawesome/brands/docker
 #      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
 #    - icon: fontawesome/brands/twitter
@@ -84,8 +94,13 @@ extra:
  # disqus: javieranto
 
 # Extensions
-markdown_extensions:
-  - pymdownx.progressbar
+markdown_extensions:  #https://squidfunk.github.io/mkdocs-material/reference/markdown-extensions/
+  - codehilite:           #Syntax Highlighting
+      guess_lang: true    #Guess the language of the code block
+      linenums: true      #Show line numbers
+  - pymdownx.inlinehilite #Inline Syntax Highlighting usar `#!<code>`    
+  - pymdownx.superfences 
+  - pymdownx.progressbar #
   - abbr
   - attr_list
   - def_list
@@ -93,8 +108,6 @@ markdown_extensions:
   - pyembed.markdown
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.betterem:
-      smart_enable: all
   - pymdownx.critic
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
@@ -110,22 +123,16 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
   - meta
   - md_in_html
   - markdown_blockdiag:
       format: svg
-  - pymdownx.highlight:
-      auto_title: true
-      linenums: true
-      #linenums_style: pymdownx-inline 
   - toc:
       permalink: true
       title: Nesta Página
       #permalink_title: Anchor link to this section for reference
       #toc_depth: 3
+  
   - extra
   - pymdownx.caret
   - pymdownx.tilde
@@ -135,8 +142,8 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.tabbed:
-        alternate_style: true
+  #- pymdownx.tabbed:
+   #     alternate_style: true
   - pymdownx.betterem:
         smart_enable: all
   - pymdownx.keys
@@ -144,8 +151,24 @@ markdown_extensions:
   - pymdownx.tasklist:
         custom_checkbox: true
   - markdown_include.include
-  - pymdownx.arithmatex:
-        generic: true
+  - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.magiclink:
+        repo_url_shorthand: true
+        user: hslima00
+        repo: mkdocs-material
+  - pymdownx.snippets:
+        check_paths: true     
+  - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format          
+  - pymdownx.tabbed:
+        alternate_style: true 
+
+
 
 
 
@@ -155,9 +178,14 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
+  - javascripts/config.js
 
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default
 
 # Google Analytics
 # google_analytics:
 #   - UA-30695368-1
 #   - auto
+
