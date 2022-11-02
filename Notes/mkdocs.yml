@@ -7,185 +7,126 @@ site_author: Hugo Lima
 repo_name: hslima00/Notes
 copyright: Copyright &copy; 2022 Hugo Lima
 
-
-
-
-# Configuration
+docs_dir: Markdown
 theme:
   name: material
-  custom_dir: material
-  language: pt
+  custom_dir: docs/theme
   icon:
-    admonition:
-      note: fontawesome/solid/note-sticky
-      abstract: fontawesome/solid/book
-      info: fontawesome/solid/circle-info
-      tip: fontawesome/solid/bullhorn
-      success: fontawesome/solid/check
-      question: fontawesome/solid/circle-question
-      warning: fontawesome/solid/triangle-exclamation
-      failure: fontawesome/solid/bomb
-      danger: fontawesome/solid/skull
-      bug: fontawesome/solid/robot
-      example: fontawesome/solid/flask
-      quote: fontawesome/solid/quote-left
+    logo: material/book-open-page-variant
+  palette:
+    scheme: dracula
+    primary: deep purple
+    accent: deep purple
+  font:
+    text: Ubuntu Mono
+    code: Roboto Mono
   features:
     - navigation.tabs
-    - content.code.annotate
-    - search.suggest    #Not working apparently
-    - search.highlight  #Not working apparently
-    - search.share      #Not working apparently
-    - toc.integrate
-  # 404 page
-  static_templates:
-    - 404.html
-  # Don't include MkDocs' JavaScript
-  #include_search_page: false 
-  #search_index_only: false
-  # Default values, taken from mkdocs_theme.yml
-  #language: pt
-    #- navigation.instant
-  palette:
-    scheme: slate
-    primary: black
-    accent: green
-  font:
-    text: Roboto
-    code: Roboto Mono
-  favicon: assets/favicon.ico
-  icon:
-    logo: fontawesome/solid/laptop-code
-    
+    - navigation.top
+    - navigation.instant
+    - content.tabs.link
 
 
-# Plugins
-plugins:
-  - mkdocs-jupyter
-  - awesome-pages                          #Serve para a "navegação fácil" entre as páginas 
-  - git-revision-date-localized:           #Mete a data da ultima modificação baseado no ultimo commit git        
-      type: date                           #date = default https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/options/
-      locale: pt
-      timezone: UTC 
-      enable_creation_date: true           #Adiciona a data criada no bottom da pagina
-  - search:                                #Adiciona a barra de pesquisa
-      lang: pt
-      prebuild_index: true                 #Organiza a pesquisa segundo as cenas que aparecem primeiro
-  #- macros 
-  - include-markdown                       #Serve para incluir markdowns dentro de outros markdowns
-  - minify:                                #Minify the output HTML
-      minify_html: true 
-      htmlmin_opts: 
-          remove_comments: true            #Remove comments from the output HTML
-# Customization
+
+markdown_extensions:
+  - markdown.extensions.toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+      permalink: ""
+  - markdown.extensions.admonition:
+  - markdown.extensions.smarty:
+      smart_quotes: false
+  - pymdownx.betterem:
+  - markdown.extensions.attr_list:
+  - markdown.extensions.def_list:
+  - markdown.extensions.tables:
+  - markdown.extensions.abbr:
+  - markdown.extensions.footnotes:
+  - markdown.extensions.md_in_html:
+  - pymdownx.superfences:
+      preserve_tabs: true
+      custom_fences:
+        # Mermaid diagrams
+        - name: diagram
+          class: diagram
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: math
+          class: arithmatex
+          format: !!python/object/apply:pymdownx.arithmatex.arithmatex_fenced_format {kwds: {mode: generic, tag: pre}}
+        # - name: md-render
+        #   class: md-render
+        #   format: !!python/name:tools.pymdownx_md_render.md_sub_render
+  - pymdownx.highlight:
+      extend_pygments_lang:
+        - name: php-inline
+          lang: php
+          options:
+            startinline: true
+        - name: pycon3
+          lang: pycon
+          options:
+            python3: true
+      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite:
+      custom_inline:
+        - name: math
+          class: arithmatex
+          format: !!python/object/apply:pymdownx.arithmatex.arithmatex_inline_format {kwds: {mode: generic}}
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+      repo_url_shorthand: true
+      social_url_shorthand: true
+      social_url_shortener: true
+      user: hslima00
+      repo: notes
+      normalize_issue_symbols: true
+  - pymdownx.tilde:
+  - pymdownx.caret:
+  - pymdownx.smartsymbols:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.escapeall:
+      hardbreak: True
+      nbsp: True
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.progressbar:
+  - pymdownx.arithmatex:
+      generic: true
+      block_tag: 'pre'
+  - pymdownx.mark:
+  - pymdownx.striphtml:
+  #- pymdownx.snippets:
+  #    base_path:
+  #    - docs/src/markdown/.snippets
+  #    - LICENSE.md
+  #    auto_append:
+  #    - refs.md
+  #    check_paths: true
+  - pymdownx.keys:
+      separator: "\uff0b"
+  - pymdownx.details: 
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.saneheaders:
+
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/hslima00
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/hugo-lima-0b4aba234/
-#    - icon: fontawesome/brands/docker
-#      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
-#    - icon: fontawesome/brands/twitter
-#      link: https://twitter.com/javierobcn
-#    - icon: fontawesome/brands/linkedin
-#      link: https://linkedin.com/in/squidfunk/
-#    - icon: fontawesome/brands/instagram
-#      link: https://instagram.com/squidfunk
- # disqus: javieranto
-
-# Extensions
-markdown_extensions:  #https://squidfunk.github.io/mkdocs-material/reference/markdown-extensions/
-  - codehilite:           #Syntax Highlighting
-      guess_lang: true    #Guess the language of the code block
-      linenums: true      #Show line numbers
-  - pymdownx.inlinehilite #Inline Syntax Highlighting usar `#!<code>`    
-  - pymdownx.superfences 
-  - pymdownx.progressbar #
-  - abbr
-  - attr_list
-  - def_list
-  - footnotes
-  - pyembed.markdown
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.critic
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.magiclink:
-      repo_url_shorthand: true
-      user: hslima00
-      repo: mkdocs-material
-  - pymdownx.snippets:
-      check_paths: true
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - meta
-  - md_in_html
-  - markdown_blockdiag:
-      format: svg
-  - toc:
-      permalink: true
-      title: Nesta Página
-      #permalink_title: Anchor link to this section for reference
-      #toc_depth: 3
-  
-  - extra
-  - pymdownx.caret
-  - pymdownx.tilde
-  - pymdownx.mark
-  - admonition
-  - pymdownx.details
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  #- pymdownx.tabbed:
-   #     alternate_style: true
-  - pymdownx.betterem:
-        smart_enable: all
-  - pymdownx.keys
-  - pymdownx.smartsymbols
-  - pymdownx.tasklist:
-        custom_checkbox: true
-  - markdown_include.include
-  - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.magiclink:
-        repo_url_shorthand: true
-        user: hslima00
-        repo: mkdocs-material
-  - pymdownx.snippets:
-        check_paths: true     
-  - pymdownx.superfences:
-        custom_fences:
-          - name: mermaid
-            class: mermaid
-            format: !!python/name:pymdownx.superfences.fence_code_format          
-  - pymdownx.tabbed:
-        alternate_style: true 
-
-
-
-
-
+extra_css:
+  - assets/pymdownx-extras/extra-13d1e30d3e.css
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
-  - stylesheets/extra.js
-  - javascripts/mathjax.js
+  - https://unpkg.com/mermaid@9.1.7/dist/mermaid.min.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
-  - javascripts/config.js
+  - assets/pymdownx-extras/extra-loader-d39d49fc.js
 
-extra_css:
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default
-
-# Google Analytics
-# google_analytics:
-#   - UA-30695368-1
-#   - auto
-
+plugins:
+  - awesome-pages 
+  - search
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+  - mkdocs_pymdownx_material_extras
+  - minify:
+      minify_html: true
