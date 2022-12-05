@@ -123,8 +123,9 @@ extra_javascript:
   - assets/pymdownx-extras/extra-loader-d39d49fc.js
 
 plugins:
-  - awesome-pages 
+  - awesome-pages
   - search
+  - macros
   - git-revision-date-localized:
       fallback_to_build_date: true
   - mkdocs_pymdownx_material_extras
