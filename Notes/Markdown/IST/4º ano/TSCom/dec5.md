@@ -22,6 +22,3 @@ You give current to change the magnetic field orientation.
 
 ## Memristors 
 
-
-
-teste
