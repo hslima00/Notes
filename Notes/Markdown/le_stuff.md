@@ -5,6 +5,22 @@ hide:
 ### Index 
 
 
+
+{% macro toc(page) %}
+
+- [{{ page.title }}]({{ page.url }})
+{% if page.children %}
+  {% for child in page.children %}
+    {{ toc(child) }}
+  {% endfor %}
+{% endif %}
+
+{% endmacro %}
+
+{{ toc(site.pages) }}
+
+
+
 ??? bug "Bonus"
 
     <p align="center">
