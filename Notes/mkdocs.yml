@@ -130,7 +130,13 @@ plugins:
   - mkdocs_pymdownx_material_extras
   - minify:
       minify_html: true
-
+  - encryptcontent:
+      global_password: hslima
+      hljs: True
+      arithmatex: True
+      remember_password: True
+      mermaid2: True
+      search_index: 'dynamically'
 
 
 
