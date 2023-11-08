@@ -83,8 +83,8 @@ markdown_extensions:
   - pymdownx.caret:
   - pymdownx.smartsymbols:
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      #emoji_index: !!python/name:materialx.emoji.twemoji
+      #emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.escapeall:
       hardbreak: True
       nbsp: True
@@ -130,13 +130,6 @@ plugins:
   - mkdocs_pymdownx_material_extras
   - minify:
       minify_html: true
-  - encryptcontent:
-      global_password: hslima
-      hljs: True
-      arithmatex: True
-      remember_password: True
-      mermaid2: True
-      search_index: 'dynamically'
 
 
 
