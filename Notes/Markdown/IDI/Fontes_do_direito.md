@@ -111,28 +111,40 @@ As leis podem ter os seguintes sentidos:
 
 | Sentido  | Descrição                                                                 |
 | -------- | ------------------------------------------------------------------------- |
-| Amplo   | conjunto de princípios que regem os seres (tudo), inclui as leis naturais |
+| Amplo    | conjunto de princípios que regem os seres (tudo), inclui as leis naturais |
 | Restrito | Diploma legal emanado da Assembleia da República                          |
 
  
 
+### *Vacatio Legis*
+
+O ==período entre a publicação de uma lei em DR e a entrada em vigor da mesma== tem o nome de “*vacatio legis*”, um período onde a lei está de “férias” (==**apesar de já existir juridicamente, ainda não está em vigor**==).
+
+
+Este período tem como ^^objetivo^^ garantir que os destinatários da lei tomem conhecimento da mesma, e das suas condições de aplicação, de forma que estes assimilem e façam as mudanças necessárias para o cumprimento da lei.
+O período de “*vacatio legis*” poderá ser mais ou menos extenso ou ainda nem existir (lei entra em vigor no dia seguinte à publicação em DR). Em ==situações em que não está referido este período== a lei entra em vigor ao ==quinto dia== após a publicação em DR.
+
+
+Contagem dos dias em dias corridos.
+
+!!! error "POR FORMATAR DAQUI PARA A FRENTE"
 
 
 
-!!! warning "POR FORMATAR DAQUI PARA A FRENTE"
+## Normas Corporativas
+Apesar de o sistema corporativo ter sido abolido na sequência de revolução de 25 Abr de 1974, o ==Código Civil== continua a considera-las ==fontes imediatas do direito==. Tais normas constituem leis em ==sentido material==. Disciplinam determinados sectores da vida social, são ditadas por entidades competentes e devem obedecer às formas estabelecidas para a criação normativa. 
 
+??? tip "Exemplo de Norma Corporativa"
 
+	Um exemplo de norma corporativa em Portugal é a Ordem dos Advogados, que estabelece regras e regulamentos para a prática da advocacia no país
 
-Normas Corporativas
-Apesar de o sistema corporativo ter sido abolido na sequência de revolução de 25 Abr de 1974, o Código Civil continua a considera-las fontes imediatas do direito. Tais normas constituem leis em sentido material. Disciplinam determinados sectores da vida social, são ditadas por entidades competentes e devem obedecer às formas estabelecidas para a criação normativa. 
+## Jurisprudência
+Conjunto de ==decisões== em que se exprime a ==orientação seguida pelos tribunais superiores== ao julgarem os casos concretos que lhes são submetidos.
 
-Jurisprudência
-Conjunto de decisões em que se exprime a orientação seguida pelos tribunais superiores ao julgarem os casos concretos que lhes são submetidos. Embora não seja fonte de direito, não deixa de ter um contributo importantíssimo na elaboração de leis e na criação do direito.
-
-Doutrina 
+## Doutrina 
 Opiniões ou pareceres dos jurisconsultos acerca de uma questão de direito, expostas em tratados, manuais, recensões, pareceres, ... A doutrina desapareceu como fonte de direito mas continua a  ter um elevado valor e influência na criação  e interpretação de leis, integração das lacunas, codificação do material normativo, formação dos juristas, ...
 
-Costume 
+## Costume 
 Prática social reiterada (continuada/constante) de um ato acompanhada da convicção de  obrigatoriedade, isto é, de que é juridicamente obrigatória. É uma fonte anónima de direito, sem origem certa, cujas normas tem a sua eficácia automaticamente assegurada. 
 
 

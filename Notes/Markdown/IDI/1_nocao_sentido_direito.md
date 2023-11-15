@@ -2,6 +2,7 @@
 
 ## Ordem Normativa
 
+> Focar: Ordem Juridica e Trato Social 
 
 ??? warning "Ordem Juridica"
 
@@ -26,10 +27,6 @@
 
 
 
-???+ warning "Ordem Religiosa (==^^n deve sair^^==)"
-
-    ### Ordem Religiosa TODO
-
 ???+ warning "Ordem de Trato Social"
 
     ### Ordem de Trato Social
@@ -52,6 +49,8 @@
 
 ## Direito Publico e Direito Privado
 
+### ^^Diferença^^ entre Direito Publico e Direito Privado
+
 A ==diferença== entre Direito Público e Direito Privado ==está nos sujeitos e nos interesses abordados por cada ramo do direito== . Além dessa diferença, também há uma relação de subordinação entre eles, sendo ==^^o Direito Público superior ao Direito Privado^^==
 
 ### Direito Publico
@@ -61,27 +60,36 @@ A ==diferença== entre Direito Público e Direito Privado ==está nos sujeitos e
     - Atua diretamente com os interesses da sociedade como um todo.
     - Envolve as relações entre entidades e órgãos estatais, como o Ministério Público e a Defensoria Pública. 
     - Relação vertical entre o Estado e o indivíduo, com o Estado acima do indivíduo.
-Regula atividades estatais, relações do Estado com particulares e ações dos cidadãos dentro da esfera pública da sociedade
-4
-.
-Exemplos de ramos do Direito Público incluem Direito Constitucional, Direito Administrativo, Direito Financeiro, Direito Penal, Direito Previdenciário, Direito Tributário, Direito Eleitoral, Direito Trabalhista, Direito Internacional e Direito Processual
-4
-.
-Direito Privado:
-Atua diretamente com os interesses particulares, como patrimônio familiar e sucessões
-4
-.
-Relação horizontal entre as partes envolvidas, com igualdade entre elas
-3
-.
-Regula interesses individuais e particulares, como compras e vendas, permutas e doações
-2
-.
-Exemplos de ramos do Direito Privado incluem Direito Civil, Direito Comercial e Direito Trabalhista
-6
-.
-A relação de subordinação entre o Direito Público e o Direito Privado significa que, em caso de conflito de interesses, o Direito Público tem prioridade em relação ao Direito Privado
-5
-. Além disso, o Direito Público é composto por princípios, normas imperativas que garantem a defesa dos cidadãos e a organização do Estado
-6
-.
+    - Regula atividades estatais, relações do Estado com particulares e ações dos cidadãos dentro da esfera pública da sociedade.
+
+
+??? example "Exemplos de ramos do Direito Público"
+
+    -  Direito Constitucional,
+    -  Direito Administrativo, 
+    -  Direito Financeiro, 
+    -  Direito Penal, 
+    -  Direito Previdenciário, 
+    -  Direito Tributário, 
+    -  Direito Eleitoral, 
+    -  Direito Trabalhista, 
+    -  Direito Internacional,
+    -  Direito Processual.
+
+
+
+???+ warning "Direito Privado"
+
+    - Atua diretamente com os interesses particulares, como patrimônio familiar e sucessões.
+    - Relação horizontal entre as partes envolvidas, com igualdade entre elas.
+    - Regula interesses individuais e particulares, como compras e vendas, permutas e doações.
+
+
+??? example "Exemplos de ramos do Direito Privado"
+
+    - Direito Civil,
+    -  Direito Comercial e Empresarial,
+    -  Direiro Agrário
+
+
+A ==relação de subordinação entre o Direito Público e o Direito Privado== significa que, ==em caso de conflito de interesses, o Direito Público tem prioridade em relação ao Direito Privado==. Além disso, o Direito Público é composto por princípios, normas imperativas que garantem a defesa dos cidadãos e a organização do Estado.
