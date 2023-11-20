@@ -15,54 +15,40 @@
 
 ## 1º teste
 
-Temas que vão sair para o teste (ditas pela Sra. Tenente, mas podem sair mais, quando ela disse estavamos na "Entrada em vigor " 3º ppt)
-
-==Check se estiver resumido! Se não tiver, pedem-se voluntários==
 
 ## Tabela
 
-| Tema                                                               | Autor     | Estado             |
-| ------------------------------------------------------------------ | --------- | ------------------ |
-| Direito publico e privado                                          | Lima      | :white_check_mark: |
-| Características do direito                                         | Sampaio   | :x:                |
-| Critérios de distinção                                             | Costa     | :x:                |
-| Fontes imediatas                                                   | Lima      | :white_check_mark: |
-| Fontes mediatas                                                    | Lima      | :white_check_mark: |
-| O que é o costume                                                  | Mota      | :x:                |
-| 3 tipos de costume com nomes estranhos ????                        | Mota      | :x:                |
-| Saber distinguir costume do uso                                    | Fernandes | :x:                |
-| Saber o que é a jurisprudência e douterina                         | Libano    | :x:                |
-| Fontes: focar a lei                                                | Lima      | :white_check_mark: |
-| Publicação e entrada em vigor                                      | Vera-Cruz | :x:                |
-| As ordens: trato social , moral                                    | Lima      | :white_check_mark: |
-| Ordem Juridica                                                     | :warning: |                    |
-| Os valores                                                         | Palaio    | :x:                |
-| A justiça                                                          | Ribeiro   | :x:                |
-| A segurança                                                        | Pinheiro  | :x:                |
-| Vacatio legis                                                      | Pinto     | :white_check_mark: |
-| Formas como a lei deixa de vigorar, caducidade e revogacao         | Rodrigues | :x:                |
-| Distinção entre direito interno e internacional                    | :warning: |                    |
-| Ramos do direito publico e do direito privado                      | Monteiro  | :x:                |
-| Promulgação e referenda                                            | :warning: |                    |
-| Elementos do estado (deve estar no final da primeira apresentação) | :warning: |                    |
+> Não está por ordem, foi aquilo que fui apanhado no ar...
 
-Focar: Ordem Juridica e Trato Social 
+| Tema                                                               | Autor              | Estado             |
+| ------------------------------------------------------------------ | ------------------ | ------------------ |
+| Direito publico e privado                                          | Lima               | :white_check_mark: |
+| Características do direito                                         | Sampaio            | :white_check_mark: |
+| Critérios de distinção                                             | Costa              | :white_check_mark: |
+| Fontes imediatas                                                   | Lima               | :white_check_mark: |
+| Fontes mediatas                                                    | Lima               | :white_check_mark: |
+| O que é o costume                                                  | Mota               | :white_check_mark: |
+| 3 tipos de costume com nomes estranhos ????                        | Mota               | :white_check_mark: |
+| Saber distinguir costume do uso                                    | Fernandes          | :white_check_mark: |
+| Douterina                                                          | Libano             | :white_check_mark: |
+| Jurisprudência                                                     | Libano             | :white_check_mark: |
+| Fontes: focar a lei                                                | Lima               | :white_check_mark: |
+| Publicação e entrada em vigor                                      | Vera-Cruz          | :white_check_mark: |
+| As ordens: trato social , moral                                    | Lima               | :white_check_mark: |
+| Ordem Juridica                                                     | Pinto              | :white_check_mark: |
+| Os valores                                                         | Palaio             | :white_check_mark: |
+| A justiça                                                          | Palaio             | :white_check_mark: |
+| A segurança                                                        | Pinheiro/Palaio    | :white_check_mark: |
+| Vacatio legis                                                      | Pinto              | :white_check_mark: |
+| Formas como a lei deixa de vigorar, caducidade e revogacao         | Rodrigues          | :white_check_mark: |
+| Distinção entre direito interno e internacional                    | Ribeiro            | :white_check_mark: |
+| Ramos do direito publico e do direito privado                      | Monteiro           | :white_check_mark: |
+| Promulgação e referenda                                            | Vera-Cruz/Pinheiro | :white_check_mark: |
+| Elementos do estado (deve estar no final da primeira apresentação) | :warning:          | :x:                |
+| hierquia das leis                                                  | Lima               | :x:                |
+| critérios de resolução de conflitos de leis                        | :warning:          | :x:                |
 
-Formas como a lei deixa de vigorar, caducidade e revogacao 
 
-Ramos do direito publico e do direito privado 
-
-Distinção entre direito interno e internacional 
-
-3 tipos de costume com nomes estranhos ????
-
-Promulgação e referenda 
-
-Lei em sentido formal e em sentido material 
-
-Diferença entre lei e decreto lei 
-
-Fases todas do processo de formacao da lei e da assembleia da republica 
 
 
 
