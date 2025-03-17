@@ -1,0 +1,107 @@
+/* Icon colors for dark theme */
+[data-md-color-scheme="dracula"] {
+    --md-default-fg-color: #f8f8f2;
+    --md-default-fg-color--light: #f8f8f2;
+    --md-default-fg-color--lighter: #f8f8f2;
+    --md-default-fg-color--lightest: #f8f8f2;
+}
+
+[data-md-color-scheme="dracula"] .md-icon {
+    color: var(--md-default-fg-color) !important;
+}
+
+[data-md-color-scheme="dracula"] .md-search__icon {
+    color: var(--md-default-fg-color) !important;
+}
+
+[data-md-color-scheme="dracula"] .mdx-iconsearch .md-icon {
+    color: var(--md-default-fg-color) !important;
+}
+
+[data-md-color-scheme="dracula"] .md-typeset .md-icon {
+    color: var(--md-default-fg-color) !important;
+}
+
+/* Target the icon search results specifically */
+.mdx-iconsearch-result .md-icon,
+.mdx-iconsearch-result__icon .md-icon {
+    color: #f8f8f2 !important;
+    fill: #f8f8f2 !important;
+}
+
+/* Target the actual SVG elements */
+.mdx-iconsearch-result svg,
+.mdx-iconsearch-result__icon svg {
+    fill: currentColor !important;
+    color: #f8f8f2 !important;
+}
+
+/* Target the material icons specifically */
+[data-md-color-scheme="dracula"] .material-symbols-outlined,
+[data-md-color-scheme="dracula"] .material-icons {
+    color: #f8f8f2 !important;
+}
+
+/* Target the icon search container */
+[data-md-color-scheme="dracula"] .mdx-iconsearch {
+    --md-default-fg-color: #f8f8f2;
+    --md-default-fg-color--light: #f8f8f2;
+}
+
+/* Target SVG elements in icon search */
+[data-md-color-scheme="dracula"] .mdx-iconsearch-result__list svg {
+    fill: #f8f8f2 !important;
+}
+
+/* Target the icon container */
+[data-md-color-scheme="dracula"] .mdx-iconsearch-result__icon {
+    color: #f8f8f2 !important;
+}
+
+/* Target the actual material icons */
+[data-md-color-scheme="dracula"] .mdx-iconsearch-result__list .icon {
+    color: #f8f8f2 !important;
+}
+
+/* Force all SVG paths to be white */
+[data-md-color-scheme="dracula"] .mdx-iconsearch-result__list svg path {
+    fill: #f8f8f2 !important;
+}
+
+/* Target the material symbols */
+[data-md-color-scheme="dracula"] .mdx-iconsearch-result__list i {
+    color: #f8f8f2 !important;
+}
+
+/* Target SVG images in icon search */
+[data-md-color-scheme="dracula"] .mdx-iconsearch-result__list img[src*=".svg"] {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+/* Only target Material Design icons */
+[data-md-color-scheme="dracula"] .mdx-iconsearch-result__list img[src*="/material/"] {
+    filter: brightness(0) invert(1);
+}
+
+/* Reset filter for emoji images */
+[data-md-color-scheme="dracula"] .mdx-iconsearch-result__list img[src*="twemoji"],
+[data-md-color-scheme="dracula"] .mdx-iconsearch-result__list img[src*="emoji"] {
+    filter: none;
+}
+
+/* Customize author card appearance */
+.md-author {
+    display: flex;
+    align-items: center;
+}
+
+.md-author__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.md-author__name {
+    margin-left: 10px;
+    font-weight: 600;
+}

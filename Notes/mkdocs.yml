@@ -13,6 +13,7 @@ theme:
   custom_dir: docs/theme
   icon:
     logo: material/book-open-page-variant
+    annotation: material/chevron-right-circle
   palette:
     scheme: dracula
     primary: deep purple
@@ -24,11 +25,30 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.instant
+    - search.suggest
+    - search.highlight
     - content.tabs.link
-
-
+    - blog
+    - navigation.footer
+    - navigation.indexes
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
 
 markdown_extensions:
+  - attr_list
+  - md_in_html
   - markdown.extensions.toc:
       slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
       permalink: ""
@@ -36,16 +56,13 @@ markdown_extensions:
   - markdown.extensions.smarty:
       smart_quotes: false
   - pymdownx.betterem:
-  - markdown.extensions.attr_list:
   - markdown.extensions.def_list:
   - markdown.extensions.tables:
   - markdown.extensions.abbr:
   - markdown.extensions.footnotes:
-  - markdown.extensions.md_in_html:
   - pymdownx.superfences:
       preserve_tabs: true
       custom_fences:
-        # Mermaid diagrams
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
@@ -84,8 +101,8 @@ markdown_extensions:
   - pymdownx.caret:
   - pymdownx.smartsymbols:
   - pymdownx.emoji:
-      #emoji_index: !!python/name:materialx.emoji.twemoji
-      #emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.escapeall:
       hardbreak: True
       nbsp: True
@@ -117,10 +134,14 @@ extra:
       link: https://github.com/hslima00
 extra_css:
   - assets/pymdownx-extras/extra-13d1e30d3e.css
+  - assets/stylesheets/custom.7c86dd97.min.css
+  - assets/stylesheets/extra.css
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - assets/pymdownx-extras/extra-loader-d39d49fc.js
+  - assets/javascripts/custom.9e5da760.min.js
+
 
 plugins:
   - awesome-pages
@@ -132,7 +153,7 @@ plugins:
           md-footer__inner: [nav, class]
           md-nav: [nav, class]
       search_index: 'clear'
-      mermaid2: true
+      mermaid2: False
       hljs: False
       webcrypto: true
   - git-revision-date-localized:
@@ -140,6 +161,7 @@ plugins:
   - mkdocs_pymdownx_material_extras
   - minify:
       minify_html: true
+  - blog
 
 
 
