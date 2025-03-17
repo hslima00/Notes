@@ -126,14 +126,7 @@ plugins:
   - awesome-pages
   - search: {}
   - encryptcontent:
-      password_inventory:
-        classified: 'password1'
-        confidential:
-          - 'password2'
-          - 'password3'
-        secret:
-          user4: 'password4'
-          user5: 'password5'
+      global_password: 'teste'
   - git-revision-date-localized:
       fallback_to_build_date: true
   - mkdocs_pymdownx_material_extras
