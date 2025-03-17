@@ -126,7 +126,10 @@ plugins:
   - awesome-pages
   - search: {}
   - encryptcontent:
-
+      password_file: passwords.yml
+      encrypted_something:
+          md-footer__inner: [nav, class]
+          md-nav: [nav, class]
   - git-revision-date-localized:
       fallback_to_build_date: true
   - mkdocs_pymdownx_material_extras
