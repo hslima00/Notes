@@ -165,7 +165,7 @@ plugins:
       enabled: true
       blog_dir: blog
       blog_toc: true
-      authors_file: "Markdown/blog/.authors.yml"
+      authors_file: "C:\Users\hslim\Notes\Notes\Markdown\blog\.authors.yml"
       post_readtime: true
 
 
