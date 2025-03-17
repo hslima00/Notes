@@ -28,7 +28,6 @@ theme:
     - search.suggest
     - search.highlight
     - content.tabs.link
-    - blog
     - navigation.footer
     - navigation.indexes
   icon:
