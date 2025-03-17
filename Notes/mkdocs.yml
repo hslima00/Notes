@@ -162,6 +162,7 @@ plugins:
   - minify:
       minify_html: true
   - blog
+      post_readtime: true
 
 
 
