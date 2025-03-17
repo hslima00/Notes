@@ -126,7 +126,8 @@ plugins:
   - awesome-pages
   - search: {}
   - encryptcontent:
-      password_file: passwords.yml
+      password_file: ../passwords.yml
+      global_password: 'teste' 
       encrypted_something:
           md-footer__inner: [nav, class]
           md-nav: [nav, class]
