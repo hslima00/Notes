@@ -126,7 +126,7 @@ plugins:
   - awesome-pages
   - search: {}
   - encryptcontent:
-      global_password: 'teste'
+
   - git-revision-date-localized:
       fallback_to_build_date: true
   - mkdocs_pymdownx_material_extras
