@@ -1,4 +1,6 @@
 ---
+password: teste
+hidden: true
 date: 2025-03-17
 title: testando...
 authors:

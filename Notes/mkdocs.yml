@@ -158,12 +158,15 @@ plugins:
       encrypted_something:
           md-footer__inner: [nav, class]
           md-nav: [nav, class]
-      inject:
-          md-content: [div, class]
       search_index: 'clear'
       mermaid2: False
       hljs: False
       webcrypto: true
+      # Add these settings
+      hide_title: true          # Hides the title
+      hide_metadata: true       # Hides the metadata
+      hide_navigation: true     # Hides navigation elements
+      decrypt_search: false     # Prevents content from appearing in search
   - git-revision-date-localized:
       fallback_to_build_date: true
   - mkdocs_pymdownx_material_extras
