@@ -53,9 +53,9 @@ markdown_extensions:
           class: arithmatex
           format: !!python/object/apply:pymdownx.arithmatex.arithmatex_fenced_format {kwds: {mode: generic, tag: pre}}
         # Add this new fence for blockdiag
-        - name: md-render
-          class: md-render
-          format: !!python/name:tools.pymdownx_md_render.md_sub_render
+        # - name: md-render
+        #  class: md-render
+        #  format: !!python/name:tools.pymdownx_md_render.md_sub_render
   - pymdownx.highlight:
       extend_pygments_lang:
         - name: php-inline
@@ -118,7 +118,6 @@ extra:
 extra_css:
   - assets/pymdownx-extras/extra-13d1e30d3e.css
 extra_javascript:
-  - https://unpkg.com/mermaid@9.1.7/dist/mermaid.min.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - assets/pymdownx-extras/extra-loader-d39d49fc.js
@@ -133,7 +132,7 @@ plugins:
           md-footer__inner: [nav, class]
           md-nav: [nav, class]
       search_index: 'clear'
-      mermaid2: False
+      mermaid2: true
       hljs: False
       webcrypto: true
   - git-revision-date-localized:
