@@ -145,6 +145,12 @@ extra_javascript:
 
 plugins:
   - awesome-pages
+  - blog:
+      enabled: true
+      blog_dir: blog
+      blog_toc: true
+      authors_file: "C:/Users/hslim/Notes/Notes/Markdown/blog/.authors.yml"
+      post_readtime: true
   - search: {}
   - encryptcontent:
       password_file: ../passwords.yml
@@ -152,6 +158,8 @@ plugins:
       encrypted_something:
           md-footer__inner: [nav, class]
           md-nav: [nav, class]
+      inject:
+          md-content: [div, class]
       search_index: 'clear'
       mermaid2: False
       hljs: False
@@ -161,12 +169,7 @@ plugins:
   - mkdocs_pymdownx_material_extras
   - minify:
       minify_html: true
-  - blog:
-      enabled: true
-      blog_dir: blog
-      blog_toc: true
-      authors_file: "C:\Users\hslim\Notes\Notes\Markdown\blog\.authors.yml"
-      post_readtime: true
+
 
 
 
