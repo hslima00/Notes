@@ -5,6 +5,22 @@
         - content.code.annotate # (1)
 ```
 
+```blockdiag
+blockdiag {
+	A -> B -> C -> D;
+	A -> E -> F -> G;
+}
+```
+
+``` mermaid
+graph LR
+  A[Start] --> B{Error?};
+  B -->|Yes| C[Hmm...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Yay!];
+```
+
 1.  :man_raising_hand: I'm a code annotation! I can contain `code`, **formatted
     text**, images, ... basically anything that can be expressed in Markdown.
 
@@ -81,6 +97,16 @@ blockdiag {
     A -> E -> F -> G;
 }
 
+blockdiag {
+   A [label = "foo"];
+   B [label = "bar"];
+   C [label = "baz"];
+
+   A -> B [label = "click bar", textcolor="red"];
+   B -> C [label = "click baz"];
+   C -> A;
+}
+
 <!-- prettier-ignore -->
 blockdiag {
    // Set labels to nodes.
@@ -96,6 +122,7 @@ blockdiag {
 }
 
 <!-- prettier-ignore -->
+```
 blockdiag {
    // Set boder-style, backgroun-color and text-color to nodes.
    A [style = dotted];
@@ -120,6 +147,7 @@ blockdiag {
    J -> K [thick]
    K -> L;
 }
+``` 
 
 <!-- prettier-ignore -->
 blockdiag {

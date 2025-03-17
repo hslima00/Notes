@@ -46,15 +46,16 @@ markdown_extensions:
       preserve_tabs: true
       custom_fences:
         # Mermaid diagrams
-        - name: diagram
-          class: diagram
+        - name: mermaid
+          class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
         - name: math
           class: arithmatex
           format: !!python/object/apply:pymdownx.arithmatex.arithmatex_fenced_format {kwds: {mode: generic, tag: pre}}
-        # - name: md-render
-        #   class: md-render
-        #   format: !!python/name:tools.pymdownx_md_render.md_sub_render
+        # Add this new fence for blockdiag
+        - name: md-render
+          class: md-render
+          format: !!python/name:tools.pymdownx_md_render.md_sub_render
   - pymdownx.highlight:
       extend_pygments_lang:
         - name: php-inline
@@ -127,10 +128,14 @@ plugins:
   - search: {}
   - encryptcontent:
       password_file: ../passwords.yml
-      global_password: 'teste' 
+      global_password: 'teste'
       encrypted_something:
           md-footer__inner: [nav, class]
           md-nav: [nav, class]
+      search_index: 'clear'
+      mermaid2: False
+      hljs: False
+      webcrypto: true
   - git-revision-date-localized:
       fallback_to_build_date: true
   - mkdocs_pymdownx_material_extras
