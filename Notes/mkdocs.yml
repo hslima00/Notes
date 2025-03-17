@@ -30,6 +30,7 @@ theme:
     - content.tabs.link
     - navigation.footer
     - navigation.indexes
+    - blog
   icon:
     admonition:
       note: octicons/tag-16
@@ -160,7 +161,11 @@ plugins:
   - mkdocs_pymdownx_material_extras
   - minify:
       minify_html: true
-  - blog
+  - blog:
+      enabled: true
+      blog_dir: blog
+      blog_toc: true
+      authors_file: "Markdown/blog/.authors.yml"
       post_readtime: true
 
 
