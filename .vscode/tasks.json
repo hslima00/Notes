@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Deploy to GitHub Pages and Push",
+            "type": "shell",
+            "command": "./.venv/Scripts/activate; cd Notes ;mkdocs gh-deploy ;    cd ..;                    git add . ;                        git commit -m tasks_json_update;                        git push",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Serve mkdocs",
+            "type": "shell",
+            "command": "./.venv/Scripts/activate; cd Notes ;mkdocs serve ;    cd ..;                    git add . ;                        git commit -m tasks_json_update;                        git push",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
