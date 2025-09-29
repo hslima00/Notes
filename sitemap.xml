@@ -2,102 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://hslima00.github.io/Notes/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/cadeiras/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Fedora/adb_mirror/</loc>
-         <lastmod>2025-03-17</lastmod>
-    </url>
-    <url>
-         <loc>https://hslima00.github.io/Notes/IDI/1_nocao_sentido_direito/</loc>
-         <lastmod>2025-03-17</lastmod>
-    </url>
-    <url>
-         <loc>https://hslima00.github.io/Notes/IDI/2_ramos_direito/</loc>
-         <lastmod>2025-03-17</lastmod>
-    </url>
-    <url>
-         <loc>https://hslima00.github.io/Notes/IDI/Fontes_do_direito/</loc>
-         <lastmod>2025-03-17</lastmod>
-    </url>
-    <url>
-         <loc>https://hslima00.github.io/Notes/IDI/IDI/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Markdown/Markdown_Tests/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Markdown/macros/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
+    </url>
+    <url>
+         <loc>https://hslima00.github.io/Notes/Markdown/markdown-cheat-sheet/</loc>
+         <lastmod>2025-09-29</lastmod>
+    </url>
+    <url>
+         <loc>https://hslima00.github.io/Notes/Markdown/mkdocs-macro/</loc>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Programming/GitHub/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Programming/data_types/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Programming/prog_index/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Programming/Java/java_basics/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Programming/Java/java_index/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Programming/Java/java_oop/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Programming/Linux/Commands/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Programming/Linux/Exploits/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Programming/Linux/Introdu%C3%A7%C3%A3o/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Programming/Linux/SSH/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Programming/Linux/Terminal/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/Programming/Linux/cheatsheet/</loc>
-         <lastmod>2025-03-17</lastmod>
-    </url>
-    <url>
-         <loc>https://hslima00.github.io/Notes/Programming/Markdown/markdown-cheat-sheet/</loc>
-         <lastmod>2025-03-17</lastmod>
-    </url>
-    <url>
-         <loc>https://hslima00.github.io/Notes/Programming/Markdown/mkdocs-macro/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/blog/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
     <url>
          <loc>https://hslima00.github.io/Notes/blog/posts/Markdown_Tests_2/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-09-29</lastmod>
     </url>
 </urlset>
